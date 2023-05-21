@@ -1,0 +1,13 @@
+.vscode/*
+Logs/*
+Packages/*
+UserSettings/*
+Assets/Scripts/Characters/Enemies/*
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+MetalSlugMLAgents.sln
+*.meta
+*.cs.meta
+Assets/Scripts/Characters/
+.gitignore
+.gitignore
