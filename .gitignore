@@ -9,7 +9,5 @@ MetalSlugMLAgents.sln
 *.meta
 *.cs.meta
 Assets/Scripts/Characters/
-.gitignore
-.gitignore
 Library/
-Temp/UnityLockfile
+Temp/

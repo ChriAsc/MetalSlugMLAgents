@@ -31,7 +31,6 @@ public class PlayerAgent : Agent
     public override void CollectObservations(VectorSensor sensor){
         sensor.AddObservation(transform.localPosition.x);
         sensor.AddObservation(goalTransform_1.localPosition.x);  // goal x reference
-        // sensor.AddObservation(goalTransform_1.localPosition.y);  // goal y reference
         sensor.AddObservation(goalTransform_2.localPosition.x);  // goal x reference
         sensor.AddObservation(goalTransform_3.localPosition.x);  // goal y reference
         sensor.AddObservation(goalTransform_4.localPosition.x);  // goal y reference

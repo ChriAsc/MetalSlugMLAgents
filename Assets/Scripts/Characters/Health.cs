@@ -68,7 +68,7 @@ public class Health : MonoBehaviour
 
         onHit?.Invoke(damage);
 
-        if (!IsAlive()) // check if died
+        if (!IsAlive()) // check if someone died
             onDead?.Invoke(damage);
     }
 }

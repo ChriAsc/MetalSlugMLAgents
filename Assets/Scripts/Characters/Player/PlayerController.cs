@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float maxSpeed = 0.5f;
+    public float maxSpeed = 1.2f;
     public float maxJump = 4f;
     private bool isGrounded = false;
 
