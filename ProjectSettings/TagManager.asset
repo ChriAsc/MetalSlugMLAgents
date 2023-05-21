@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Walkable
+  - Bullet
+  - Enemy
+  - Building
+  - Boat door trigger
+  - Terrain
+  - Boat
+  - Marco Boat
+  - Water Dead
+  - Roof
+  - Bridge
+  - Granate
+  - EnemyBomb
+  - RunningTarget
+  - Trigger
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - GoThroughEnemy
+  - Enemy
+  - Walkable
+  - Building
+  - Sky & Forest
+  - IgnoreRoof
+  - Collectible
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Parallax
+    uniqueID: 4043820315
+    locked: 0
+  - name: Background (far)
+    uniqueID: 239733559
+    locked: 0
+  - name: Background (mid)
+    uniqueID: 3131056757
+    locked: 0
+  - name: Background (close)
+    uniqueID: 3493534317
+    locked: 0
+  - name: Boat
+    uniqueID: 1577918917
+    locked: 0
+  - name: Effect (far)
+    uniqueID: 304863773
+    locked: 0
+  - name: Enemy
+    uniqueID: 3553370755
+    locked: 0
+  - name: Collectible
+    uniqueID: 1776705675
+    locked: 0
+  - name: Effect (mid)
+    uniqueID: 1703492091
+    locked: 0
+  - name: Player
+    uniqueID: 1090199495
+    locked: 0
+  - name: Effect (close)
+    uniqueID: 223644325
+    locked: 0
+  - name: Foreground
+    uniqueID: 562574345
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

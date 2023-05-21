@@ -1,0 +1,5492 @@
+fileFormatVersion: 2
+guid: 2dc34f2bca2673643a7fde2776801d05
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_0
+  - first:
+      213: 21300002
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_1
+  - first:
+      213: 21300004
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_2
+  - first:
+      213: 21300006
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_3
+  - first:
+      213: 21300008
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_4
+  - first:
+      213: 21300010
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_5
+  - first:
+      213: 21300012
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_6
+  - first:
+      213: 21300014
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_7
+  - first:
+      213: 21300016
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_8
+  - first:
+      213: 21300018
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_9
+  - first:
+      213: 21300020
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_10
+  - first:
+      213: 21300022
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_11
+  - first:
+      213: 21300024
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_12
+  - first:
+      213: 21300026
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_13
+  - first:
+      213: 21300028
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_14
+  - first:
+      213: 21300030
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_15
+  - first:
+      213: 21300032
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_16
+  - first:
+      213: 21300034
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_17
+  - first:
+      213: 21300036
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_18
+  - first:
+      213: 21300038
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_19
+  - first:
+      213: 21300040
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_20
+  - first:
+      213: 21300042
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_21
+  - first:
+      213: 21300044
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_22
+  - first:
+      213: 21300046
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_23
+  - first:
+      213: 21300048
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_24
+  - first:
+      213: 21300050
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_25
+  - first:
+      213: 21300052
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_26
+  - first:
+      213: 21300054
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_27
+  - first:
+      213: 21300056
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_28
+  - first:
+      213: 21300058
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_29
+  - first:
+      213: 21300060
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_30
+  - first:
+      213: 21300062
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_31
+  - first:
+      213: 21300064
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_32
+  - first:
+      213: 21300066
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_33
+  - first:
+      213: 21300068
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_34
+  - first:
+      213: 21300070
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_35
+  - first:
+      213: 21300072
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_36
+  - first:
+      213: 21300074
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_37
+  - first:
+      213: 21300076
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_38
+  - first:
+      213: 21300078
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_39
+  - first:
+      213: 21300080
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_40
+  - first:
+      213: 21300082
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_41
+  - first:
+      213: 21300084
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_42
+  - first:
+      213: 21300086
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_43
+  - first:
+      213: 21300088
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_44
+  - first:
+      213: 21300090
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_45
+  - first:
+      213: 21300092
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_46
+  - first:
+      213: 21300094
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_47
+  - first:
+      213: 21300096
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_48
+  - first:
+      213: 21300098
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_49
+  - first:
+      213: 21300100
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_50
+  - first:
+      213: 21300102
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_51
+  - first:
+      213: 21300104
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_52
+  - first:
+      213: 21300106
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_53
+  - first:
+      213: 21300108
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_54
+  - first:
+      213: 21300110
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_55
+  - first:
+      213: 21300112
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_56
+  - first:
+      213: 21300114
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_57
+  - first:
+      213: 21300116
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_58
+  - first:
+      213: 21300118
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_59
+  - first:
+      213: 21300120
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_60
+  - first:
+      213: 21300122
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_61
+  - first:
+      213: 21300124
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_62
+  - first:
+      213: 21300126
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_63
+  - first:
+      213: 21300128
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_64
+  - first:
+      213: 21300130
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_65
+  - first:
+      213: 21300132
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_66
+  - first:
+      213: 21300134
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_67
+  - first:
+      213: 21300136
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_68
+  - first:
+      213: 21300138
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_69
+  - first:
+      213: 21300140
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_70
+  - first:
+      213: 21300142
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_71
+  - first:
+      213: 21300144
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_72
+  - first:
+      213: 21300146
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_73
+  - first:
+      213: 21300148
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_74
+  - first:
+      213: 21300150
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_75
+  - first:
+      213: 21300152
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_76
+  - first:
+      213: 21300154
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_77
+  - first:
+      213: 21300156
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_78
+  - first:
+      213: 21300158
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_79
+  - first:
+      213: 21300160
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_80
+  - first:
+      213: 21300162
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_81
+  - first:
+      213: 21300164
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_82
+  - first:
+      213: 21300166
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_83
+  - first:
+      213: 21300168
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_84
+  - first:
+      213: 21300170
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_85
+  - first:
+      213: 21300172
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_86
+  - first:
+      213: 21300174
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_87
+  - first:
+      213: 21300176
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_88
+  - first:
+      213: 21300178
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_89
+  - first:
+      213: 21300180
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_90
+  - first:
+      213: 21300182
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_91
+  - first:
+      213: 21300184
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_92
+  - first:
+      213: 21300186
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_93
+  - first:
+      213: 21300188
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_94
+  - first:
+      213: 21300190
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_95
+  - first:
+      213: 21300192
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_96
+  - first:
+      213: 21300194
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_97
+  - first:
+      213: 21300196
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_98
+  - first:
+      213: 21300198
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_99
+  - first:
+      213: 21300200
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_100
+  - first:
+      213: 21300202
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_101
+  - first:
+      213: 21300204
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_102
+  - first:
+      213: 21300206
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_103
+  - first:
+      213: 21300208
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_104
+  - first:
+      213: 21300210
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_105
+  - first:
+      213: 21300212
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_106
+  - first:
+      213: 21300214
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_107
+  - first:
+      213: 21300216
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_108
+  - first:
+      213: 21300218
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_109
+  - first:
+      213: 21300220
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_110
+  - first:
+      213: 21300222
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_111
+  - first:
+      213: 21300224
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_112
+  - first:
+      213: 21300226
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_113
+  - first:
+      213: 21300228
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_114
+  - first:
+      213: 21300230
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_115
+  - first:
+      213: 21300232
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_116
+  - first:
+      213: 21300234
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_117
+  - first:
+      213: 21300236
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_118
+  - first:
+      213: 21300238
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_119
+  - first:
+      213: 21300240
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_120
+  - first:
+      213: 21300242
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_121
+  - first:
+      213: 21300244
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_122
+  - first:
+      213: 21300246
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_123
+  - first:
+      213: 21300248
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_124
+  - first:
+      213: 21300250
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_125
+  - first:
+      213: 21300252
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_126
+  - first:
+      213: 21300254
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_127
+  - first:
+      213: 21300256
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_128
+  - first:
+      213: 21300258
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_129
+  - first:
+      213: 21300260
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_130
+  - first:
+      213: 21300262
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_131
+  - first:
+      213: 21300264
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_132
+  - first:
+      213: 21300266
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_133
+  - first:
+      213: 21300268
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_134
+  - first:
+      213: 21300270
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_135
+  - first:
+      213: 21300272
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_136
+  - first:
+      213: 21300274
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_137
+  - first:
+      213: 21300276
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_138
+  - first:
+      213: 21300278
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_139
+  - first:
+      213: 21300280
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_140
+  - first:
+      213: 21300282
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_141
+  - first:
+      213: 21300284
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_142
+  - first:
+      213: 21300286
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_143
+  - first:
+      213: 21300288
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_144
+  - first:
+      213: 21300290
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_145
+  - first:
+      213: 21300292
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_146
+  - first:
+      213: 21300294
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_147
+  - first:
+      213: 21300296
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_148
+  - first:
+      213: 21300298
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_149
+  - first:
+      213: 21300300
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_150
+  - first:
+      213: 21300302
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_151
+  - first:
+      213: 21300304
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_152
+  - first:
+      213: 21300306
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_153
+  - first:
+      213: 21300308
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_154
+  - first:
+      213: 21300310
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_155
+  - first:
+      213: 21300312
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_156
+  - first:
+      213: 21300314
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_157
+  - first:
+      213: 21300316
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_158
+  - first:
+      213: 21300318
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_159
+  - first:
+      213: 21300320
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_160
+  - first:
+      213: 21300322
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_161
+  - first:
+      213: 21300324
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_162
+  - first:
+      213: 21300326
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_163
+  - first:
+      213: 21300328
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_164
+  - first:
+      213: 21300330
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_165
+  - first:
+      213: 21300332
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_166
+  - first:
+      213: 21300334
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_167
+  - first:
+      213: 21300336
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_168
+  - first:
+      213: 21300338
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_169
+  - first:
+      213: 21300340
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_170
+  - first:
+      213: 21300342
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_171
+  - first:
+      213: 21300344
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_172
+  - first:
+      213: 21300346
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_173
+  - first:
+      213: 21300348
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_174
+  - first:
+      213: 21300350
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_175
+  - first:
+      213: 21300352
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_176
+  - first:
+      213: 21300354
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_177
+  - first:
+      213: 21300356
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_178
+  - first:
+      213: 21300358
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_179
+  - first:
+      213: 21300360
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_180
+  - first:
+      213: 21300362
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_181
+  - first:
+      213: 21300364
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_182
+  - first:
+      213: 21300366
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_183
+  - first:
+      213: 21300368
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_184
+  - first:
+      213: 21300370
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_185
+  - first:
+      213: 21300372
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_186
+  - first:
+      213: 21300374
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_187
+  - first:
+      213: 21300376
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_188
+  - first:
+      213: 21300378
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_189
+  - first:
+      213: 21300380
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_190
+  - first:
+      213: 21300382
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_191
+  - first:
+      213: 21300384
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_192
+  - first:
+      213: 21300386
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_193
+  - first:
+      213: 21300388
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_194
+  - first:
+      213: 21300390
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_195
+  - first:
+      213: 21300392
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_196
+  - first:
+      213: 21300394
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_197
+  - first:
+      213: 21300396
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_198
+  - first:
+      213: 21300398
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_199
+  - first:
+      213: 21300400
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_200
+  - first:
+      213: 21300402
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_201
+  - first:
+      213: 21300404
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_202
+  - first:
+      213: 21300406
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_203
+  - first:
+      213: 21300408
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_204
+  - first:
+      213: 21300410
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_205
+  - first:
+      213: 21300412
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_206
+  - first:
+      213: 21300414
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_207
+  - first:
+      213: 21300416
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_208
+  - first:
+      213: 21300418
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_209
+  - first:
+      213: 21300420
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_210
+  - first:
+      213: 21300422
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_211
+  - first:
+      213: 21300424
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_212
+  - first:
+      213: 21300426
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_213
+  - first:
+      213: 21300428
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_214
+  - first:
+      213: 21300430
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_215
+  - first:
+      213: 21300432
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_216
+  - first:
+      213: 21300434
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_217
+  - first:
+      213: 21300436
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_218
+  - first:
+      213: 21300438
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_219
+  - first:
+      213: 21300440
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_220
+  - first:
+      213: 21300442
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_221
+  - first:
+      213: 21300444
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_222
+  - first:
+      213: 21300446
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_223
+  - first:
+      213: 21300448
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_224
+  - first:
+      213: 21300450
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_225
+  - first:
+      213: 21300452
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_226
+  - first:
+      213: 21300454
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_227
+  - first:
+      213: 21300456
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_228
+  - first:
+      213: 21300458
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_229
+  - first:
+      213: 21300460
+    second: Neo Geo NGCD - Metal Slug 3 - Maggot_230
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 517
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb42cf2743d402246b97397fa46e0e89
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 602
+        width: 168
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d8a5d8e6a83b74c9251979f88afdfd
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_2
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 606
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff1a086f37bf654f935a48cb99d229a
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_3
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 606
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387822be31d9d3c45895e3b2b12e1844
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_4
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 606
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965d4cbc0312e244b8bd9a171d7bf948
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_5
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 606
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254ac2488e301fc46b1715244971081a
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_6
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 606
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ba1f752095bb24693887c6896dec87
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_7
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 606
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84fe127307bf504fa9b39505947998b
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_8
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 606
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988fd9f6a461aae42ba34ebbfd92ee44
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_9
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 606
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629c831e6f405b04ab88ca9fbb08c608
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_10
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 585
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe35591f0ed5d14b881b42ba27394a9
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 585
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818274d396a41df47a93d97a987caea3
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_12
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 585
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8fa6ece2d91334bacb10db4617da0d
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_13
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 585
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcc98cd8cd3b714fbd14f64340237d5
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_14
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 585
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795a2e092dc1d654080b2b78bd593537
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_15
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 585
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80036f29c08cb15469dc0661b7146b6d
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_16
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 585
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088b1aa01fe8f3c41b65555fa2647248
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_17
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 564
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872b4f9c9644bd746a157d5a6e1e0f07
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_18
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 564
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e158f8db6c92d4e4cb0c9d0de0be062d
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_19
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 564
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74a6f8eca90caa46bf438daa9c0f546
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_20
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 564
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a322cbe18a8cdf44793a9d3b64bbd9f9
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_21
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 564
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb81e6042c59b44e92f6f48c4d0704d
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_22
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 564
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c315cd0f07742eb4db50ef205ad34ffb
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_23
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 564
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75af4631e9bf4cc409b05360cefc11f7
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_24
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 541
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebe695094dadcb4680c9f745c740555
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_25
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 541
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91445c98fb58225498487e2c800832a8
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_26
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 541
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445e62750c1e4604ba4cb08b3246b781
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_27
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 541
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9831411d1b15d947867289ca937a7d9
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_28
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 541
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd2c7ae906da814987f1e393eac9509
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_29
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 541
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d201c33e2811ce44183768900ce11cce
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_30
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 541
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b12e77aafa84c4ca1a3a66af7af9c3
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_31
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 541
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7414e97bf5c210f408b7b19d148e7063
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_32
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 521
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcbaaaf04639bf4bb5cc095df283a77
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_33
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 521
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9467cc00735e3429636af25940a2b1
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_34
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 521
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4f905b04d7bd44e8252f1e6f2e03b7
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_35
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 521
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6576e7db8035f334d889fdd74b216952
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_36
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 521
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ab84e058c04ff4a8a7221cedc669a9
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_37
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 521
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb533b56d5df0eb468270f3afc3cee86
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_38
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 521
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e19d95da1c2b74f8421ad7d9d7c149
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_39
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 521
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5b6edef7999234f9d408d7919a01a8
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_40
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 493
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d318793d0fb4274ba3a6000102e0746
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_41
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 493
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71456e5d02023e43a292e7f83310826
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_42
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 493
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28dc74e0c40f67b44b0f1d93be1d4da6
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_43
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 493
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81a9f4ada660e54da0737bb4578e12a
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_44
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 493
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf249936b5578b74a95ecad4661fcc81
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_45
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 493
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00cff9217b0e8b24c9a226acc3806116
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_46
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 493
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ddc2f01fd9526449524f2931be5665
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_47
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 493
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e2c2a8feff1ed42a3bc51da57ee877
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_48
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 469
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bee212d2ab0d73438b3919384e151b8
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_49
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 469
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a17c7ab56aa9de469918291308bdb69
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_50
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 469
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d1c988873d49e4f9e1b3bf867f1dd9
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_51
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 469
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7c9148e35349f408b88e5397213786
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_52
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 469
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73bbd35fcf2efc4386c13f975941815
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_53
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 469
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a368be0576fe6894d8590cbeb64f840a
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_54
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 469
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6473fcb723e3254598e4b66499afa33
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_55
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 469
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd6430f61e57a344977eceb5246d112
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_56
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 441
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac333e67089da3f40a7cf56dcb6d14f0
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_57
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 441
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa8204713c65a74caf7256b1ba69607
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_58
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 441
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3327ebb903232c40bf1f31d94a48bc9
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_59
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 441
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fa7a851358eef40b97adf092ca4cd7
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_60
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 441
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27eed9552c04994f887daf1581160ad
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_61
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 441
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc69cc3009e2e24ebb46256acba3f30
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_62
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 441
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80918f079b63c74e84ca4a163060eb9
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_63
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 441
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ef978fee88bbf469299a17d8b803c1
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_64
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 441
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0509987355e3214a8ff860c7a1afa1b
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_65
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 441
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ee3861ce699aa4e95b05e93ceff933
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_66
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 441
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8387a5f5da77c714e96f6d291f33a4b0
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_67
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 441
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05606715974976947b96d7c894848f65
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_68
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 441
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4ea1f1c58c9da42b1da9aff8bcaccd
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_69
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 441
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2594e0eada04d4f9666bbe7682f538
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_70
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 441
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749c150f44664ba418ccb8ddd66c2762
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_71
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 441
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c781c53257169e4d8b9eb99e1613ac0
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_72
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 441
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5dd9601469078e49bbeedd44073a1ba
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_73
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 441
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c489e49937ef5154489931883555b63a
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_74
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 441
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c753f9b921d2dd47a545406cd5cfc2b
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_75
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 441
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66586d4a39d11a54fb710dbdd1bf088b
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_76
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 441
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a14188b04eff5a4d88d6285ea0d0137
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_77
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 441
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e3ce6802b07904c844cf7ba4562342
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_78
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 441
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d123b5a2d23ea8d48913049be9760878
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_79
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 441
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5014417bba3125468db3127da2effcd
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_80
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 441
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140be54a8eeea8a4a8bfdb3989ac59fb
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_81
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 441
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3651d402bba957147b127b05e29dad91
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_82
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 441
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61c839ae04b0c14c88fc26c9373c2dc
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_83
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 441
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37356e5622b31d343b597e807d12be1c
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_84
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 441
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e40bf4dfbf60541b0dd0fc9e6a2549
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_85
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 441
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db36362305b3ac842852ec131b639c88
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_86
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 441
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21093aee6f81334a8cfd360b8df6c06
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_87
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 441
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79deae473b98394e83b2971dc534563
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_88
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 415
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471c3520057869e4daf1c25467801085
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_89
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 415
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92601f3afb422854687e721479e4ac35
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_90
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 415
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8438690f3edb06548a5f35844c4afb19
+      internalID: 21300180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_91
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 414
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a27d107e69b3f4bac53e30fe476376
+      internalID: 21300182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_92
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 414
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb39068545b005419c37415021ae03d
+      internalID: 21300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_93
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 414
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4d2b856a400014ea7289fa4d81cd9b
+      internalID: 21300186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_94
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 414
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196a185e163d4d64a892cc0557fd6592
+      internalID: 21300188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_95
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 414
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6adc9ea6258c6e4bbb699674a8c37de
+      internalID: 21300190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_96
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 414
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabc7aeb58e51604c9e03b17481bd0ac
+      internalID: 21300192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_97
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 414
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ff85b796b1251459f3b7b05364370e
+      internalID: 21300194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_98
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 414
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8e09a40e65d4449bd35a97fde8a233
+      internalID: 21300196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_99
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 414
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db320cab6a0ec2745b033492a8e17cf7
+      internalID: 21300198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_100
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 414
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f683e8f3d82144884eef6c39330196
+      internalID: 21300200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_101
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 414
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5864f263e7ce247b0a787037079df1
+      internalID: 21300202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_102
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 414
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbf9470461bc5a4b86d027d23f77d99
+      internalID: 21300204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_103
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 414
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6eafbf071f02d448b582dfc6f1fd72
+      internalID: 21300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_104
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 373
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dacd0ce9ddcaaf4e81cd54cd60a896f
+      internalID: 21300208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_105
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 373
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346279f553fe30847b99fa364bc10d02
+      internalID: 21300210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_106
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 373
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f123ba5e920cc08419ecf205831a0169
+      internalID: 21300212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_107
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 373
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0e57e73c4485848a07ca2b1c659522
+      internalID: 21300214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_108
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 373
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3586f3b2faab6984aaaf70395d8a5540
+      internalID: 21300216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_109
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 373
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75d6a9af2cc38141ab7d00fb9edc9bf
+      internalID: 21300218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_110
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 373
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceba26e3f75b94e42b8cdb62a5904bf9
+      internalID: 21300220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_111
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 373
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33392ed94b74a854d88abfe77662955e
+      internalID: 21300222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_112
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 373
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe9fe1b0b821224896ef0b33f1e3ed0
+      internalID: 21300224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_113
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 373
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0077532af96b2145838fca41a1065d7
+      internalID: 21300226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_114
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 373
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54b09d59dcc9b44ea8c66a80c0d1984
+      internalID: 21300228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_115
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 373
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b081007c5a42743a247a5ccae60489
+      internalID: 21300230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_116
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 362
+        width: 16
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6282c0c3c5df545b7215e8fc99c876
+      internalID: 21300232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_117
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 373
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fafb51fdd0598041ad25b77103951e7
+      internalID: 21300234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_118
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 373
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bc873f3de1f5f4eb6a66844fc20100
+      internalID: 21300236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_119
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 373
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5721f19af201389428f917c797f3ef2e
+      internalID: 21300238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_120
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 373
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226f3861aff379343b5a7540850a5012
+      internalID: 21300240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_121
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 373
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65da8ab6eb69dca49bcb5f9885239af4
+      internalID: 21300242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_122
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 373
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5b32a8e6b1d1b4985bb860eb9e6e11
+      internalID: 21300244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_123
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 373
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6614456b1e7fb049865349b6c577d64
+      internalID: 21300246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_124
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 267
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c4e6342e5cc3540a6bc4d238b91147
+      internalID: 21300248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_125
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 267
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae86aa8d47f6344c8a6230ea19326fe
+      internalID: 21300250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_126
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 267
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56431092ce7a29545b5da806764d43da
+      internalID: 21300252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_127
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 267
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64597ecf961411a4e8c68e77404dd92d
+      internalID: 21300254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_128
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 267
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b119293942bc8c541a18bcab41daeea5
+      internalID: 21300256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_129
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 267
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcad69499c8383649880da1cfa6c84ef
+      internalID: 21300258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_130
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 266
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcda814a98f7e4b49b4661390c5a44bb
+      internalID: 21300260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_134
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 265
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d4b873ed119bb409f386befea6fe94
+      internalID: 21300268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_136
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 325
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4fbb09e02ec0741afeedeb61024d39
+      internalID: 21300272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_138
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 263
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b70fd0e542a3d48b87f7038061fe5b
+      internalID: 21300276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_141
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 325
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8317faa827033154cab4486e58ec31e1
+      internalID: 21300282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_142
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 263
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f85cf429c95eaa4a9d23651c537e9cb
+      internalID: 21300284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_143
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 325
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdc43cdafcb2844b9b3e22daae36e48
+      internalID: 21300286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_145
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 325
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91de120bd986fc24a90856582e878851
+      internalID: 21300290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_146
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 264
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab008bde4ac961648a1c70e8455140a2
+      internalID: 21300292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_147
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 325
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2582498e493334eaa9f3aa4d940c78
+      internalID: 21300294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_148
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 263
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9c899ee8cca374f923085f50f21e63
+      internalID: 21300296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_149
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 262
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5497dc3746eb046abe4c71a80fbe11
+      internalID: 21300298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_150
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 325
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301d158414bd02a42bb0a10684a2edd9
+      internalID: 21300300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_151
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 325
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b87270c8ddd584180b3e809e7f6048
+      internalID: 21300302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_152
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 263
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b2310f4bc733b4a8c76521d1ea4cf7
+      internalID: 21300304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_153
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 227
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da98e7cbe877f02479bb62c957387ad5
+      internalID: 21300306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_154
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 227
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d828bdf798aee314da4b4e7ebf24d038
+      internalID: 21300308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_155
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 227
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c02110e6667ba42abc3ed694ab4d08
+      internalID: 21300310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_156
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 226
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cdbf8d767fb2742a843968c87f63c9
+      internalID: 21300312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_157
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 226
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ce25e5c8c2adc478d85a5d31bd3bfe
+      internalID: 21300314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_158
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 226
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e9ccdee82ba3645b2bc1ad11e9b962
+      internalID: 21300316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_159
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 226
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffe344825152c94fbe5493179148703
+      internalID: 21300318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_160
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 226
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1dc5076a36db146880aa8b7aadd97c
+      internalID: 21300320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_161
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 226
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2602cbe1ebb594a8792fc39990fb82
+      internalID: 21300322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_162
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 226
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff39987b6214da542bfc5de5cc775538
+      internalID: 21300324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_163
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 226
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee13749859a276746b94f6b699661ef9
+      internalID: 21300326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_164
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 115
+        width: 110
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a24a406dfc42f3418034b9b959c7573
+      internalID: 21300328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_165
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 226
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6e1824babb996449a9037b235b4265
+      internalID: 21300330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_166
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 226
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a35df66b3f07b4b83a08b49f6a3dd7
+      internalID: 21300332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_167
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 226
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b019bb39494877c4fbc3ed86bce943bd
+      internalID: 21300334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_168
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 226
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b227878264b8d49a4f42c1113a69c5
+      internalID: 21300336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_169
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 185
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e865c8dac743d94e9d6c76c253234e5
+      internalID: 21300338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_170
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 120
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bda36f5feb9374097c5ea9ccacd94a
+      internalID: 21300340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_171
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 185
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ba9cb5f9c73114ca020985563fb643
+      internalID: 21300342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_172
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 120
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4842abbc86ea3459ce0017a9e51cf6
+      internalID: 21300344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_173
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 120
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dabac2efb1f482428cc2f8ad76b114e
+      internalID: 21300346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_174
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 185
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921c553c3feb17842a854debf1d1a948
+      internalID: 21300348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_175
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 117
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fe496a9b428fa48b24b082810b9040
+      internalID: 21300350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_176
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 185
+        width: 35
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd13422b3e4fd34692028cee7239a35
+      internalID: 21300352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_177
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 116
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852020e3ddb07574d8948c8a979f1f80
+      internalID: 21300354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_178
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 185
+        width: 38
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c785f2342d7614f9f7a27057e5b192
+      internalID: 21300356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_179
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 130
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1799ad881a1cb8145a3c890ef8723489
+      internalID: 21300358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_180
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 116
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9412fa58bd2a80246a14a17fa853ea7d
+      internalID: 21300360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_181
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 185
+        width: 42
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef840bb4a05b6f14c9d553867d97d27d
+      internalID: 21300362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_182
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 131
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79050f63ccd4c9446ad11a56568bff9a
+      internalID: 21300364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_183
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 124
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc4068bd80e2074bb0114c52dfdbb85
+      internalID: 21300366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_184
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 129
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c0d9c3dc297d748b3a0e9d731e5eb5
+      internalID: 21300368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_185
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 122
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195c663282043df4da7d14ad4de1338d
+      internalID: 21300370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_186
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 144
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537c73c4a6cee7e459560433265bfb9b
+      internalID: 21300372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_187
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 135
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8e45ad6dce1b647a1d054a2d012b6e
+      internalID: 21300374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_188
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 114
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0655a1c1db2b0dc4fbe9c16ff8777170
+      internalID: 21300376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_189
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 185
+        width: 44
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3238e5b7bb65f242bfb6d2ef14bf963
+      internalID: 21300378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_190
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 118
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12495f9a4c28bf4d89d86ce3bb1d66d
+      internalID: 21300380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_191
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 124
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9885dca31a3d034a823ee0e9205f4e7
+      internalID: 21300382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_192
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 114
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4cc0b1643224a4ab07d9d51acfa6a7
+      internalID: 21300384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_193
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 114
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0117ab05e8d723543a4ee0335235faea
+      internalID: 21300386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_194
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 185
+        width: 42
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c125a0d34309c4344a3fc1c7d2160fa7
+      internalID: 21300388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_195
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 114
+        width: 130
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ff19a6bb15fb84687fc327921b14f9
+      internalID: 21300390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_196
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 120
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7045976af0171e5429df4b0c0232815c
+      internalID: 21300392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_197
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e285e69940b29bc409528616c69c2527
+      internalID: 21300394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_198
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24cdf59befdf74c46ace0f5cfc96d584
+      internalID: 21300396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_199
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dfc07d78570544ab1c4e56a0086724
+      internalID: 21300398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_200
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d205dcae367e36d4da14b60072208961
+      internalID: 21300400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_201
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70bbac0f4c5ee149a400f16df92c551
+      internalID: 21300402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_202
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09462116bd552e94590e601e3996b6ba
+      internalID: 21300404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_203
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f79fbb86b239346b37384a352542bb
+      internalID: 21300406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_204
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7696dc6a3a821ce43ab42f2aa654af55
+      internalID: 21300408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_205
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e8a1bd657a526428710679b82de192
+      internalID: 21300410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_206
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0a10ec79d2bf84aa6ab252f598d188
+      internalID: 21300412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_207
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0091de668443f94e80e57a1e83295f7
+      internalID: 21300414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_208
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 68
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc38834e332c824ca396d3dc47d96e5
+      internalID: 21300416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_209
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 68
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1c08740692c9940ab6ec72ee0742f6
+      internalID: 21300418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_210
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2b6de9cdb834740b95a4a62eb987fb
+      internalID: 21300420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_211
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 68
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af64a6dcd7fb294aae9b88cd82f701c
+      internalID: 21300422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_212
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 44
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b99849a5c898645961c076cb06742e
+      internalID: 21300424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_213
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 41
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9ffb34fbb20ce44864fc2e2bd2f416
+      internalID: 21300426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_214
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 39
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7963db029b6ed914a9e730614aa0ce37
+      internalID: 21300428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_215
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 36
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff349256bec325a4792ae31f5264355a
+      internalID: 21300430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_216
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 36
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d57658d7430764399bffc5b2276723
+      internalID: 21300432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_217
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 36
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81289bea998dae4fa3fd03decbd1a6c
+      internalID: 21300434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_218
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 36
+        width: 36
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91ca65a34c36284d93216d3cdd3e6c5
+      internalID: 21300436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_219
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 4
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f58fefc2b5626e45856cea4495e1ca1
+      internalID: 21300438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_220
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 4
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf069573e3f15b458883fb16d6b7983
+      internalID: 21300440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_221
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 4
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceabdcaf3dd596f408860492b42f0050
+      internalID: 21300442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_222
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 4
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a555a77c37cb1549ad2320a03176e03
+      internalID: 21300444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_223
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 4
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38dccf5f36a52ac48bbcc4afafa93f66
+      internalID: 21300446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_224
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 4
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da38df39358babe44bfa7d181c491c22
+      internalID: 21300448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_225
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 4
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21cff3c7a4b00894e89b62db591fb7eb
+      internalID: 21300450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_226
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 4
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932a3c40be9cdff45b16afdd17161967
+      internalID: 21300452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_227
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 4
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82c84f4d4fad3d42aa6eba105badff5
+      internalID: 21300454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_228
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 4
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e366f44561f32d8419dfef3f39bffcaf
+      internalID: 21300456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_229
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 4
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f1d9d3cd2337e42bf5f66e6a0af791
+      internalID: 21300458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 3 - Maggot_230
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 4
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c0969e45e79a04e852194387930899
+      internalID: 21300460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 109a48f6bce55c648ac083d1296ecf96
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

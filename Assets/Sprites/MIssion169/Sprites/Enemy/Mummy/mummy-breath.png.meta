@@ -1,0 +1,476 @@
+fileFormatVersion: 2
+guid: 3b445cea04bca9743b8a0bfe38374beb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: mummy-breath_0
+  - first:
+      213: 21300002
+    second: mummy-breath_1
+  - first:
+      213: 21300004
+    second: mummy-breath_2
+  - first:
+      213: 21300006
+    second: mummy-breath_3
+  - first:
+      213: 21300008
+    second: mummy-breath_4
+  - first:
+      213: 21300010
+    second: mummy-breath_5
+  - first:
+      213: 21300012
+    second: mummy-breath_6
+  - first:
+      213: 21300014
+    second: mummy-breath_7
+  - first:
+      213: 21300016
+    second: mummy-breath_8
+  - first:
+      213: 21300018
+    second: mummy-breath_9
+  - first:
+      213: 21300020
+    second: mummy-breath_10
+  - first:
+      213: 21300022
+    second: mummy-breath_11
+  - first:
+      213: 21300024
+    second: mummy-breath_12
+  - first:
+      213: 21300026
+    second: mummy-breath_13
+  - first:
+      213: 21300028
+    second: mummy-breath_14
+  - first:
+      213: 21300030
+    second: mummy-breath_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 16
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mummy-breath_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 21
+        height: 14
+      alignment: 9
+      pivot: {x: 0.98356056, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 29
+        height: 18
+      alignment: 9
+      pivot: {x: 0.98298556, y: 0.363825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 33
+        height: 18
+      alignment: 9
+      pivot: {x: 0.9845708, y: 0.37030953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1
+        width: 40
+        height: 19
+      alignment: 9
+      pivot: {x: 0.98731196, y: 0.23584113}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1
+        width: 46
+        height: 21
+      alignment: 9
+      pivot: {x: 0.984648, y: 0.22209184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1
+        width: 47
+        height: 22
+      alignment: 9
+      pivot: {x: 0.98675406, y: 0.20819668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_6
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 3
+        width: 48
+        height: 22
+      alignment: 9
+      pivot: {x: 0.98877144, y: 0.11269708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1
+        width: 47
+        height: 24
+      alignment: 9
+      pivot: {x: 0.98178685, y: 0.18874298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_8
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1
+        width: 49
+        height: 23
+      alignment: 9
+      pivot: {x: 0.9883248, y: 0.20565918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_9
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 4
+        width: 51
+        height: 21
+      alignment: 9
+      pivot: {x: 0.9874842, y: 0.07202135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_10
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 4
+        width: 52
+        height: 22
+      alignment: 9
+      pivot: {x: 0.9848433, y: 0.07555864}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_11
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 2
+        width: 54
+        height: 22
+      alignment: 9
+      pivot: {x: 0.9841783, y: 0.1657524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_12
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 4
+        width: 52
+        height: 20
+      alignment: 9
+      pivot: {x: 0.9848433, y: 0.07980285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_13
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 4
+        width: 51
+        height: 20
+      alignment: 9
+      pivot: {x: 0.985196, y: 0.07980285}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_14
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 5
+        width: 54
+        height: 19
+      alignment: 9
+      pivot: {x: 0.99066275, y: 0.045400668}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mummy-breath_15
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 4
+        width: 50
+        height: 20
+      alignment: 9
+      pivot: {x: 0.99023193, y: 0.073966786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
