@@ -43,7 +43,6 @@ public class PlayerAgent : Agent
         
         int moveH = actions.DiscreteActions[0] - 1;
         
-        // Debug.Log("MoveH:" + moveH);
         
         _playerController.MoveHorizontally(moveH);
 
