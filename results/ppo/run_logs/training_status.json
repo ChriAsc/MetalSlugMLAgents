@@ -1,26 +1,4 @@
 {
-    "Player Behaviour": {
-        "checkpoints": [
-            {
-                "steps": 6016,
-                "file_path": "results\\ppo\\Player Behaviour\\Player Behaviour-6016.onnx",
-                "reward": null,
-                "creation_time": 1684760977.6069093,
-                "auxillary_file_paths": [
-                    "results\\ppo\\Player Behaviour\\Player Behaviour-6016.pt"
-                ]
-            }
-        ],
-        "final_checkpoint": {
-            "steps": 6016,
-            "file_path": "results\\ppo\\Player Behaviour.onnx",
-            "reward": null,
-            "creation_time": 1684760977.6069093,
-            "auxillary_file_paths": [
-                "results\\ppo\\Player Behaviour\\Player Behaviour-6016.pt"
-            ]
-        }
-    },
     "metadata": {
         "stats_format_version": "0.3.0",
         "mlagents_version": "0.30.0",

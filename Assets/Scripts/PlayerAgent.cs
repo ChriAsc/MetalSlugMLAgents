@@ -21,7 +21,8 @@ public class PlayerAgent : Agent
     GameObject lastEnemy = null;
     private float lastPositionX = 0f;
     private float lastPositionY = 0f;
-    // private float last_d = Mathf.Infinity;
+    float distance_from_enemy = Mathf.Infinity;
+    float maxD = 35.0f;
     
     // private int speed = 5;
 
@@ -51,13 +52,13 @@ public class PlayerAgent : Agent
         _playerController.MoveHorizontally(moveH);
         if(lastPositionX < transform.localPosition.x)
         {
-            Debug.Log("Moving on ...");
-            AddReward(5f);
+            // Debug.Log("Moving on ...");
+            AddReward(3f);
             lastPositionX = transform.localPosition.x;
         } else
         {
-            Debug.Log("Wrong direction!");
-            AddReward(-5f);
+            // Debug.Log("Wrong direction!");
+            AddReward(-4f);
         }
         
 
@@ -94,31 +95,31 @@ public class PlayerAgent : Agent
         // {
         //     _playerController.MoveVertically(0);
         // }
+        if(actions.DiscreteActions[1] == 0)
+        {
+            _playerController.Fire();
+            AddReward(-4f);
+        }
         
-        if(DetectEnemy() == 0)
+        if(DetectEnemy())
+        {           
+            GameObject actualEnemy = FindClosestEnemy();
+            if (actualEnemy == lastEnemy)
+            {
+                // Debug.Log("The closest enemy is the same!");
+                AddReward(-1f);
+            } else
+            {
+                Debug.Log("Closest enemy: " + actualEnemy);
+                AddReward(3f);
+                lastEnemy = actualEnemy;
+            }
+            
+        } else
         {
             Debug.Log("No enemies around!");
             AddReward(2f);
-        } else
-        {
-            // float previous_enemies = DetectEnemy();
-            if(actions.DiscreteActions[1] == 0)
-            {
-                _playerController.Fire();
-                // AddReward(0.1f);
-                
-                GameObject actualEnemy = FindClosestEnemy();
-                if (actualEnemy == lastEnemy)
-                {
-                    // Debug.Log("The closest enemy is the same!");
-                    AddReward(-1f);
-                } else
-                {
-                    Debug.Log("Nearest enemy: " + actualEnemy);
-                    AddReward(5f);
-                    lastEnemy = actualEnemy;
-                }
-            }
+        }
             // if ((actions.DiscreteActions[1] - Random.Range(0f,1f)) > 0.9f)
             // {
             //     Debug.Log("Bomb");
@@ -129,8 +130,6 @@ public class PlayerAgent : Agent
             //     }
             //     else AddReward(-5f);
             // }
-
-        }
         
         if(jump > 0.3f)
         {
@@ -210,6 +209,12 @@ public class PlayerAgent : Agent
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log("Hit!");
+            AddReward(-1f);
+        }
+
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Debug.Log("Collectible!");
@@ -240,17 +245,20 @@ public class PlayerAgent : Agent
         }        
     }
 
-    public int DetectEnemy()
+    public bool DetectEnemy()
     {
-        GameObject[] gameObjects;
-        gameObjects = GameObject.FindGameObjectsWithTag("Enemy");
-        // Debug.Log("Number of enemies:" + gameObjects.Length);
-        // if(gameObjects.Length == 0)
-        // {
-        //     return false;
-        // }
-        // else return true;
-        return gameObjects.Length;
+        GameObject enemy = FindClosestEnemy();
+        if(enemy != null)
+        {
+            distance_from_enemy = transform.localPosition.x - enemy.transform.position.x;
+            if (distance_from_enemy < maxD)
+            {
+                Debug.Log(distance_from_enemy);
+                return true;
+            }
+        
+        }
+        return false;
     }
 
     public GameObject FindClosestEnemy()
@@ -258,7 +266,7 @@ public class PlayerAgent : Agent
         GameObject[] enemies;
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject closest = null;
-        float distance = 40f;
+        float distance = maxD;
         float position = transform.localPosition.x;
         foreach (GameObject enemy in enemies)
         {
