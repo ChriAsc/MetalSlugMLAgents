@@ -1702,7 +1702,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7164012
+      value: 1.2197095
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
@@ -1937,6 +1937,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ammo Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310384726594784159, guid: d12df7c60fe589a43b20a4c73cbbe1fa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d12df7c60fe589a43b20a4c73cbbe1fa, type: 3}
@@ -3203,6 +3208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MedKit Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670995687853807557, guid: 5290d9d34e7620342b7843d0b81567c3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectible
       objectReference: {fileID: 0}
     - target: {fileID: 4670995687853807561, guid: 5290d9d34e7620342b7843d0b81567c3,
         type: 3}
@@ -7701,12 +7711,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1765443407533320850}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1677233770 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1765443406516593723, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-    type: 3}
-  m_PrefabInstance: {fileID: 1765443407533320850}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1684087960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 654322134894282684, guid: dbdec53586b0c3740b7025c04630e45d,
@@ -7937,6 +7941,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H
       objectReference: {fileID: 0}
+    - target: {fileID: 4116058016369488371, guid: cf910b9ff292d734f97cec20ed18f9eb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectible
+      objectReference: {fileID: 0}
     - target: {fileID: 4116058016369488383, guid: cf910b9ff292d734f97cec20ed18f9eb,
         type: 3}
       propertyPath: m_RootOrder
@@ -8121,6 +8130,12 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!4 &1764111852 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3053036849674727436, guid: 87975f218fa12d3448559109f6b6aa57,
+    type: 3}
+  m_PrefabInstance: {fileID: 1268712062893146695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765037822
 GameObject:
   m_ObjectHideFlags: 0
@@ -8361,7 +8376,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1500
-  health: 0
   immortal: 0
 --- !u!114 &1769647876
 MonoBehaviour:
@@ -10202,27 +10216,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55e088b19d11dd4a9ed2892063f42af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 1.2
+  maxSpeed: 0.5
   maxJump: 4
-  isGrounded: 0
-  facingRight: 1
-  wasCrounching: 0
-  wasFiring: 0
-  wasFiring2: 0
   topAnimator: {fileID: 1069877685}
-  bottomAnimator: {fileID: 1677233770}
   bottom: {fileID: 1677233767}
   up: {fileID: 1069877682}
-  rb: {fileID: 1765443407533320859}
-  shotTime: 0
   fireDelta: 0.3
-  nextFire: 0.2
-  crouchTime: 0
   crouchDelta: 0.5
-  nextCrouch: 0.5
-  jumpTime: 0
   jumpDelta: 0.8
-  nextJump: 0.5
   projSpawner: {fileID: 1330288042}
   granadeSpawner: {fileID: 1240986145}
   granate: {fileID: 5665392374265219023, guid: 969c77ef74c77ee4e9f6a33b41a4fad4, type: 3}
@@ -10232,13 +10233,9 @@ MonoBehaviour:
   machineGunAnimator: {fileID: 22100000, guid: e22904daed3847e4f8e255e3400551be, type: 2}
   bottomMachineGunAnimator: {fileID: 22100000, guid: 846e0d697e8088048bbc9ee714fbcf78,
     type: 2}
-  haveMachineGun: 0
   meleeDistance: 0.4
   damageMelee: 200
-  health: {fileID: 0}
-  asObjUp: 0
   foreground: {fileID: 1062245212}
-  cinemachineBrain: {fileID: 0}
 --- !u!114 &1765443407533320853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10248,11 +10245,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1765443407533320851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Script: {fileID: 11500000, guid: 04a3b0524f0855245b8bc30b79f96bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
-  TakeActionsBetweenDecisions: 0
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 50000
+  _playerController: {fileID: 1765443407533320852}
+  goalTransform_1: {fileID: 744082459}
+  goalTransform_2: {fileID: 1841103425}
+  goalTransform_3: {fileID: 1930952384}
+  goalTransform_4: {fileID: 1764111852}
 --- !u!114 &1765443407533320854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10266,19 +10270,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 5
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
-      BranchSizes: 0200000002000000
-    VectorActionSize: 0200000002000000
+      BranchSizes: 030000000200000002000000
+    VectorActionSize: 030000000200000002000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: AgentBehaviour
+  m_BehaviorName: Player Behaviour
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -10293,19 +10297,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1765443407533320851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17b94ba17337c3148a95c9466d666e2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
---- !u!50 &1765443407533320859 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1765443406479915050, guid: 10d84f9cfeae4f54d9078ef51e03d394,
-    type: 3}
-  m_PrefabInstance: {fileID: 1765443407533320850}
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1765443407533320856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765443407533320851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 5
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 1
+      BranchSizes: 0300000002000000
+    VectorActionSize: 
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_DeterministicInference: 0
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &1870971871782869132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10559,7 +10586,7 @@ PrefabInstance:
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.826127
+      value: -13.322819
       objectReference: {fileID: 0}
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}

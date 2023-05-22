@@ -19,6 +19,7 @@ TagManager:
   - EnemyBomb
   - RunningTarget
   - Trigger
+  - Collectible
   layers:
   - Default
   - TransparentFX
