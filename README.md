@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/37103199/116417359-75edfd00-a83b-11eb-
 
 
 # Related Projects
-Original game Unity project.
+Original game.
 https://gamesareart.itch.io/metal-slug-in-unity
 
 ML Agents Tool Kit
