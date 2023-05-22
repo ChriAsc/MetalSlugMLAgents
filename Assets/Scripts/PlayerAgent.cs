@@ -19,15 +19,16 @@ public class PlayerAgent : Agent
     private bool flag_4 = true;
 
     GameObject lastEnemy = null;
-    float lastPositionX;
-    float lastPositionY;
+    private float lastPositionX = 0f;
+    private float lastPositionY = 0f;
+    // private float last_d = Mathf.Infinity;
     
     // private int speed = 5;
 
     public override void OnEpisodeBegin()
     {
 
-        transform.localPosition = new Vector2(-27.53f,1.54f);
+        transform.localPosition = new Vector3(-27.53f,1.54f,0f);
         lastPositionX = transform.localPosition.x;
         lastPositionY = transform.localPosition.y;
     }
@@ -41,13 +42,25 @@ public class PlayerAgent : Agent
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
+        float jump = actions.ContinuousActions[0];
         // float moveH = actions.ContinuousActions[0];
         // float moveV = actions.ContinuousActions[1];
         
         int moveH = actions.DiscreteActions[0] - 1;
         
-        
+        float d_from_goal = lastPositionX - goalTransform_4.localPosition.x;
         _playerController.MoveHorizontally(moveH);
+        if(lastPositionX < transform.localPosition.x)
+        {
+            Debug.Log("Moving on ...");
+            AddReward(5f);
+            lastPositionX = transform.localPosition.x;
+        } else
+        {
+            Debug.Log("Wrong direction!");
+            AddReward(-1f);
+        }
+        
 
         // if(moveH == 1)
         // {
@@ -82,17 +95,47 @@ public class PlayerAgent : Agent
         // {
         //     _playerController.MoveVertically(0);
         // }
-
-        if(actions.DiscreteActions[1] == 1)
+        
+        if(DetectEnemy() == 0)
         {
-            // Debug.Log("Spara");
-            _playerController.Fire();
-            // AddReward(0.1f);
+            Debug.Log("No enemies around!");
+            AddReward(2f);
+        } else
+        {
+            // float previous_enemies = DetectEnemy();
+            if(actions.DiscreteActions[1] == 0)
+            {
+                _playerController.Fire();
+                // AddReward(0.1f);
+                
+                GameObject actualEnemy = FindClosestEnemy();
+                if (actualEnemy == lastEnemy)
+                {
+                    // Debug.Log("The closest enemy is the same!");
+                    AddReward(-1f);
+                } else
+                {
+                    Debug.Log("Nearest enemy: " + actualEnemy);
+                    AddReward(5f);
+                    lastEnemy = actualEnemy;
+                }
+            }
+            // if ((actions.DiscreteActions[1] - Random.Range(0f,1f)) > 0.9f)
+            // {
+            //     Debug.Log("Bomb");
+            //     _playerController.ThrowGranate();
+            //     if (DetectEnemy() < previous_enemies)
+            //     {
+            //         AddReward(5f);
+            //     }
+            //     else AddReward(-5f);
+            // }
+
         }
 
         // float jump = (float) actions.DiscreteActions[2] - Random.Range(0.2f,1f);
-        // int jump = actions.DiscreteActions[2];
-        if(actions.ContinuousActions[0] > 0.5f)
+        
+        if(jump > 0.3f)
         {
             // Debug.Log("Salta");
             _playerController.Jump();
@@ -100,10 +143,10 @@ public class PlayerAgent : Agent
             if(transform.localPosition.y == lastPositionY)
             {
                 AddReward(-2f);
-            }
-            else if(transform.localPosition.y != lastPositionY)
+            } else if(transform.localPosition.y != lastPositionY)
             {
                 AddReward(0.5f);
+                lastPositionY = transform.localPosition.y;
             }
         }
 
@@ -128,36 +171,18 @@ public class PlayerAgent : Agent
         if(transform.localPosition.x == goalTransform_4.localPosition.x && flag_4 == true)
         {
             Debug.Log("Bridge!");
-            AddReward(20f);
+            AddReward(15f);
             flag_4 = SetFlag(flag_4);
         }
-        if(transform.localPosition.x == lastPositionX)
-        {
-            AddReward(-1f);
-            lastPositionX = transform.localPosition.x;
-        }
 
-        if(!DetectEnemy())
-        {
-            Debug.Log("No enemies around!");
-            AddReward(1f);
-        }
-        else if(DetectEnemy())
-        {
-            GameObject actualEnemy = FindClosestEnemy();
-            
-            if (actualEnemy == lastEnemy)
-            {
-                Debug.Log("The closest enemy is the same!");
-                AddReward(-1f);
-            }
-            else
-            {
-                Debug.Log("Nearest enemy: " + actualEnemy);
-                AddReward(5f);
-                lastEnemy = actualEnemy;
-            }
-        }
+
+
+        // if(transform.localPosition.x == goalTransform_4.localPosition.x && flag_4 == true)
+        // {
+        //     Debug.Log("Bridge!");
+        //     AddReward(20f);
+        //     flag_4 = SetFlag(flag_4);
+        // }
 
 
         // if(actions.DiscreteActions[2] == 0)
@@ -218,16 +243,17 @@ public class PlayerAgent : Agent
         }        
     }
 
-    public bool DetectEnemy()
+    public int DetectEnemy()
     {
         GameObject[] gameObjects;
         gameObjects = GameObject.FindGameObjectsWithTag("Enemy");
-        Debug.Log("Numero di nemici:" + gameObjects.Length);
-        if(gameObjects.Length == 0)
-        {
-            return false;
-        }
-        else return true;
+        // Debug.Log("Number of enemies:" + gameObjects.Length);
+        // if(gameObjects.Length == 0)
+        // {
+        //     return false;
+        // }
+        // else return true;
+        return gameObjects.Length;
     }
 
     public GameObject FindClosestEnemy()

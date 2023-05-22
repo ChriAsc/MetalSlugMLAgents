@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float maxSpeed = 1.2f;
+    public float maxSpeed = 0.5f;
     public float maxJump = 4f;
     private bool isGrounded = false;
 
@@ -208,8 +208,8 @@ public class PlayerController : MonoBehaviour
         if (GameManager.GetBombs() > 0)
         {
             shotTime = shotTime + Time.deltaTime;
-            if (MobileManager.GetButtonGrenade())
-            {
+            // if (MobileManager.GetButtonGrenade())
+            // {
                 GameManager.RemoveBomb();
                 if (!wasFiring2)
                 {
@@ -249,21 +249,21 @@ public class PlayerController : MonoBehaviour
                     }
                     /*end*/
                 }
-            }
-            else
-            {
-                /*Animation based on whether it is standing or not*/
-                if (bottomAnimator.GetBool("isCrouched"))
-                {
-                    bottomAnimator.SetBool("isThrowingGranate", false);
-                }
-                else
-                {
-                    topAnimator.SetBool("isThrowingGranate", false);
-                }
-                /*end*/
-                wasFiring2 = false;
-            }
+            // }
+            // else
+            // {
+            //     /*Animation based on whether it is standing or not*/
+            //     if (bottomAnimator.GetBool("isCrouched"))
+            //     {
+            //         bottomAnimator.SetBool("isThrowingGranate", false);
+            //     }
+            //     else
+            //     {
+            //         topAnimator.SetBool("isThrowingGranate", false);
+            //     }
+            //     /*end*/
+            //     wasFiring2 = false;
+            // }
         }
         else
         {
