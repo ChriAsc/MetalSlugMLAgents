@@ -27,7 +27,6 @@ public class PlayerAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-
         transform.localPosition = new Vector3(-27.53f,1.54f,0f);
         lastPositionX = transform.localPosition.x;
         lastPositionY = transform.localPosition.y;
@@ -35,6 +34,7 @@ public class PlayerAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor){
         sensor.AddObservation(transform.localPosition.x);
+        sensor.AddObservation(transform.localPosition.y);
         sensor.AddObservation(goalTransform_1.localPosition.x);  // goal x reference
         sensor.AddObservation(goalTransform_2.localPosition.x);  // goal x reference
         sensor.AddObservation(goalTransform_3.localPosition.x);  // goal y reference
@@ -48,7 +48,6 @@ public class PlayerAgent : Agent
         
         int moveH = actions.DiscreteActions[0] - 1;
         
-        float d_from_goal = lastPositionX - goalTransform_4.localPosition.x;
         _playerController.MoveHorizontally(moveH);
         if(lastPositionX < transform.localPosition.x)
         {
@@ -58,7 +57,7 @@ public class PlayerAgent : Agent
         } else
         {
             Debug.Log("Wrong direction!");
-            AddReward(-1f);
+            AddReward(-5f);
         }
         
 
@@ -132,22 +131,20 @@ public class PlayerAgent : Agent
             // }
 
         }
-
-        // float jump = (float) actions.DiscreteActions[2] - Random.Range(0.2f,1f);
         
         if(jump > 0.3f)
         {
             // Debug.Log("Salta");
             _playerController.Jump();
-
-            if(transform.localPosition.y == lastPositionY)
-            {
-                AddReward(-2f);
-            } else if(transform.localPosition.y != lastPositionY)
-            {
-                AddReward(0.5f);
-                lastPositionY = transform.localPosition.y;
-            }
+        }
+        
+        // if(transform.localPosition.y == lastPositionY)
+        // {
+        //     AddReward(-2f);
+        if(transform.localPosition.y != lastPositionY)
+        {
+            AddReward(0.5f);
+            lastPositionY = transform.localPosition.y;
         }
 
         if(transform.localPosition.x == goalTransform_1.localPosition.x && flag_1 == true)
