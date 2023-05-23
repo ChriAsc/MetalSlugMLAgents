@@ -17,6 +17,7 @@ public class PlayerAgent : Agent
     private bool flag_2 = true;
     private bool flag_3 = true;
     private bool flag_4 = true;
+    private bool flag_enemy = true;
 
     GameObject lastEnemy = null;
     private float lastPositionX = 0f;
@@ -150,6 +151,27 @@ public class PlayerAgent : Agent
             flag_4 = SetFlag(flag_4);
         }
 
+        if(DetectEnemy())
+        {           
+            GameObject actualEnemy = FindClosestEnemy();
+            if (actualEnemy == lastEnemy)
+            {
+                // Debug.Log("The closest enemy is the same!");
+                AddReward(-1f);
+            } else
+            {
+                Debug.Log("Closest enemy: " + actualEnemy);
+                AddReward(3f);
+                lastEnemy = actualEnemy;
+                flag_enemy = SetFlag(flag_enemy);
+            }
+            
+        } else if (!DetectEnemy() && flag_enemy)
+        {
+            Debug.Log("No enemies around! " + GetCumulativeReward());
+            AddReward(5f);
+            flag_enemy = SetFlag(flag_enemy);
+        }
 
 
         // if(transform.localPosition.x == goalTransform_4.localPosition.x && flag_4 == true)
