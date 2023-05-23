@@ -22,9 +22,8 @@ public class PlayerAgent : Agent
     GameObject lastEnemy = null;
     private float lastPositionX = 0f;
     private float lastPositionY = 0f;
-    private float positionYbefore = 0f;
     float distance_from_enemy = Mathf.Infinity;
-    float maxD = 30.0f;
+    float maxD = 33.0f;
     
     // private int speed = 5;
 
@@ -33,7 +32,6 @@ public class PlayerAgent : Agent
         transform.localPosition = new Vector3(-27.53f,1.54f,0f);
         lastPositionX = transform.localPosition.x;
         lastPositionY = transform.localPosition.y;
-        positionYbefore = transform.localPosition.y;
     }
 
     public override void CollectObservations(VectorSensor sensor){
@@ -51,53 +49,26 @@ public class PlayerAgent : Agent
         // float moveV = actions.ContinuousActions[1];
         
         int moveH = actions.DiscreteActions[0] - 1;
-        
         _playerController.MoveHorizontally(moveH);
-        if(lastPositionX < transform.localPosition.x)
-        {
-            // Debug.Log("Moving on ...");
-            AddReward(1f);
-            lastPositionX = transform.localPosition.x;
-        } else
-        {
-            // Debug.Log("Wrong direction!");
-            AddReward(-3f);
-        }
-        
 
-        // if(moveH == 1)
+        if(moveH == 1)
+        {
+            AddReward(1f);
+        } else if (moveH == -1)
+        {
+            AddReward(-2f);
+        }
+        // if(lastPositionX < transform.localPosition.x)
         // {
-        //     AddReward(0.3f);
-        // }
-        // if(moveH == -1)
+        //     Debug.Log("Moving on ...");
+        //     lastPositionX = transform.localPosition.x;
+        //     AddReward(0.01f);
+        // } else
         // {
+        //     Debug.Log("Wrong direction!");
         //     AddReward(-1f);
         // }
-
-        // if(moveH > 0f)
-        // {
-        //     _playerController.MoveHorizontally(1);
-        //     AddReward(2f);
-        // }
-        // if(moveH == 0f)
-        // {
-        //     _playerController.MoveHorizontally(0);
-            
-        // }
-        // if(moveH < 0f)
-        // {
-        //     _playerController.MoveHorizontally(-1);
-        // }
         
-        // if(moveV > 0f)
-        // Debug.Log("MoveV:" + moveV);
-        // {
-        //     _playerController.MoveVertically(1);
-        // }
-        // if(moveV == 0f)
-        // {
-        //     _playerController.MoveVertically(0);
-        // }
         if(actions.DiscreteActions[1] == 0)
         {
             _playerController.Fire();
@@ -115,16 +86,11 @@ public class PlayerAgent : Agent
             //     else AddReward(-5f);
             // }
         
-        if(jump > 0.3f)
+        if(jump > 0.2f)
         {
             // Debug.Log("Salta");
             _playerController.Jump();
         }
-        
-        // if(transform.localPosition.y == lastPositionY)
-        // {
-        //     AddReward(-2f);
-        // }
 
         if(transform.localPosition.x == goalTransform_1.localPosition.x && flag_1 == true)
         {
@@ -157,11 +123,11 @@ public class PlayerAgent : Agent
             if (actualEnemy == lastEnemy)
             {
                 // Debug.Log("The closest enemy is the same!");
-                AddReward(-1f);
+                AddReward(-0.1f);
             } else
             {
-                Debug.Log("Closest enemy: " + actualEnemy);
-                AddReward(3f);
+                Debug.Log("Closest enemy: " + actualEnemy + " Cumulative: "+ GetCumulativeReward());
+                AddReward(2f);
                 lastEnemy = actualEnemy;
                 flag_enemy = SetFlag(flag_enemy);
             }
@@ -180,8 +146,6 @@ public class PlayerAgent : Agent
         //     AddReward(20f);
         //     flag_4 = SetFlag(flag_4);
         // }
-
-
         // if(actions.DiscreteActions[2] == 0)
         // {
 
@@ -195,24 +159,18 @@ public class PlayerAgent : Agent
         return !flag;
     }
 
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     LayerMask collectible = LayerMask.GetMask("Collectible");
-
-    //     if(collision.IsTouchingLayers(collectible))
-    //     {
-    //         Debug.Log("Collectible Layer!");
-    //         AddReward(10f);
-    //     }
-    // }
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // if (collision.gameObject.CompareTag("Walkable"))
-        // {
-        //     lastPositionY = transform.localPosition.y;
-        // }
+        if (collision.gameObject.CompareTag("Walkable"))
+        {
+            if((transform.localPosition.y != lastPositionY) && (lastPositionX < transform.localPosition.x))
+            {
+                lastPositionX = transform.localPosition.x;
+                lastPositionY = transform.localPosition.y;
+                Debug.Log("Reward for jumping");
+                AddReward(3f);
+            }
+        }
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("Hit!");
@@ -249,6 +207,18 @@ public class PlayerAgent : Agent
         }        
     }
 
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     LayerMask collectible = LayerMask.GetMask("Collectible");
+
+    //     if(collision.IsTouchingLayers(collectible))
+    //     {
+    //         Debug.Log("Collectible Layer!");
+    //         AddReward(10f);
+    //     }
+    // }
+
+
     public bool DetectEnemy()
     {
         GameObject enemy = FindClosestEnemy();
@@ -257,7 +227,7 @@ public class PlayerAgent : Agent
             distance_from_enemy = Mathf.Abs(transform.localPosition.x - enemy.transform.position.x);
             if (distance_from_enemy < maxD)
             {
-                Debug.Log("Distance from enemy:" + distance_from_enemy);
+                Debug.Log("Distance from the enemy:" + distance_from_enemy);
                 return true;
             }
         

@@ -2,22 +2,22 @@
     "Player Behaviour": {
         "checkpoints": [
             {
-                "steps": 448,
-                "file_path": "results\\ppo\\Player Behaviour\\Player Behaviour-448.onnx",
+                "steps": 3520,
+                "file_path": "results\\ppo\\Player Behaviour\\Player Behaviour-3520.onnx",
                 "reward": null,
-                "creation_time": 1684839236.8361685,
+                "creation_time": 1684853847.2291589,
                 "auxillary_file_paths": [
-                    "results\\ppo\\Player Behaviour\\Player Behaviour-448.pt"
+                    "results\\ppo\\Player Behaviour\\Player Behaviour-3520.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 448,
+            "steps": 3520,
             "file_path": "results\\ppo\\Player Behaviour.onnx",
             "reward": null,
-            "creation_time": 1684839236.8361685,
+            "creation_time": 1684853847.2291589,
             "auxillary_file_paths": [
-                "results\\ppo\\Player Behaviour\\Player Behaviour-448.pt"
+                "results\\ppo\\Player Behaviour\\Player Behaviour-3520.pt"
             ]
         }
     },
