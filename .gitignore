@@ -6,8 +6,6 @@ Assets/Scripts/Characters/Enemies/*
 Assembly-CSharp-Editor.csproj
 Assembly-CSharp.csproj
 MetalSlugMLAgents.sln
-*.meta
-*.cs.meta
 Assets/Scripts/Characters/
 Library/
 Temp/

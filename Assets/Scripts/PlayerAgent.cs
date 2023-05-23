@@ -21,8 +21,9 @@ public class PlayerAgent : Agent
     GameObject lastEnemy = null;
     private float lastPositionX = 0f;
     private float lastPositionY = 0f;
+    private float positionYbefore = 0f;
     float distance_from_enemy = Mathf.Infinity;
-    float maxD = 35.0f;
+    float maxD = 30.0f;
     
     // private int speed = 5;
 
@@ -31,6 +32,7 @@ public class PlayerAgent : Agent
         transform.localPosition = new Vector3(-27.53f,1.54f,0f);
         lastPositionX = transform.localPosition.x;
         lastPositionY = transform.localPosition.y;
+        positionYbefore = transform.localPosition.y;
     }
 
     public override void CollectObservations(VectorSensor sensor){
@@ -53,12 +55,12 @@ public class PlayerAgent : Agent
         if(lastPositionX < transform.localPosition.x)
         {
             // Debug.Log("Moving on ...");
-            AddReward(3f);
+            AddReward(1f);
             lastPositionX = transform.localPosition.x;
         } else
         {
             // Debug.Log("Wrong direction!");
-            AddReward(-4f);
+            AddReward(-3f);
         }
         
 
@@ -98,28 +100,9 @@ public class PlayerAgent : Agent
         if(actions.DiscreteActions[1] == 0)
         {
             _playerController.Fire();
-            AddReward(-4f);
+            // AddReward(-2f);
         }
-        
-        if(DetectEnemy())
-        {           
-            GameObject actualEnemy = FindClosestEnemy();
-            if (actualEnemy == lastEnemy)
-            {
-                // Debug.Log("The closest enemy is the same!");
-                AddReward(-1f);
-            } else
-            {
-                Debug.Log("Closest enemy: " + actualEnemy);
-                AddReward(3f);
-                lastEnemy = actualEnemy;
-            }
-            
-        } else
-        {
-            Debug.Log("No enemies around!");
-            AddReward(2f);
-        }
+    
             // if ((actions.DiscreteActions[1] - Random.Range(0f,1f)) > 0.9f)
             // {
             //     Debug.Log("Bomb");
@@ -140,11 +123,7 @@ public class PlayerAgent : Agent
         // if(transform.localPosition.y == lastPositionY)
         // {
         //     AddReward(-2f);
-        if(transform.localPosition.y != lastPositionY)
-        {
-            AddReward(0.5f);
-            lastPositionY = transform.localPosition.y;
-        }
+        // }
 
         if(transform.localPosition.x == goalTransform_1.localPosition.x && flag_1 == true)
         {
@@ -205,10 +184,13 @@ public class PlayerAgent : Agent
     //     }
     // }
 
-    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // if (collision.gameObject.CompareTag("Walkable"))
+        // {
+        //     lastPositionY = transform.localPosition.y;
+        // }
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("Hit!");
@@ -250,10 +232,10 @@ public class PlayerAgent : Agent
         GameObject enemy = FindClosestEnemy();
         if(enemy != null)
         {
-            distance_from_enemy = transform.localPosition.x - enemy.transform.position.x;
+            distance_from_enemy = Mathf.Abs(transform.localPosition.x - enemy.transform.position.x);
             if (distance_from_enemy < maxD)
             {
-                Debug.Log(distance_from_enemy);
+                Debug.Log("Distance from enemy:" + distance_from_enemy);
                 return true;
             }
         
@@ -270,7 +252,7 @@ public class PlayerAgent : Agent
         float position = transform.localPosition.x;
         foreach (GameObject enemy in enemies)
         {
-            float currentD = enemy.transform.position.x - position;
+            float currentD = Mathf.Abs(enemy.transform.position.x - position);
             if(currentD < distance)
             {
                 closest = enemy;
