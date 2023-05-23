@@ -51,13 +51,10 @@ public class PlayerAgent : Agent
         int moveH = actions.DiscreteActions[0] - 1;
         _playerController.MoveHorizontally(moveH);
 
-        if(moveH == 1)
+        if(moveH == 1 && (lastPositionX < transform.localPosition.x))
         {
-            AddReward(1f);
-        } else if (moveH == -1)
-        {
-            AddReward(-2f);
-        }
+            AddReward(0.5f);
+        } 
         // if(lastPositionX < transform.localPosition.x)
         // {
         //     Debug.Log("Moving on ...");
@@ -168,8 +165,8 @@ public class PlayerAgent : Agent
                 lastPositionX = transform.localPosition.x;
                 lastPositionY = transform.localPosition.y;
                 Debug.Log("Reward for jumping");
-                AddReward(3f);
-            }
+                AddReward(0.1f);
+            } else AddReward(-0.0001f);
         }
         if (collision.gameObject.CompareTag("Bullet"))
         {
@@ -197,7 +194,7 @@ public class PlayerAgent : Agent
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            AddReward(-5f);
+            AddReward(-10f);
         }
 
         if (_playerController.GetHealth() <= 0f)
@@ -227,7 +224,7 @@ public class PlayerAgent : Agent
             distance_from_enemy = Mathf.Abs(transform.localPosition.x - enemy.transform.position.x);
             if (distance_from_enemy < maxD)
             {
-                Debug.Log("Distance from the enemy:" + distance_from_enemy);
+                // Debug.Log("Distance from the enemy:" + distance_from_enemy);
                 return true;
             }
         

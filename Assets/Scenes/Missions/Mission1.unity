@@ -10216,7 +10216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55e088b19d11dd4a9ed2892063f42af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0.2
+  maxSpeed: 0.3
   maxJump: 4
   topAnimator: {fileID: 1069877685}
   bottom: {fileID: 1677233767}
@@ -10251,7 +10251,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 50000
+  MaxStep: 500000
   _playerController: {fileID: 1765443407533320852}
   goalTransform_1: {fileID: 744082459}
   goalTransform_2: {fileID: 1841103425}
