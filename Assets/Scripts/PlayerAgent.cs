@@ -31,7 +31,7 @@ public class PlayerAgent : Agent
     public override void OnEpisodeBegin()
     {
         transform.localPosition = new Vector3(-27.53f,1.54f,0f);
-        lastPosition = Vector2(transform.localPosition.x, transform.localPosition.y);
+        lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
         // lastPositionY = transform.localPosition.y;
     }
@@ -55,9 +55,13 @@ public class PlayerAgent : Agent
 
         if(moveH == 1 && (lastPositionX < transform.localPosition.x))
         {
-            AddReward(0.5f);
+            AddReward(2f);
             lastPositionX = transform.localPosition.x;
-        } 
+        }
+        if (moveH == -1)
+        {
+            AddReward(-2f);
+        }
         // if(lastPositionX < transform.localPosition.x)
         // {
         //     Debug.Log("Moving on ...");
@@ -167,7 +171,7 @@ public class PlayerAgent : Agent
             {
                 // lastPositionX = transform.localPosition.x;
                 // lastPositionY = transform.localPosition.y;
-                lastPosition = Vector2(transform.localPosition.x, transform.localPosition.y);
+                lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
                 Debug.Log("Reward for jumping");
                 AddReward(0.1f);
             } else AddReward(-0.0001f);
