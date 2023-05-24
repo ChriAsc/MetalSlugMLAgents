@@ -60,7 +60,7 @@ public class PlayerAgent : Agent
         }
         if (moveH == -1)
         {
-            AddReward(-0.1f);
+            AddReward(-3f);
         }
         // if(lastPositionX < transform.localPosition.x)
         // {
@@ -167,7 +167,7 @@ public class PlayerAgent : Agent
     {
         if (collision.gameObject.CompareTag("Walkable"))
         {
-            if((transform.localPosition.y > lastPosition.y + 0.3) && (transform.localPosition.x >= lastPosition.x))
+            if((transform.localPosition.y > (lastPosition.y + 0.2)) && (transform.localPosition.x >= lastPosition.x))
             {
                 // lastPositionX = transform.localPosition.x;
                 // lastPositionY = transform.localPosition.y;
