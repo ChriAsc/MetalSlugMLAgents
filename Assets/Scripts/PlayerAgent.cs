@@ -21,7 +21,8 @@ public class PlayerAgent : Agent
 
     GameObject lastEnemy = null;
     private float lastPositionX = 0f;
-    private float lastPositionY = 0f;
+    // private float lastPositionY = 0f;
+    Vector2 lastPosition;
     float distance_from_enemy = Mathf.Infinity;
     float maxD = 33.0f;
     
@@ -30,8 +31,9 @@ public class PlayerAgent : Agent
     public override void OnEpisodeBegin()
     {
         transform.localPosition = new Vector3(-27.53f,1.54f,0f);
+        lastPosition = Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
-        lastPositionY = transform.localPosition.y;
+        // lastPositionY = transform.localPosition.y;
     }
 
     public override void CollectObservations(VectorSensor sensor){
@@ -54,6 +56,7 @@ public class PlayerAgent : Agent
         if(moveH == 1 && (lastPositionX < transform.localPosition.x))
         {
             AddReward(0.5f);
+            lastPositionX = transform.localPosition.x;
         } 
         // if(lastPositionX < transform.localPosition.x)
         // {
@@ -160,10 +163,11 @@ public class PlayerAgent : Agent
     {
         if (collision.gameObject.CompareTag("Walkable"))
         {
-            if((transform.localPosition.y != lastPositionY) && (lastPositionX < transform.localPosition.x))
+            if((transform.localPosition.y != lastPosition.y) && (transform.localPosition.x > lastPosition.x))
             {
-                lastPositionX = transform.localPosition.x;
-                lastPositionY = transform.localPosition.y;
+                // lastPositionX = transform.localPosition.x;
+                // lastPositionY = transform.localPosition.y;
+                lastPosition = Vector2(transform.localPosition.x, transform.localPosition.y);
                 Debug.Log("Reward for jumping");
                 AddReward(0.1f);
             } else AddReward(-0.0001f);
