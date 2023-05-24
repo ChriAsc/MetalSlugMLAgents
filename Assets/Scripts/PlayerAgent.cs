@@ -25,7 +25,9 @@ public class PlayerAgent : Agent
     Vector2 lastPosition;
     float distance_from_enemy = Mathf.Infinity;
     float maxD = 33.0f;
-    
+    private float nextActionTime = 0.0f;
+    public float period = 100.0f;
+
     // private int speed = 5;
 
     public override void OnEpisodeBegin()
@@ -34,6 +36,14 @@ public class PlayerAgent : Agent
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
         // lastPositionY = transform.localPosition.y;
+    }
+        
+    void Update () {
+        if (Time.time > nextActionTime)
+        {
+            nextActionTime += period;
+            Debug.Log("Total Reward:    " + GetCumulativeReward());
+        }
     }
 
     public override void CollectObservations(VectorSensor sensor){
@@ -46,21 +56,22 @@ public class PlayerAgent : Agent
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float jump = actions.ContinuousActions[0];
         // float moveH = actions.ContinuousActions[0];
         // float moveV = actions.ContinuousActions[1];
         
         int moveH = actions.DiscreteActions[0] - 1;
+        int jump = actions.DiscreteActions[2];
+
         _playerController.MoveHorizontally(moveH);
 
         if(moveH == 1 && (lastPositionX < transform.localPosition.x))
         {
-            AddReward(2f);
             lastPositionX = transform.localPosition.x;
+            AddReward(1f);
         }
         if (moveH == -1)
         {
-            AddReward(-3f);
+            AddReward(-0.1f);
         }
         // if(lastPositionX < transform.localPosition.x)
         // {
@@ -76,45 +87,45 @@ public class PlayerAgent : Agent
         if(actions.DiscreteActions[1] == 0)
         {
             _playerController.Fire();
-            // AddReward(-2f);
+            AddReward(0.001f);
         }
     
-            // if ((actions.DiscreteActions[1] - Random.Range(0f,1f)) > 0.9f)
-            // {
-            //     Debug.Log("Bomb");
-            //     _playerController.ThrowGranate();
-            //     if (DetectEnemy() < previous_enemies)
-            //     {
-            //         AddReward(5f);
-            //     }
-            //     else AddReward(-5f);
-            // }
-        
-        if(jump > 0.2f)
+        // if ((actions.DiscreteActions[1] - Random.Range(0f,1f)) > 0.9f)
+        // {
+        //     Debug.Log("Bomb");
+        //     _playerController.ThrowGranate();
+        //     if (DetectEnemy() < previous_enemies)
+        //     {
+        //         AddReward(5f);
+        //     }
+        //     else AddReward(-5f);
+        // }
+    
+        if(jump == 1)
         {
             // Debug.Log("Salta");
             _playerController.Jump();
         }
 
-        if(transform.localPosition.x == goalTransform_1.localPosition.x && flag_1 == true)
+        if(transform.localPosition.x == goalTransform_1.position.x && flag_1 == true)
         {
             Debug.Log("First cartel!");
             AddReward(5f);
             flag_1 = SetFlag(flag_1);
         }
-        if(transform.localPosition.x == goalTransform_2.localPosition.x && flag_2 == true)
+        if(transform.localPosition.x == goalTransform_2.position.x && flag_2 == true)
         {
             Debug.Log("Second cartel!");
             AddReward(10f);
             flag_2 = SetFlag(flag_2);
         }
-        if(transform.localPosition.x == goalTransform_3.localPosition.x && flag_3 == true)
+        if(transform.localPosition.x == goalTransform_3.position.x && flag_3 == true)
         {
             Debug.Log("Boat!");
             AddReward(15f);
             flag_3 = SetFlag(flag_3);
         }
-        if(transform.localPosition.x == goalTransform_4.localPosition.x && flag_4 == true)
+        if(transform.localPosition.x == goalTransform_4.position.x && flag_4 == true)
         {
             Debug.Log("Bridge!");
             AddReward(15f);
@@ -130,15 +141,15 @@ public class PlayerAgent : Agent
                 AddReward(-0.1f);
             } else
             {
-                Debug.Log("Closest enemy: " + actualEnemy + " Cumulative: "+ GetCumulativeReward());
-                AddReward(2f);
+                Debug.Log("Closest enemy: " + actualEnemy);
+                AddReward(5f);
                 lastEnemy = actualEnemy;
                 flag_enemy = SetFlag(flag_enemy);
             }
             
         } else if (!DetectEnemy() && flag_enemy)
         {
-            Debug.Log("No enemies around! " + GetCumulativeReward());
+            Debug.Log("No enemies around!");
             AddReward(5f);
             flag_enemy = SetFlag(flag_enemy);
         }
@@ -176,7 +187,7 @@ public class PlayerAgent : Agent
                 AddReward(0.1f);
             } else
             {
-                AddReward(-0.0001f);
+                AddReward(-0.001f);
             }
         }
         if (collision.gameObject.CompareTag("Bullet"))
@@ -194,12 +205,12 @@ public class PlayerAgent : Agent
         if (collision.gameObject.CompareTag("Marco Boat"))
         {
             // Debug.Log("Marco Boat!");
-            AddReward(1f);
+            AddReward(5f);
         }
 
         if (collision.gameObject.CompareTag("Water Dead"))
         {
-            AddReward(-50f);
+            AddReward(-1000f);
             EndEpisode();
         }
 
@@ -210,7 +221,7 @@ public class PlayerAgent : Agent
 
         if (_playerController.GetHealth() <= 0f)
         {
-            AddReward(-50f);
+            AddReward(-100);
             EndEpisode();
         }        
     }
