@@ -60,7 +60,7 @@ public class PlayerAgent : Agent
         }
         if (moveH == -1)
         {
-            AddReward(-2f);
+            AddReward(-0.1f);
         }
         // if(lastPositionX < transform.localPosition.x)
         // {
@@ -167,14 +167,17 @@ public class PlayerAgent : Agent
     {
         if (collision.gameObject.CompareTag("Walkable"))
         {
-            if((transform.localPosition.y != lastPosition.y) && (transform.localPosition.x > lastPosition.x))
+            if((transform.localPosition.y > lastPosition.y + 0.3) && (transform.localPosition.x >= lastPosition.x))
             {
                 // lastPositionX = transform.localPosition.x;
                 // lastPositionY = transform.localPosition.y;
                 lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
                 Debug.Log("Reward for jumping");
                 AddReward(0.1f);
-            } else AddReward(-0.0001f);
+            } else
+            {
+                AddReward(-0.0001f);
+            }
         }
         if (collision.gameObject.CompareTag("Bullet"))
         {

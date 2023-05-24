@@ -10271,7 +10271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BrainParameters:
     VectorObservationSize: 6
-    NumStackedVectorObservations: 1
+    NumStackedVectorObservations: 6
     m_ActionSpec:
       m_NumContinuousActions: 1
       BranchSizes: 0300000002000000
@@ -10300,7 +10300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
+  DecisionPeriod: 6
   TakeActionsBetweenDecisions: 1
 --- !u!1001 &1870971871782869132
 PrefabInstance:
