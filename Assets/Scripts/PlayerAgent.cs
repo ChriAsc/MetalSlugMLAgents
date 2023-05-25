@@ -22,7 +22,7 @@ public class PlayerAgent : Agent
     GameObject lastEnemy = null;
     private float lastPositionX = 0f;
     // private float lastPositionY = 0f;
-    Vector2 lastPosition;
+    // Vector2 lastPosition;
     float distance_from_enemy = Mathf.Infinity;
     float maxD = 33.0f;
     private float nextActionTime = 0.0f;
@@ -226,17 +226,6 @@ public class PlayerAgent : Agent
         }        
     }
 
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //     LayerMask collectible = LayerMask.GetMask("Collectible");
-
-    //     if(collision.IsTouchingLayers(collectible))
-    //     {
-    //         Debug.Log("Collectible Layer!");
-    //         AddReward(10f);
-    //     }
-    // }
-
 
     public bool DetectEnemy()
     {
@@ -246,7 +235,7 @@ public class PlayerAgent : Agent
             distance_from_enemy = Mathf.Abs(transform.localPosition.x - enemy.transform.position.x);
             if (distance_from_enemy < maxD)
             {
-                // Debug.Log("Distance from the enemy:" + distance_from_enemy);
+                Debug.Log("Distance from the enemy:" + distance_from_enemy);
                 return true;
             }
         
