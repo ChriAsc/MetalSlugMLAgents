@@ -13,6 +13,7 @@ public class PlayerAgent : Agent
     [SerializeField] private Transform goalTransform_2;
     [SerializeField] private Transform goalTransform_3;
     [SerializeField] private Transform goalTransform_4;
+
     private bool flag_1 = true;
     private bool flag_2 = true;
     private bool flag_3 = true;
@@ -22,11 +23,13 @@ public class PlayerAgent : Agent
     GameObject lastEnemy = null;
     private float lastPositionX = 0f;
     // private float lastPositionY = 0f;
-    // Vector2 lastPosition;
+    private Vector2 lastPosition;
     float distance_from_enemy = Mathf.Infinity;
     float maxD = 33.0f;
     private float nextActionTime = 0.0f;
     public float period = 100.0f;
+
+    RaycastHit2D hit;
 
     // private int speed = 5;
 
@@ -38,12 +41,30 @@ public class PlayerAgent : Agent
         // lastPositionY = transform.localPosition.y;
     }
         
-    void Update () {
+    private void Update()
+    {
         if (Time.time > nextActionTime)
         {
             nextActionTime += period;
             Debug.Log("Total Reward:    " + GetCumulativeReward());
         }
+
+    }
+
+    private void FixedUpdate()
+    {
+        hit=Physics2D.Raycast(transform.localPosition, Vector2.right);
+
+        //If the collider of the object hit is not NUll
+        if(hit.collider != null && hit.collider.tag == "Enemy")
+        {
+            //Hit something, print the tag of the object
+            Debug.Log("Enemy: " + hit.collider.name);
+        }
+
+        //Method to draw the ray in scene for debug purpose
+        Debug.DrawRay(transform.localPosition, Vector2.right, Color.red);
+        
     }
 
     public override void CollectObservations(VectorSensor sensor){
@@ -73,6 +94,7 @@ public class PlayerAgent : Agent
         {
             AddReward(-0.1f);
         }
+        
         // if(lastPositionX < transform.localPosition.x)
         // {
         //     Debug.Log("Moving on ...");
@@ -87,7 +109,7 @@ public class PlayerAgent : Agent
         if(actions.DiscreteActions[1] == 0)
         {
             _playerController.Fire();
-            AddReward(0.001f);
+            // AddReward(0.001f);
         }
     
         // if ((actions.DiscreteActions[1] - Random.Range(0f,1f)) > 0.9f)
@@ -138,15 +160,14 @@ public class PlayerAgent : Agent
             if (actualEnemy == lastEnemy)
             {
                 // Debug.Log("The closest enemy is the same!");
-                AddReward(-0.1f);
+                // AddReward(-0.1f);
             } else
             {
                 Debug.Log("Closest enemy: " + actualEnemy);
-                AddReward(5f);
+                // AddReward(5f);
                 lastEnemy = actualEnemy;
                 flag_enemy = SetFlag(flag_enemy);
             }
-            
         } else if (!DetectEnemy() && flag_enemy)
         {
             Debug.Log("No enemies around!");
@@ -163,7 +184,6 @@ public class PlayerAgent : Agent
         // }
         // if(actions.DiscreteActions[2] == 0)
         // {
-
         //     _playerController.Crouch();
         // }
 
@@ -178,10 +198,8 @@ public class PlayerAgent : Agent
     {
         if (collision.gameObject.CompareTag("Walkable"))
         {
-            if((transform.localPosition.y > (lastPosition.y + 0.2)) && (transform.localPosition.x >= lastPosition.x))
+            if((transform.localPosition.y > (lastPosition.y + 0.1)) && (transform.localPosition.x >= lastPosition.x))
             {
-                // lastPositionX = transform.localPosition.x;
-                // lastPositionY = transform.localPosition.y;
                 lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
                 Debug.Log("Reward for jumping");
                 AddReward(0.1f);
@@ -235,7 +253,7 @@ public class PlayerAgent : Agent
             distance_from_enemy = Mathf.Abs(transform.localPosition.x - enemy.transform.position.x);
             if (distance_from_enemy < maxD)
             {
-                Debug.Log("Distance from the enemy:" + distance_from_enemy);
+                // Debug.Log("Distance from the enemy:" + distance_from_enemy);
                 return true;
             }
         
