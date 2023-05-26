@@ -30,7 +30,7 @@ public class PlayerAgent : Agent
     public float period = 100.0f;
 
     RaycastHit2D hit;
-
+    [SerializeField] LayerMask _layerMask;
     // private int speed = 5;
 
     public override void OnEpisodeBegin()
@@ -53,17 +53,18 @@ public class PlayerAgent : Agent
 
     private void FixedUpdate()
     {
-        hit=Physics2D.Raycast(transform.localPosition, Vector2.right);
+        hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 35f, _layerMask);
 
         //If the collider of the object hit is not NUll
-        if(hit.collider != null && hit.collider.tag == "Enemy")
+        // if(hit.collider != null && hit.collider.tag == "Enemy")
+        if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
         {
             //Hit something, print the tag of the object
-            Debug.Log("Enemy: " + hit.collider.name);
+            Debug.Log("Collision with: " + hit.collider.name);
+            Debug.Log("Position: " + hit.collider.transform.position);
+            //Method to draw the ray in scene for debug purpose
+            Debug.DrawRay(transform.localPosition, transform.TransformDirection(Vector2.right)*35, Color.red);
         }
-
-        //Method to draw the ray in scene for debug purpose
-        Debug.DrawRay(transform.localPosition, Vector2.right, Color.red);
         
     }
 
