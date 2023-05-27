@@ -39,6 +39,8 @@ public class PlayerAgent : Agent
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
         // lastPositionY = transform.localPosition.y;
+
+        _layerMask = LayerMask.GetMask("Enemy", "Building", "Collectible");
     }
         
     private void Update()
@@ -50,11 +52,6 @@ public class PlayerAgent : Agent
             Debug.Log("Total Reward:    " + GetCumulativeReward());
         }
 
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 
     public override void CollectObservations(VectorSensor sensor){
@@ -118,43 +115,29 @@ public class PlayerAgent : Agent
 
         if(actions.DiscreteActions[1] == 0)
         {
-            _playerController.Fire();
-        }
-        if(actions.DiscreteActions[1] == 1 && flagGrenade)
-        {
-            _playerController.ThrowGranate();
-            flagGrenade = SetFlag(flagGrenade);
-        }
-
-
-        _layerMask = LayerMask.GetMask("Enemy", "Building", "Collectible");
-        hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 35f, _layerMask);
-
-        //If the collider of the object hit is not NUll
-        // if(hit.collider != null && hit.collider.tag == "Enemy")
-        if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
-        {
-            //Hit something, print the tag of the object
-            Debug.Log("Collision with: " + hit.collider.name);
-            // Debug.Log("Position: " + hit.collider.transform.position);
-            //Method to draw the ray in scene for debug purpose
+            hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 35f, _layerMask);
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*35f, Color.green);
-
-            // GameObject actualEnemy = hit.collider.gameObject;
-            // if (actualEnemy == lastEnemy)
-            // {
-            //     // Debug.Log("The closest enemy is the same!");
-            //     AddReward(-0.1f);
-            // } else
-            // {
-            //     AddReward(5f);
-            //     lastEnemy = actualEnemy;
-            // }
-        } else
-        {
-            Debug.Log("Collision with: " + hit.collider.tag);
-            AddReward(3f);
+            _playerController.Fire();
+            //If the collider of the object hit is not NUll
+            if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
+            {
+                //Hit something, print the tag of the object
+                Debug.Log("Collision with: " + hit.collider.name);
+                // Debug.Log("Position: " + hit.collider.transform.position);
+                //Method to draw the ray in scene for debug purpose
+                AddReward(1f);
+            } else
+            {
+                Debug.Log("Collision with: " + hit.collider.tag);
+                AddReward(-0.01f);
+            }
         }
+        // if(actions.DiscreteActions[1] == 1 && flagGrenade)
+        // {
+        //     _playerController.ThrowGranate();
+        //     flagGrenade = SetFlag(flagGrenade);
+        // }
+
     }
 
     public bool SetFlag(bool flag)
