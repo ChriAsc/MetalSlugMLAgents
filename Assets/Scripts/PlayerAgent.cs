@@ -31,7 +31,6 @@ public class PlayerAgent : Agent
 
     RaycastHit2D hit;
     LayerMask _layerMask;
-    // private int speed = 5;
 
     public override void OnEpisodeBegin()
     {
@@ -54,6 +53,11 @@ public class PlayerAgent : Agent
 
     }
 
+    public void registerReward(float rew){
+        AddReward(rew);
+    }
+
+
     public override void CollectObservations(VectorSensor sensor){
         sensor.AddObservation(transform.localPosition.x);
         sensor.AddObservation(transform.localPosition.y);
@@ -75,11 +79,11 @@ public class PlayerAgent : Agent
         if(moveH == 1 && (lastPositionX < transform.localPosition.x))
         {
             lastPositionX = transform.localPosition.x;
-            AddReward(1f);
+            //AddReward(1f);
         }
         if (moveH == -1)
         {
-            AddReward(-0.1f);
+            //AddReward(-0.1f);
         }
         
         if(jump == 1)
@@ -115,8 +119,9 @@ public class PlayerAgent : Agent
 
         if(actions.DiscreteActions[1] == 0)
         {
-            hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 35f, _layerMask);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*35f, Color.green);
+
+            hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.green);
             _playerController.Fire();
             //If the collider of the object hit is not NUll
             if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
@@ -126,10 +131,9 @@ public class PlayerAgent : Agent
                 // Debug.Log("Position: " + hit.collider.transform.position);
                 //Method to draw the ray in scene for debug purpose
                 AddReward(1f);
-            } else
-            {
-                Debug.Log("Collision with: " + hit.collider.tag);
-                AddReward(-0.01f);
+            }else if(hit.collider != null){
+                    Debug.Log("Collision with: " + hit.collider.tag);
+                    AddReward(-0.01f);
             }
         }
         // if(actions.DiscreteActions[1] == 1 && flagGrenade)
@@ -180,18 +184,18 @@ public class PlayerAgent : Agent
         if (collision.gameObject.CompareTag("Water Dead"))
         {
             AddReward(-1000f);
-            EndEpisode();
+            //EndEpisode();
         }
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        /*if (collision.gameObject.CompareTag("Enemy"))
         {
             AddReward(-10f);
         }
-
+*/
         if (_playerController.GetHealth() <= 0f)
         {
-            AddReward(-100);
-            EndEpisode();
+           // AddReward(-100);
+            //EndEpisode();
         }        
     }
 

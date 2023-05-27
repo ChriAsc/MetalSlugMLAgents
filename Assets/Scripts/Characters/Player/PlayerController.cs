@@ -65,6 +65,10 @@ public class PlayerController : MonoBehaviour
     public GameObject foreground;
     Cinemachine.CinemachineBrain cinemachineBrain;
 
+    [SerializeField] private PlayerAgent _playerAgent;
+    private MenuManager _menuManager;
+
+
     public enum CollectibleType
     {
         HeavyMachineGun,
@@ -82,6 +86,7 @@ public class PlayerController : MonoBehaviour
 
     private void registerHealth()
     {
+
         health = GetComponent<Health>();
         // register health delegate
         health.onDead += OnDead;
@@ -112,13 +117,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnDead(float damage) // health delegate onDead
     {
-        Died();
-        GameManager.PlayerDied();
-        AudioManager.PlayDeathAudio();
+        _playerAgent.registerReward(-100.0f);
+        //Died();
+        //GameManager.PlayerDied();
+
+
+        //_menuManager.startMission();
+        _playerAgent.EndEpisode();
+        Start();
+
+        //AudioManager.PlayDeathAudio();
     }
 
     private void OnHit(float damage) // health delegate onHit
     {
+        _playerAgent.registerReward(-20.0f);
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
     }
