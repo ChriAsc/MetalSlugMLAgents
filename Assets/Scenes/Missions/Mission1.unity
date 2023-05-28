@@ -1706,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2216365
+      value: 1.7091529
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
@@ -8158,12 +8158,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!4 &1764111852 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3053036849674727436, guid: 87975f218fa12d3448559109f6b6aa57,
-    type: 3}
-  m_PrefabInstance: {fileID: 1268712062893146695}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765037822
 GameObject:
   m_ObjectHideFlags: 0
@@ -10224,6 +10218,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4353407388265877699, guid: 10d84f9cfeae4f54d9078ef51e03d394,
+        type: 3}
+      propertyPath: immortal
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10d84f9cfeae4f54d9078ef51e03d394, type: 3}
 --- !u!1 &1765443407533320851 stripped
@@ -10244,7 +10243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55e088b19d11dd4a9ed2892063f42af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0.3
+  maxSpeed: 0.5
   maxJump: 4
   topAnimator: {fileID: 1069877685}
   bottom: {fileID: 1677233767}
@@ -10264,6 +10263,7 @@ MonoBehaviour:
   meleeDistance: 0.4
   damageMelee: 200
   foreground: {fileID: 1062245212}
+  _playerAgent: {fileID: 0}
 --- !u!114 &1765443407533320853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10281,10 +10281,6 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 500000
   _playerController: {fileID: 1765443407533320852}
-  goalTransform_1: {fileID: 744082459}
-  goalTransform_2: {fileID: 1841103425}
-  goalTransform_3: {fileID: 1930952384}
-  goalTransform_4: {fileID: 1764111852}
   period: 10
 --- !u!114 &1765443407533320854
 MonoBehaviour:
@@ -10299,7 +10295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 6
+    VectorObservationSize: 2
     NumStackedVectorObservations: 2
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -10331,6 +10327,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DecisionPeriod: 10
   TakeActionsBetweenDecisions: 1
+--- !u!114 &1765443407533320856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765443407533320851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67c7e722ba14acd9153bb4488bff6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags: []
+  m_RaysPerDirection: 6
+  m_MaxRayDegrees: 120
+  m_SphereCastRadius: 0
+  m_RayLength: 10
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 3856
+  m_ObservationStacks: 4
+  rayHitColor: {r: 0, g: 1, b: 0.20229316, a: 1}
+  rayMissColor: {r: 0.5188679, g: 0.51234126, b: 0.51234126, a: 1}
 --- !u!1001 &1870971871782869132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10584,7 +10604,7 @@ PrefabInstance:
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.320891
+      value: -12.833375
       objectReference: {fileID: 0}
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}

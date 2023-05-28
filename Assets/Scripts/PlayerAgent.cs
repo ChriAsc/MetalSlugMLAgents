@@ -9,22 +9,22 @@ using Random = UnityEngine.Random;
 public class PlayerAgent : Agent
 {
     [SerializeField] private PlayerController _playerController;
-    [SerializeField] private Transform goalTransform_1;
-    [SerializeField] private Transform goalTransform_2;
-    [SerializeField] private Transform goalTransform_3;
-    [SerializeField] private Transform goalTransform_4;
+    // [SerializeField] private Transform goalTransform_1;
+    // [SerializeField] private Transform goalTransform_2;
+    // [SerializeField] private Transform goalTransform_3;
+    // [SerializeField] private Transform goalTransform_4;
 
-    private bool flag_1 = true;
-    private bool flag_2 = true;
-    private bool flag_3 = true;
-    private bool flag_4 = true;
+    // private bool flag_1 = true;
+    // private bool flag_2 = false;
+    // private bool flag_3 = false;
+    // private bool flag_4 = false;
 
     GameObject lastEnemy = null;
     private float lastPositionX = 0f;
     // private float lastPositionY = 0f;
     private Vector2 lastPosition;
-    float distance_from_enemy = Mathf.Infinity;
-    float maxD = 33.0f;
+    // float distance_from_enemy = Mathf.Infinity;
+    // float maxD = 33.0f;
     private float nextActionTime = 0.0f;
     public float period = 100.0f;
     private bool flagGrenade = false;
@@ -47,8 +47,9 @@ public class PlayerAgent : Agent
         if (Time.time > nextActionTime)
         {
             nextActionTime += period;
-            flagGrenade = SetFlag(flagGrenade);
+            // flagGrenade = SetFlag(flagGrenade);
             Debug.Log("Total Reward:    " + GetCumulativeReward());
+        
         }
 
     }
@@ -61,10 +62,10 @@ public class PlayerAgent : Agent
     public override void CollectObservations(VectorSensor sensor){
         sensor.AddObservation(transform.localPosition.x);
         sensor.AddObservation(transform.localPosition.y);
-        sensor.AddObservation(goalTransform_1.localPosition.x);  // goal x reference
-        sensor.AddObservation(goalTransform_2.localPosition.x);  // goal x reference
-        sensor.AddObservation(goalTransform_3.localPosition.x);  // goal y reference
-        sensor.AddObservation(goalTransform_4.localPosition.x);  // goal y reference
+        // sensor.AddObservation(goalTransform_1.localPosition.x);  // goal x reference
+        // sensor.AddObservation(goalTransform_2.localPosition.x);  // goal x reference
+        // sensor.AddObservation(goalTransform_3.localPosition.x);  // goal y reference
+        // sensor.AddObservation(goalTransform_4.localPosition.x);  // goal y reference
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
@@ -79,11 +80,11 @@ public class PlayerAgent : Agent
         if(moveH == 1 && (lastPositionX < transform.localPosition.x))
         {
             lastPositionX = transform.localPosition.x;
-            //AddReward(1f);
+            // AddReward(0.1f);
         }
         if (moveH == -1)
         {
-            //AddReward(-0.1f);
+            // AddReward(-0.1f);
         }
         
         if(jump == 1)
@@ -92,49 +93,50 @@ public class PlayerAgent : Agent
             _playerController.Jump();
         }
 
-        if(transform.localPosition.x == goalTransform_1.position.x && flag_1 == true)
-        {
-            Debug.Log("First cartel!");
-            AddReward(5f);
-            flag_1 = SetFlag(flag_1);
-        }
-        if(transform.localPosition.x == goalTransform_2.position.x && flag_2 == true)
-        {
-            Debug.Log("Second cartel!");
-            AddReward(10f);
-            flag_2 = SetFlag(flag_2);
-        }
-        if(transform.localPosition.x == goalTransform_3.position.x && flag_3 == true)
-        {
-            Debug.Log("Boat!");
-            AddReward(15f);
-            flag_3 = SetFlag(flag_3);
-        }
-        if(transform.localPosition.x == goalTransform_4.position.x && flag_4 == true)
-        {
-            Debug.Log("Bridge!");
-            AddReward(15f);
-            flag_4 = SetFlag(flag_4);
-        }
+        // if(transform.localPosition.x == goalTransform_1.position.x && flag_1 == true)
+        // {
+        //     Debug.Log("First cartel!");
+        //     AddReward(5f);
+        //     flag_1 = SetFlag(flag_1);
+        // }
+        // if(transform.localPosition.x == goalTransform_2.position.x && flag_2 == true)
+        // {
+        //     Debug.Log("Second cartel!");
+        //     AddReward(10f);
+        //     flag_2 = SetFlag(flag_2);
+        // }
+        // if(transform.localPosition.x == goalTransform_3.position.x && flag_3 == true)
+        // {
+        //     Debug.Log("Boat!");
+        //     AddReward(15f);
+        //     flag_3 = SetFlag(flag_3);
+        // }
+        // if(transform.localPosition.x == goalTransform_4.localPosition.x && flag_4 == true)
+        // {
+        //     Debug.Log("Fish!");
+        //     AddReward(15f);
+        //     flag_4 = SetFlag(flag_4);
+        // }
 
         if(actions.DiscreteActions[1] == 0)
         {
 
-            hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.green);
+            // hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
+            // Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.green);
+            
             _playerController.Fire();
             //If the collider of the object hit is not NUll
-            if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
-            {
-                //Hit something, print the tag of the object
-                Debug.Log("Collision with: " + hit.collider.name);
-                // Debug.Log("Position: " + hit.collider.transform.position);
-                //Method to draw the ray in scene for debug purpose
-                AddReward(1f);
-            }else if(hit.collider != null){
-                    Debug.Log("Collision with: " + hit.collider.tag);
-                    AddReward(-0.01f);
-            }
+            // if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
+            // {
+            //     //Hit something, print the tag of the object
+            //     Debug.Log("Collision with: " + hit.collider.name);
+            //     // Debug.Log("Position: " + hit.collider.transform.position);
+            //     //Method to draw the ray in scene for debug purpose
+            //     AddReward(1f);
+            // }else if(hit.collider != null){
+            //         Debug.Log("Collision with: " + hit.collider.tag);
+            //         AddReward(-0.01f);
+            // }
         }
         // if(actions.DiscreteActions[1] == 1 && flagGrenade)
         // {

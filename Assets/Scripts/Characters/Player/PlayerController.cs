@@ -117,23 +117,23 @@ public class PlayerController : MonoBehaviour
 
     private void OnDead(float damage) // health delegate onDead
     {
-        _playerAgent.registerReward(-100.0f);
-        //Died();
-        //GameManager.PlayerDied();
+        Died();
+        GameManager.PlayerDied();
+        // _playerAgent.registerReward(-100.0f);
 
 
         //_menuManager.startMission();
         _playerAgent.EndEpisode();
-        Start();
+        // Start();
 
         //AudioManager.PlayDeathAudio();
     }
 
     private void OnHit(float damage) // health delegate onHit
     {
-        _playerAgent.registerReward(-20.0f);
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
+        // _playerAgent.registerReward(-20.0f);
     }
 
     public void Died()
@@ -236,6 +236,7 @@ public class PlayerController : MonoBehaviour
                         topAnimator.SetBool("isThrowingGranate", true);
                     }
                    /*end*/
+                   _playerAgent.registerReward(5.0f);
 
                     if (shotTime > nextFire)
                     {
