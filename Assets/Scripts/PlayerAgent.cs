@@ -80,11 +80,11 @@ public class PlayerAgent : Agent
         if(moveH == 1 && (lastPositionX < transform.localPosition.x))
         {
             lastPositionX = transform.localPosition.x;
-            // AddReward(0.1f);
+            AddReward(0.1f);
         }
         if (moveH == -1)
         {
-            // AddReward(-0.1f);
+            AddReward(-0.1f);
         }
         
         if(jump == 1)

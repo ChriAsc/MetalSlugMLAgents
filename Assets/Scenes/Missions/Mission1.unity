@@ -1706,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7091529
+      value: 1.7069197
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
@@ -10243,7 +10243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55e088b19d11dd4a9ed2892063f42af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0.5
+  maxSpeed: 0.3
   maxJump: 4
   topAnimator: {fileID: 1069877685}
   bottom: {fileID: 1677233767}
@@ -10281,7 +10281,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 500000
   _playerController: {fileID: 1765443407533320852}
-  period: 10
+  period: 1
 --- !u!114 &1765443407533320854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10340,9 +10340,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SensorName: RayPerceptionSensor
-  m_DetectableTags: []
+  m_DetectableTags:
+  - Enemy
+  - Building
   m_RaysPerDirection: 6
-  m_MaxRayDegrees: 120
+  m_MaxRayDegrees: 130
   m_SphereCastRadius: 0
   m_RayLength: 10
   m_RayLayerMask:
@@ -10604,7 +10606,7 @@ PrefabInstance:
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.833375
+      value: -12.8356085
       objectReference: {fileID: 0}
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
