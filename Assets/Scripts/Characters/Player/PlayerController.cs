@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
-    public float maxSpeed = 0.3f;
+    public float maxSpeed = 0.4f;
     public float maxJump = 4f;
     private bool isGrounded = false;
 
@@ -117,9 +117,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnDead(float damage) // health delegate onDead
     {
-        _playerAgent.registerReward(-100.0f);
+        // _playerAgent.registerReward(-100.0f);
         //_menuManager.startMission();
-        _playerAgent.EndEpisode();
+        // _playerAgent.EndEpisode();
         Died();
         GameManager.PlayerDied();
 

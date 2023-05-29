@@ -22,12 +22,13 @@ public class PlayerAgent : Agent
     // GameObject lastEnemy = null;
 
     private int countEnemy;
-    private float lastPositionX = 0f;
+    private float lastPositionX;
     // private float lastPositionY = 0f;
     private Vector2 lastPosition;
+    float maxD = 1f;
     // float distance_from_enemy = Mathf.Infinity;
     private float nextActionTime = 0.0f;
-    private float period = 100.0f;
+    private float period = 50.0f;
     // private bool flagGrenade = false;
 
     // RaycastHit2D hit;
@@ -36,6 +37,7 @@ public class PlayerAgent : Agent
     public override void OnEpisodeBegin()
     {
         countEnemy = checkEnemy();
+        lastPositionX = transform.localPosition.x;
         transform.localPosition = new Vector3(-27.53f,1.54f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
@@ -46,6 +48,13 @@ public class PlayerAgent : Agent
         
     private void Update()
     {
+        if(transform.position.x == goalTransform_1.position.x && flag_1 == true)
+        {
+            Debug.Log("First cartel!");
+            AddReward(5f);
+            flag_1 = SetFlag(flag_1);
+        }
+
         if (Time.time > nextActionTime)
         {
             nextActionTime += period;
@@ -53,26 +62,16 @@ public class PlayerAgent : Agent
             Debug.Log("Total Reward:    " + GetCumulativeReward());
         
         }
+
+        if (_playerController.GetHealth() <= 0f)
+        {
+           AddReward(-100f);
+           EndEpisode();
+        }      
     }
 
     private void FixedUpdate()
     {
-        if(transform.localPosition.x == goalTransform_1.position.x && flag_1 == true)
-        {
-            Debug.Log("First cartel!");
-            AddReward(5f);
-            flag_1 = SetFlag(flag_1);
-        }
-
-        if(lastPositionX < transform.localPosition.x)
-        {
-            lastPositionX = transform.localPosition.x;
-            AddReward(0.01f);
-        }
-        if (lastPositionX > transform.localPosition.x)
-        {
-            AddReward(-0.1f);
-        }
 
         int actualCount = checkEnemy();
         if (actualCount != countEnemy)
@@ -84,6 +83,22 @@ public class PlayerAgent : Agent
         {
             AddReward(-0.01f);
         }
+
+        if(lastPositionX < transform.localPosition.x)
+        {
+            lastPositionX = transform.localPosition.x;
+            AddReward(10f);
+        }
+        if(lastPosition.x > transform.localPosition.x)
+        {
+            AddReward(-10f);
+            lastPosition.x = transform.localPosition.x;
+        }
+
+        if(checkBoat())
+        {
+            _playerController.ThrowGranate();
+        }
     }
 
     public int checkEnemy()
@@ -93,6 +108,22 @@ public class PlayerAgent : Agent
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         count = enemies.Length;
         return count;
+    }
+
+    public bool checkBoat()
+    {
+        GameObject[] enemies;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        float position = transform.localPosition.x;
+        foreach (GameObject enemy in enemies)
+        {
+            if(enemy.name == "EnemyBoat")
+            {
+                if (Mathf.Abs(enemy.transform.position.x - transform.localPosition.x)< maxD)
+                return true;
+            }
+        }
+        return false;
     }
 
     public void registerReward(float rew){
@@ -190,14 +221,14 @@ public class PlayerAgent : Agent
     {
         if (collision.gameObject.CompareTag("Walkable"))
         {
-            if((transform.localPosition.y > (lastPosition.y + 0.1)) && (transform.localPosition.x >= lastPosition.x))
+            if((transform.localPosition.y > (lastPosition.y + 0.1)))
             {
                 lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
                 Debug.Log("Reward for jumping");
-                AddReward(0.1f);
+                AddReward(10f);
             } else
             {
-                AddReward(-0.001f);
+                AddReward(-0.0001f);
             }
         }
         if (collision.gameObject.CompareTag("Bullet"))
@@ -215,7 +246,7 @@ public class PlayerAgent : Agent
         if (collision.gameObject.CompareTag("Marco Boat"))
         {
             // Debug.Log("Marco Boat!");
-            AddReward(5f);
+            AddReward(30f);
         }
 
         if (collision.gameObject.CompareTag("Water Dead"))
@@ -224,16 +255,11 @@ public class PlayerAgent : Agent
             //EndEpisode();
         }
 
-        // if (collision.gameObject.CompareTag("Enemy"))
-        // {
-        //     AddReward(-10f);
-        // }
-
-        // if (_playerController.GetHealth() <= 0f)
-        // {
-        //    AddReward(-100);
-        //    EndEpisode();
-        // }        
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            AddReward(-30f);
+        }
+ 
     }
 
     // public bool DetectEnemy()
