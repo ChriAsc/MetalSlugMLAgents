@@ -1706,7 +1706,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7271419
+      value: 0.78926086
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
@@ -10347,10 +10347,10 @@ MonoBehaviour:
   - Water Dead
   - Collectible
   - Bullet
-  m_RaysPerDirection: 10
-  m_MaxRayDegrees: 130
+  m_RaysPerDirection: 8
+  m_MaxRayDegrees: 180
   m_SphereCastRadius: 0
-  m_RayLength: 10
+  m_RayLength: 3.5
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 3856
@@ -10610,7 +10610,7 @@ PrefabInstance:
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.328476
+      value: -14.266356
       objectReference: {fileID: 0}
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}

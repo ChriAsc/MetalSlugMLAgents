@@ -6,15 +6,13 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using Random = UnityEngine.Random;
 
-public class PlayerAgent : Agent
+public class PlayerAgent2 : Agent
 {
     [SerializeField] private PlayerController _playerController;
-    [SerializeField] private Transform goalTransform_1;
     // [SerializeField] private Transform goalTransform_2;
     // [SerializeField] private Transform goalTransform_3;
     // [SerializeField] private Transform goalTransform_4;
 
-    private bool flag_1 = true;
     // private bool flag_2 = true;
     // private bool flag_3 = true;
     // private bool flag_4 = true;
@@ -37,7 +35,7 @@ public class PlayerAgent : Agent
     {
         
         countEnemy = checkEnemy();
-        transform.localPosition = new Vector3(-27.53f,1.54f,0f);
+        transform.localPosition = new Vector3(-8.61f,0.13f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
 
@@ -58,17 +56,12 @@ public class PlayerAgent : Agent
 
     private void FixedUpdate()
     {
-        if(transform.localPosition.x == goalTransform_1.position.x && flag_1 == true)
-        {
-            Debug.Log("First cartel!");
-            AddReward(5f);
-            flag_1 = SetFlag(flag_1);
-        }
+
 
         if(lastPositionX < transform.localPosition.x)
         {
             lastPositionX = transform.localPosition.x;
-            AddReward(0.01f);
+            AddReward(10f);
         }
         if (lastPositionX > transform.localPosition.x)
         {
@@ -103,7 +96,6 @@ public class PlayerAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor){
         sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(goalTransform_1.localPosition.x);  // goal x reference
         // sensor.AddObservation(goalTransform_2.localPosition.x);  // goal x reference
         // sensor.AddObservation(goalTransform_3.localPosition.x);  // goal y reference
         // sensor.AddObservation(goalTransform_4.localPosition.x);  // goal y reference

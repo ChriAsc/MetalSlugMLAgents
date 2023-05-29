@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDead(float damage) // health delegate onDead
     {
-        _playerAgent.registerReward(-100.0f);
+        //_playerAgent.registerReward(-100.0f);
         //_menuManager.startMission();
         _playerAgent.EndEpisode();
         Died();
