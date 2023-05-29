@@ -9,37 +9,39 @@ using Random = UnityEngine.Random;
 public class PlayerAgent : Agent
 {
     [SerializeField] private PlayerController _playerController;
-    // [SerializeField] private Transform goalTransform_1;
+    [SerializeField] private Transform goalTransform_1;
     // [SerializeField] private Transform goalTransform_2;
     // [SerializeField] private Transform goalTransform_3;
     // [SerializeField] private Transform goalTransform_4;
 
-    // private bool flag_1 = true;
-    // private bool flag_2 = false;
-    // private bool flag_3 = false;
-    // private bool flag_4 = false;
+    private bool flag_1 = true;
+    // private bool flag_2 = true;
+    // private bool flag_3 = true;
+    // private bool flag_4 = true;
 
-    GameObject lastEnemy = null;
+    // GameObject lastEnemy = null;
+
+    private int countEnemy;
     private float lastPositionX = 0f;
     // private float lastPositionY = 0f;
     private Vector2 lastPosition;
     // float distance_from_enemy = Mathf.Infinity;
-    // float maxD = 33.0f;
     private float nextActionTime = 0.0f;
-    public float period = 100.0f;
-    private bool flagGrenade = false;
+    private float period = 100.0f;
+    // private bool flagGrenade = false;
 
-    RaycastHit2D hit;
-    LayerMask _layerMask;
+    // RaycastHit2D hit;
+    // LayerMask _layerMask;
 
     public override void OnEpisodeBegin()
     {
+        countEnemy = checkEnemy();
         transform.localPosition = new Vector3(-27.53f,1.54f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
-        // lastPositionY = transform.localPosition.y;
 
-        _layerMask = LayerMask.GetMask("Enemy", "Building", "Collectible");
+        // lastPositionY = transform.localPosition.y;
+        // _layerMask = LayerMask.GetMask("Enemy", "Building", "Collectible");
     }
         
     private void Update()
@@ -51,7 +53,46 @@ public class PlayerAgent : Agent
             Debug.Log("Total Reward:    " + GetCumulativeReward());
         
         }
+    }
 
+    private void FixedUpdate()
+    {
+        if(transform.localPosition.x == goalTransform_1.position.x && flag_1 == true)
+        {
+            Debug.Log("First cartel!");
+            AddReward(5f);
+            flag_1 = SetFlag(flag_1);
+        }
+
+        if(lastPositionX < transform.localPosition.x)
+        {
+            lastPositionX = transform.localPosition.x;
+            AddReward(0.01f);
+        }
+        if (lastPositionX > transform.localPosition.x)
+        {
+            AddReward(-0.1f);
+        }
+
+        int actualCount = checkEnemy();
+        if (actualCount != countEnemy)
+        {
+            Debug.Log("Someone was killed!");
+            AddReward(10f);
+            countEnemy = actualCount;
+        } else
+        {
+            AddReward(-0.01f);
+        }
+    }
+
+    public int checkEnemy()
+    {
+        GameObject[] enemies;
+        int count;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        count = enemies.Length;
+        return count;
     }
 
     public void registerReward(float rew){
@@ -60,9 +101,8 @@ public class PlayerAgent : Agent
 
 
     public override void CollectObservations(VectorSensor sensor){
-        sensor.AddObservation(transform.localPosition.x);
-        sensor.AddObservation(transform.localPosition.y);
-        // sensor.AddObservation(goalTransform_1.localPosition.x);  // goal x reference
+        sensor.AddObservation(transform.localPosition);
+        sensor.AddObservation(goalTransform_1.localPosition.x);  // goal x reference
         // sensor.AddObservation(goalTransform_2.localPosition.x);  // goal x reference
         // sensor.AddObservation(goalTransform_3.localPosition.x);  // goal y reference
         // sensor.AddObservation(goalTransform_4.localPosition.x);  // goal y reference
@@ -77,15 +117,15 @@ public class PlayerAgent : Agent
 
         _playerController.MoveHorizontally(moveH);
 
-        if(moveH == 1 && (lastPositionX < transform.localPosition.x))
-        {
-            lastPositionX = transform.localPosition.x;
-            AddReward(0.1f);
-        }
-        if (moveH == -1)
-        {
-            AddReward(-0.1f);
-        }
+        // if(moveH == 1 && (lastPositionX < transform.localPosition.x))
+        // {
+        //     lastPositionX = transform.localPosition.x;
+        //     AddReward(0.1f);
+        // }
+        // if (lastPositionX > transform.localPosition.x)
+        // {
+        //     AddReward(-1f);
+        // }
         
         if(jump == 1)
         {
@@ -93,12 +133,6 @@ public class PlayerAgent : Agent
             _playerController.Jump();
         }
 
-        // if(transform.localPosition.x == goalTransform_1.position.x && flag_1 == true)
-        // {
-        //     Debug.Log("First cartel!");
-        //     AddReward(5f);
-        //     flag_1 = SetFlag(flag_1);
-        // }
         // if(transform.localPosition.x == goalTransform_2.position.x && flag_2 == true)
         // {
         //     Debug.Log("Second cartel!");
@@ -125,6 +159,7 @@ public class PlayerAgent : Agent
             // Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.green);
             
             _playerController.Fire();
+
             //If the collider of the object hit is not NUll
             // if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
             // {
@@ -189,18 +224,17 @@ public class PlayerAgent : Agent
             //EndEpisode();
         }
 
-        /*if (collision.gameObject.CompareTag("Enemy"))
-        {
-            AddReward(-10f);
-        }
-*/
-        if (_playerController.GetHealth() <= 0f)
-        {
-           // AddReward(-100);
-            //EndEpisode();
-        }        
-    }
+        // if (collision.gameObject.CompareTag("Enemy"))
+        // {
+        //     AddReward(-10f);
+        // }
 
+        // if (_playerController.GetHealth() <= 0f)
+        // {
+        //    AddReward(-100);
+        //    EndEpisode();
+        // }        
+    }
 
     // public bool DetectEnemy()
     // {
@@ -236,8 +270,7 @@ public class PlayerAgent : Agent
     //     }
     //     return closest;
     // }
-
-
+    
     // public override void Heuristic(in ActionBuffers actionsOut)
     // {
     //     ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
