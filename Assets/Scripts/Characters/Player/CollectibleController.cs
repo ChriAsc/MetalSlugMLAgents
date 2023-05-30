@@ -26,10 +26,10 @@ public class CollectibleController : MonoBehaviour
             {
                 AudioManager.PlayMedKitGrab();
             }
-            else if (type == PlayerController.CollectibleType.Checkpoint)
-            {
-                // Debug.Log("checkpoint!");
-            }
+            // else if (type == PlayerController.CollectibleType.Checkpoint)
+            // {
+            //     Debug.Log("checkpoint!");
+            // }
             Destroy(gameObject);
         }
     }

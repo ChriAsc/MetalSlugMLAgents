@@ -721,6 +721,8 @@ public class PlayerController : MonoBehaviour
                     UIManager.UpdateAmmoUI();
                 }
                 break;
+            case CollectibleType.Checkpoint:
+                break;
             default:
                 Debug.Log("Collectible not found");
                 break;

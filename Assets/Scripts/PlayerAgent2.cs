@@ -103,12 +103,20 @@ public class PlayerAgent2 : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         // float moveH = actions.ContinuousActions[0];
-        // float moveV = actions.ContinuousActions[1];
+        float moveV = actions.ContinuousActions[0];
         
         int moveH = actions.DiscreteActions[0] - 1;
+        // int moveV = actions.DiscreteActions[3];
         int jump = actions.DiscreteActions[2];
 
         _playerController.MoveHorizontally(moveH);
+        if(moveV > 0)
+        {
+        _playerController.MoveVertically(1);
+        } else
+        {
+            _playerController.MoveVertically(0);
+        }
 
         // if(moveH == 1 && (lastPositionX < transform.localPosition.x))
         // {
@@ -197,6 +205,12 @@ public class PlayerAgent2 : Agent
         {
             Debug.Log("Hit!");
             AddReward(-1f);
+        }
+
+        if (collision.gameObject.CompareTag("Granate"))
+        {
+            Debug.Log("Hit!");
+            AddReward(-50f);
         }
 
         if (collision.gameObject.CompareTag("Collectible"))
