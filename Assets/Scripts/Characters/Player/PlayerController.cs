@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         HeavyMachineGun,
         Ammo,
         MedKit,
+        Checkpoint
     };
 
     public void Start()

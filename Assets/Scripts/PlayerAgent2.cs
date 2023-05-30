@@ -58,15 +58,15 @@ public class PlayerAgent2 : Agent
     {
 
 
-        if(lastPositionX < transform.localPosition.x)
-        {
-            lastPositionX = transform.localPosition.x;
-            AddReward(10f);
-        }
-        if (lastPositionX > transform.localPosition.x)
-        {
-            AddReward(-0.1f);
-        }
+        // if(lastPositionX < transform.localPosition.x)
+        // {
+        //     lastPositionX = transform.localPosition.x;
+        //     AddReward(10f);
+        // }
+        // if (lastPositionX > transform.localPosition.x)
+        // {
+        //     AddReward(-0.1f);
+        // }
 
         int actualCount = checkEnemy();
         if (actualCount != countEnemy)
@@ -202,7 +202,7 @@ public class PlayerAgent2 : Agent
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Debug.Log("Collectible!");
-            AddReward(3f);
+            AddReward(5f);
         }
 
         if (collision.gameObject.CompareTag("Marco Boat"))
@@ -214,6 +214,12 @@ public class PlayerAgent2 : Agent
         if (collision.gameObject.CompareTag("Water Dead"))
         {
             AddReward(-1000f);
+            //EndEpisode();
+        }
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            Debug.Log("Checkpoint!");
+            AddReward(10f);
             //EndEpisode();
         }
 
