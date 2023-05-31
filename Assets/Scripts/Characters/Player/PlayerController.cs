@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     public GameObject foreground;
     Cinemachine.CinemachineBrain cinemachineBrain;
 
-    [SerializeField] private PlayerAgent _playerAgent;
+    private PlayerAgent2 _playerAgent2;
     private MenuManager _menuManager;
 
 
@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
 
     public void Start()
     {
+        _playerAgent2 = GetComponent<PlayerAgent2>();
         rb = GetComponent<Rigidbody2D>();
         bottomAnimator = bottom.GetComponent<Animator>();
         cinemachineBrain = Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
@@ -121,9 +122,9 @@ public class PlayerController : MonoBehaviour
         // _playerAgent.registerReward(-100.0f);
         //_menuManager.startMission();
         // _playerAgent.EndEpisode();
+        _playerAgent2.registerReward(-100.0f);
         Died();
         GameManager.PlayerDied();
-
         //AudioManager.PlayDeathAudio();
     }
 
@@ -131,7 +132,7 @@ public class PlayerController : MonoBehaviour
     {
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
-        // _playerAgent.registerReward(-20.0f);
+        _playerAgent2.registerReward(-20.0f);
     }
 
     public void Died()
@@ -234,7 +235,7 @@ public class PlayerController : MonoBehaviour
                         topAnimator.SetBool("isThrowingGranate", true);
                     }
                    /*end*/
-                   _playerAgent.registerReward(5.0f);
+                //    _playerAgent2.registerReward(5.0f);
 
                     if (shotTime > nextFire)
                     {

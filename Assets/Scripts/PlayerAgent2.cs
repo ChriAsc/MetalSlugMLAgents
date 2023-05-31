@@ -90,7 +90,9 @@ public class PlayerAgent2 : Agent
     }
 
     public void registerReward(float rew){
+        Debug.Log("Total Reward before:    " + GetCumulativeReward());
         AddReward(rew);
+        Debug.Log("Total Reward after:    " + GetCumulativeReward());
     }
 
 
@@ -110,7 +112,7 @@ public class PlayerAgent2 : Agent
         int jump = actions.DiscreteActions[2];
 
         _playerController.MoveHorizontally(moveH);
-        if(moveV > 0)
+        if(moveV > 0.3)
         {
         _playerController.MoveVertically(1);
         } else
@@ -189,29 +191,29 @@ public class PlayerAgent2 : Agent
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Walkable"))
-        {
-            if((transform.localPosition.y > (lastPosition.y + 0.1)) && (transform.localPosition.x >= lastPosition.x))
-            {
-                lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
-                Debug.Log("Reward for jumping");
-                AddReward(0.1f);
-            } else
-            {
-                AddReward(-0.001f);
-            }
-        }
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            Debug.Log("Hit!");
-            AddReward(-1f);
-        }
+        // if (collision.gameObject.CompareTag("Walkable"))
+        // {
+        //     if((transform.localPosition.y > (lastPosition.y + 0.1)) && (transform.localPosition.x >= lastPosition.x))
+        //     {
+        //         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
+        //         Debug.Log("Reward for jumping");
+        //         AddReward(0.1f);
+        //     } else
+        //     {
+        //         AddReward(-0.001f);
+        //     }
+        // }
+        // if (collision.gameObject.CompareTag("Bullet"))
+        // {
+        //     Debug.Log("Hit!");
+        //     AddReward(-1f);
+        // }
 
-        if (collision.gameObject.CompareTag("Granate"))
-        {
-            Debug.Log("Hit!");
-            AddReward(-50f);
-        }
+        // if (collision.gameObject.CompareTag("Granate"))
+        // {
+        //     Debug.Log("Hit!");
+        //     AddReward(-50f);
+        // }
 
         if (collision.gameObject.CompareTag("Collectible"))
         {
@@ -219,17 +221,17 @@ public class PlayerAgent2 : Agent
             AddReward(5f);
         }
 
-        if (collision.gameObject.CompareTag("Marco Boat"))
-        {
-            // Debug.Log("Marco Boat!");
-            AddReward(5f);
-        }
+        // if (collision.gameObject.CompareTag("Marco Boat"))
+        // {
+        //     Debug.Log("Marco Boat!");
+        //     AddReward(5f);
+        // }
 
-        if (collision.gameObject.CompareTag("Water Dead"))
-        {
-            AddReward(-1000f);
-            //EndEpisode();
-        }
+        // if (collision.gameObject.CompareTag("Water Dead"))
+        // {
+        //     AddReward(-1000f);
+        //     EndEpisode();
+        // }
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             Debug.Log("Checkpoint!");
