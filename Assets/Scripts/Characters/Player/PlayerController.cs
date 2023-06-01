@@ -146,12 +146,14 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(WaitCrouch());
     }
 
-    public void Fire()
+    public void Fire(int fire)
     {
         shotTime = shotTime + Time.deltaTime;
 
         // if (MobileManager.GetButtonFire1())
-        // {
+        if (fire == 1)
+        {
+            
             if (!wasFiring)
             {
                
@@ -209,15 +211,15 @@ public class PlayerController : MonoBehaviour
 
                 wasFiring = false;
             }
-        // }
-        // else
-        // {
-        //     bottomAnimator.SetBool("isMeleeRange", false);
-        //     topAnimator.SetBool("isMeleeRange", false);
-        //     topAnimator.SetBool("isFiring", false);
-        //     bottomAnimator.SetBool("isFiring", false);
-        //     wasFiring = false;
-        // }
+        }
+        else
+        {
+            bottomAnimator.SetBool("isMeleeRange", false);
+            topAnimator.SetBool("isMeleeRange", false);
+            topAnimator.SetBool("isFiring", false);
+            bottomAnimator.SetBool("isFiring", false);
+            wasFiring = false;
+        }
     }
 
     public void ThrowGranate()

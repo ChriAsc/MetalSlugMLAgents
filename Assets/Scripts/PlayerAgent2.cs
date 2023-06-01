@@ -116,48 +116,48 @@ public class PlayerAgent2 : Agent
             _playerController.Jump();
         }
 
-        if(actions.DiscreteActions[1] == 0)
+        if(actions.DiscreteActions[1] == 1)
         {
-            _playerController.Fire();
+            _playerController.Fire(1);
             
             if(_playerController.GetFacing() == true)
             {
-                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 4f, _layerMask);
                 //If the collider of the object hit is not NUll
                 if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
                 {
                     //Hit something, print the tag of the object
                     Debug.Log("Collision with: " + hit.collider.name);
                     //Method to draw the ray in scene for debug purpose
-                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.white);
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*4f, Color.white);
                 
                     AddReward(5f);
                 }
             }
             else if (_playerController.GetFacing() == false)
             {
-                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 3.5f, _layerMask);
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 4f, _layerMask);
                 //If the collider of the object hit is not NUll
                 if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
                 {
                     //Hit something, print the tag of the object
                     Debug.Log("Collision with: " + hit.collider.name);
                     //Method to draw the ray in scene for debug purpose
-                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left)*3.5f, Color.cyan);
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left)*4f, Color.cyan);
                 
                     AddReward(5f);
                 }
             }
             else if (moveV > 0.3)
             {
-                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 3.5f, _layerMask);
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 4f, _layerMask);
                 //If the collider of the object hit is not NUll
                 if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
                 {
                     //Hit something, print the tag of the object
                     Debug.Log("Collision with: " + hit.collider.name);
                     //Method to draw the ray in scene for debug purpose
-                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.up)*3.5f, Color.yellow);
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.up)*4f, Color.yellow);
                 
                     AddReward(5f);
                 }
@@ -167,6 +167,10 @@ public class PlayerAgent2 : Agent
             //         Debug.Log("Collision with: " + hit.collider.tag);
             //         AddReward(-0.01f);
             // }
+        }
+        else if (actions.DiscreteActions[1] == 0)
+        {
+            _playerController.Fire(0);
         }
         // if(actions.DiscreteActions[1] == 1 && flagGrenade)
         // {
