@@ -100,6 +100,11 @@ public class PlayerController : MonoBehaviour
         return this.health.GetHealth();
     }
 
+    public bool GetFacing()
+    {
+        return this.facingRight;
+    }
+
     public void Update()
     {
         //Block the player from moving if it's death
