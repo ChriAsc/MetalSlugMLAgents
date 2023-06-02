@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
         // _playerAgent.registerReward(-100.0f);
         //_menuManager.startMission();
         // _playerAgent.EndEpisode();
-        _playerAgent2.registerReward(-100.0f);
+        _playerAgent2.registerReward(-1000.0f);
         Died();
         GameManager.PlayerDied();
         //AudioManager.PlayDeathAudio();
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
     {
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
-        _playerAgent2.registerReward(-20.0f);
+        _playerAgent2.registerReward(-25.0f);
     }
 
     public void Died()
