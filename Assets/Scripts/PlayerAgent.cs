@@ -190,7 +190,7 @@ public class PlayerAgent : Agent
             // hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
             // Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.green);
             
-            _playerController.Fire();
+            _playerController.Fire(0);
 
             //If the collider of the object hit is not NUll
             // if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")

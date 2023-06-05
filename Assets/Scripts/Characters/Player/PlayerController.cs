@@ -101,6 +101,11 @@ public class PlayerController : MonoBehaviour
         return this.health.GetHealth();
     }
 
+    public bool GetFacing()
+    {
+        return this.facingRight;
+    }
+
     public void Update()
     {
         //Block the player from moving if it's death
@@ -139,7 +144,7 @@ public class PlayerController : MonoBehaviour
     {
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
-        _playerAgent2.registerReward(-20.0f);
+        _playerAgent2.registerReward(-25.0f);
     }
 
     public void Died()
@@ -148,12 +153,14 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(WaitCrouch());
     }
 
-    public void Fire()
+    public void Fire(int fire)
     {
         shotTime = shotTime + Time.deltaTime;
 
         // if (MobileManager.GetButtonFire1())
-        // {
+        if (fire == 1)
+        {
+            
             if (!wasFiring)
             {
                
@@ -211,15 +218,15 @@ public class PlayerController : MonoBehaviour
 
                 wasFiring = false;
             }
-        // }
-        // else
-        // {
-        //     bottomAnimator.SetBool("isMeleeRange", false);
-        //     topAnimator.SetBool("isMeleeRange", false);
-        //     topAnimator.SetBool("isFiring", false);
-        //     bottomAnimator.SetBool("isFiring", false);
-        //     wasFiring = false;
-        // }
+        }
+        else
+        {
+            bottomAnimator.SetBool("isMeleeRange", false);
+            topAnimator.SetBool("isMeleeRange", false);
+            topAnimator.SetBool("isFiring", false);
+            bottomAnimator.SetBool("isFiring", false);
+            wasFiring = false;
+        }
     }
 
     public void ThrowGranate()

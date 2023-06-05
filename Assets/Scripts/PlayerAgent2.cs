@@ -9,38 +9,29 @@ using Random = UnityEngine.Random;
 public class PlayerAgent2 : Agent
 {
     [SerializeField] private PlayerController _playerController;
-    // [SerializeField] private Transform goalTransform_2;
-    // [SerializeField] private Transform goalTransform_3;
-    // [SerializeField] private Transform goalTransform_4;
-
-    // private bool flag_2 = true;
-    // private bool flag_3 = true;
-    // private bool flag_4 = true;
 
     // GameObject lastEnemy = null;
 
-    private int countEnemy;
+    // private int countEnemy;
     private float lastPositionX = 0f;
     // private float lastPositionY = 0f;
     private Vector2 lastPosition;
     // float distance_from_enemy = Mathf.Infinity;
     private float nextActionTime = 0.0f;
     private float period = 100.0f;
-    // private bool flagGrenade = false;
 
-    // RaycastHit2D hit;
-    // LayerMask _layerMask;
+    RaycastHit2D hit;
+    LayerMask _layerMask;
 
     public override void OnEpisodeBegin()
     {
-        
-        countEnemy = checkEnemy();
         transform.localPosition = new Vector3(-8.61f,0.13f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
 
         // lastPositionY = transform.localPosition.y;
-        // _layerMask = LayerMask.GetMask("Enemy", "Building", "Collectible");
+
+        _layerMask = LayerMask.GetMask("Enemy", "IgnoreRoof", "Building");
     }
         
     private void Update()
@@ -54,10 +45,8 @@ public class PlayerAgent2 : Agent
         }
     }
 
-    private void FixedUpdate()
-    {
-
-
+    // private void FixedUpdate()
+    // {
         // if(lastPositionX < transform.localPosition.x)
         // {
         //     lastPositionX = transform.localPosition.x;
@@ -68,26 +57,17 @@ public class PlayerAgent2 : Agent
         //     AddReward(-0.1f);
         // }
 
-        int actualCount = checkEnemy();
-        if (actualCount != countEnemy)
-        {
-            Debug.Log("Someone was killed!");
-            AddReward(10f);
-            countEnemy = actualCount;
-        } else
-        {
-            AddReward(-0.01f);
-        }
-    }
+    //     if (actualCount != countEnemy)
+    //     {
+    //         Debug.Log("Someone was killed!");
+    //         AddReward(10f);
+    //         countEnemy = actualCount;
+    //     } else
+    //     {
+    //         AddReward(-0.01f);
+    //     }
+    // }
 
-    public int checkEnemy()
-    {
-        GameObject[] enemies;
-        int count;
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        count = enemies.Length;
-        return count;
-    }
 
     public void registerReward(float rew){
         Debug.Log("Total Reward before:    " + GetCumulativeReward());
@@ -136,45 +116,64 @@ public class PlayerAgent2 : Agent
             _playerController.Jump();
         }
 
-        // if(transform.localPosition.x == goalTransform_2.position.x && flag_2 == true)
-        // {
-        //     Debug.Log("Second cartel!");
-        //     AddReward(10f);
-        //     flag_2 = SetFlag(flag_2);
-        // }
-        // if(transform.localPosition.x == goalTransform_3.position.x && flag_3 == true)
-        // {
-        //     Debug.Log("Boat!");
-        //     AddReward(15f);
-        //     flag_3 = SetFlag(flag_3);
-        // }
-        // if(transform.localPosition.x == goalTransform_4.localPosition.x && flag_4 == true)
-        // {
-        //     Debug.Log("Fish!");
-        //     AddReward(15f);
-        //     flag_4 = SetFlag(flag_4);
-        // }
-
-        if(actions.DiscreteActions[1] == 0)
+        if(actions.DiscreteActions[1] == 1)
         {
-
-            // hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
-            // Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.green);
+            _playerController.Fire(1);
             
-            _playerController.Fire();
+            if(_playerController.GetFacing() == true)
+            {
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
+                //Method to draw the ray in scene for debug purpose
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.white);
+                
+                //If the collider of the object hit is not NUll
+                if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
+                {
+                    //Hit something, print the tag of the object
+                    Debug.Log("Collision with: " + hit.collider.name);
+                    
+                    AddReward(1f);
+                }
+            }
+            else if (_playerController.GetFacing() == false)
+            {
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 3.5f, _layerMask);
+                //Method to draw the ray in scene for debug purpose
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left)*3.5f, Color.cyan);
+                
+                //If the collider of the object hit is not NUll
+                if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
+                {
+                    //Hit something, print the tag of the object
+                    Debug.Log("Collision with: " + hit.collider.name);
+                    
+                    AddReward(1f);
+                }
+            }
+            else if (moveV > 0.3)
+            {
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 3.5f, _layerMask);
+                //Method to draw the ray in scene for debug purpose
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.up)*3.5f, Color.yellow);
+                
+                //If the collider of the object hit is not NUll
+                if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
+                {
+                    //Hit something, print the tag of the object
+                    Debug.Log("Collision with: " + hit.collider.name);
+                    
+                    AddReward(1f);
+                }
+            }
 
-            //If the collider of the object hit is not NUll
-            // if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
-            // {
-            //     //Hit something, print the tag of the object
-            //     Debug.Log("Collision with: " + hit.collider.name);
-            //     // Debug.Log("Position: " + hit.collider.transform.position);
-            //     //Method to draw the ray in scene for debug purpose
-            //     AddReward(1f);
-            // }else if(hit.collider != null){
+                    // else if(hit.collider != null){
             //         Debug.Log("Collision with: " + hit.collider.tag);
             //         AddReward(-0.01f);
             // }
+        }
+        else if (actions.DiscreteActions[1] == 0)
+        {
+            _playerController.Fire(0);
         }
         // if(actions.DiscreteActions[1] == 1 && flagGrenade)
         // {
@@ -191,6 +190,35 @@ public class PlayerAgent2 : Agent
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Collectible"))
+        {
+            Debug.Log("Collectible!");
+            AddReward(5f);
+        }
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            Debug.Log("Checkpoint!");
+            AddReward(10f);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            AddReward(-5f);
+        }
+        // if (collision.gameObject.CompareTag("Bullet"))
+        // {
+        //     Debug.Log("Hit by a bullet!");
+        //     AddReward(-1f);
+        // }
+        // if (collision.gameObject.CompareTag("Marco Boat"))
+        // {
+        //     Debug.Log("Marco Boat!");
+        //     AddReward(5f);
+        // }
+        // if (collision.gameObject.CompareTag("Water Dead"))
+        // {
+        //     AddReward(-1000f);
+        //     EndEpisode();
+        // }
         // if (collision.gameObject.CompareTag("Walkable"))
         // {
         //     if((transform.localPosition.y > (lastPosition.y + 0.1)) && (transform.localPosition.x >= lastPosition.x))
@@ -203,47 +231,11 @@ public class PlayerAgent2 : Agent
         //         AddReward(-0.001f);
         //     }
         // }
-        // if (collision.gameObject.CompareTag("Bullet"))
-        // {
-        //     Debug.Log("Hit!");
-        //     AddReward(-1f);
-        // }
-
         // if (collision.gameObject.CompareTag("Granate"))
         // {
         //     Debug.Log("Hit!");
         //     AddReward(-50f);
         // }
-
-        if (collision.gameObject.CompareTag("Collectible"))
-        {
-            Debug.Log("Collectible!");
-            AddReward(5f);
-        }
-
-        // if (collision.gameObject.CompareTag("Marco Boat"))
-        // {
-        //     Debug.Log("Marco Boat!");
-        //     AddReward(5f);
-        // }
-
-        // if (collision.gameObject.CompareTag("Water Dead"))
-        // {
-        //     AddReward(-1000f);
-        //     EndEpisode();
-        // }
-        if (collision.gameObject.CompareTag("Checkpoint"))
-        {
-            Debug.Log("Checkpoint!");
-            AddReward(10f);
-            //EndEpisode();
-        }
-
-        // if (collision.gameObject.CompareTag("Enemy"))
-        // {
-        //     AddReward(-10f);
-        // }
-
         // if (_playerController.GetHealth() <= 0f)
         // {
         //    AddReward(-100);
