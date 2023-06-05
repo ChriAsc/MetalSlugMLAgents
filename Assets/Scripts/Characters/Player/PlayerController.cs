@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerAgent2 _playerAgent2;
     private MenuManager _menuManager;
+    private GameManager _gameManager;
 
 
     public enum CollectibleType
@@ -119,13 +120,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnDead(float damage) // health delegate onDead
     {
-        // _playerAgent.registerReward(-100.0f);
-        //_menuManager.startMission();
-        // _playerAgent.EndEpisode();
-        _playerAgent2.registerReward(-100.0f);
-        Died();
+        //------originale
+        //Died();
         GameManager.PlayerDied();
+        Start();
+        health = GetComponent<Health>();
+        health.health=100;
+        
         //AudioManager.PlayDeathAudio();
+        //--------
+        GameManager.LoadNextMission();
+        _playerAgent2.EndEpisode();
+        _playerAgent2.registerReward(-100f);
+        //_menuManager.PressStart();
     }
 
     private void OnHit(float damage) // health delegate onHit

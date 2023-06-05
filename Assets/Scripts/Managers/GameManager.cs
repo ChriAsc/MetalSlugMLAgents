@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     Difficulty difficulty = Difficulty.Medium;
     float bgmAudio = 1f;
     float sfxAudio = 1f;
-    Missions currentMission = Missions.Home;
+    Missions currentMission = Missions.Mission2;
     float mission1Points = 0f;
     float mission2Points = 0f;
     float mission3Points = 0f;
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     public LayerMask walkableLayer;
     public LayerMask playerLayer;
 
-    void Awake()
+    public void Awake()
     {
         //If a Game Manager exists and this isn't it...
         if (current != null && current != this)
@@ -259,19 +259,23 @@ public class GameManager : MonoBehaviour
 
     public static void PlayerDied()
     {
+
+        //_---------------------------------------------------originale--------------------------------
         //If there is no current Game Manager, exit
         if (current == null)
             return;
 
         //The game is now over
-        current.isGameOver = true;
+        //current.isGameOver = true;
 
         //Tell UI Manager to show the game over text and tell the Audio Manager to play
         //game over audio
-        UIManager.DisplayGameOverText();
-        AudioManager.PlayGameOverAudio();
+        //UIManager.DisplayGameOverText();
+        //AudioManager.PlayGameOverAudio();
 
-        current.StartCoroutine(current.WaitHome());
+        //current.StartCoroutine(current.WaitHome());
+        //_---------------------------------------------------originale--------------------------------
+        GameReset();
     }
 
     public static void PlayerWin()
@@ -559,7 +563,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator WaitNextMission()
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(0f);
         LoadNextMission();
     }
 
