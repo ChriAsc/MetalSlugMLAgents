@@ -135,8 +135,8 @@ public class PlayerController : MonoBehaviour
         //AudioManager.PlayDeathAudio();
         //--------
         GameManager.LoadNextMission();
-        _playerAgent2.EndEpisode();
         _playerAgent2.registerReward(-100f);
+        _playerAgent2.EndEpisode();
         //_menuManager.PressStart();
     }
 
@@ -229,13 +229,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void ThrowGranate()
+    public void ThrowGranate(int granate)
     {
         if (GameManager.GetBombs() > 0)
         {
             shotTime = shotTime + Time.deltaTime;
             // if (MobileManager.GetButtonGrenade())
-            // {
+            if (granate == 1)
+            {
                 GameManager.RemoveBomb();
                 if (!wasFiring2)
                 {
@@ -249,7 +250,6 @@ public class PlayerController : MonoBehaviour
                         topAnimator.SetBool("isThrowingGranate", true);
                     }
                    /*end*/
-                //    _playerAgent2.registerReward(5.0f);
 
                     if (shotTime > nextFire)
                     {
@@ -276,21 +276,21 @@ public class PlayerController : MonoBehaviour
                     }
                     /*end*/
                 }
-            // }
-            // else
-            // {
-            //     /*Animation based on whether it is standing or not*/
-            //     if (bottomAnimator.GetBool("isCrouched"))
-            //     {
-            //         bottomAnimator.SetBool("isThrowingGranate", false);
-            //     }
-            //     else
-            //     {
-            //         topAnimator.SetBool("isThrowingGranate", false);
-            //     }
-            //     /*end*/
-            //     wasFiring2 = false;
-            // }
+            }
+            else
+            {
+                /*Animation based on whether it is standing or not*/
+                if (bottomAnimator.GetBool("isCrouched"))
+                {
+                    bottomAnimator.SetBool("isThrowingGranate", false);
+                }
+                else
+                {
+                    topAnimator.SetBool("isThrowingGranate", false);
+                }
+                /*end*/
+                wasFiring2 = false;
+            }
         }
         else
         {

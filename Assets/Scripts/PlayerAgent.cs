@@ -96,10 +96,10 @@ public class PlayerAgent : Agent
             lastPosition.x = transform.localPosition.x;
         }
 
-        if(checkBoat())
-        {
-            _playerController.ThrowGranate();
-        }
+        // if(checkBoat())
+        // {
+        //     _playerController.ThrowGranate();
+        // }
     }
 
     public int checkEnemy()

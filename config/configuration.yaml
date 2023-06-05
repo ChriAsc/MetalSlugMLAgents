@@ -1,6 +1,6 @@
 default_settings: null
 behaviors:
-  Player Behaviour:
+  Player Behaviour 2:
     trainer_type: ppo
     hyperparameters:
       batch_size: 1024
@@ -39,7 +39,7 @@ behaviors:
     checkpoint_interval: 10000
     max_steps: 500000
     time_horizon: 64
-    summary_freq: 5000
+    summary_freq: 10000
     threaded: false
     self_play: null
     behavioral_cloning: null
