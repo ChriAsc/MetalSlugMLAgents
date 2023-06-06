@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
         //AudioManager.PlayDeathAudio();
         //--------
         GameManager.LoadNextMission();
-        _playerAgent2.registerReward(-100f);
+        _playerAgent2.registerReward(-500f);    // -100f
         _playerAgent2.EndEpisode();
         //_menuManager.PressStart();
     }
@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
     {
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
-        _playerAgent2.registerReward(-25.0f);
+        _playerAgent2.registerReward(-50f);   //-25f
     }
 
     public void Died()
@@ -446,13 +446,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Jump()
+    public void Jump(int jump)
     {
 
         jumpTime = jumpTime + Time.deltaTime;
 
         // if (MobileManager.GetButtonJump() && isGrounded && !bottomAnimator.GetBool("isCrouched"))
-        // {
+        if (jump==1 && isGrounded && !bottomAnimator.GetBool("isCrouched"))
+        {
             if (jumpTime > nextJump)
             {
                 rb.AddForce(new Vector3(0, maxJump, 0), ForceMode2D.Impulse);
@@ -464,13 +465,14 @@ public class PlayerController : MonoBehaviour
                 nextJump = nextJump - jumpTime;
                 jumpTime = 0.0f;
             }
-        // }
+        }
     }
 
-    public void Crouch()
+    public void Crouch(int jump, int crouch)
     {
         crouchTime = crouchTime + Time.deltaTime;
-        if (MobileManager.GetButtonCrouch() && MobileManager.GetButtonJump() && isGrounded)
+        // if (MobileManager.GetButtonCrouch() && MobileManager.GetButtonJump() && isGrounded)
+        if (crouch == 1 && jump==1 && isGrounded)
         {
             isGrounded = false;
             if (crouchTime > nextCrouch)
@@ -491,7 +493,8 @@ public class PlayerController : MonoBehaviour
                 wasCrounching = true;
             }
         }
-        else if (MobileManager.GetButtonCrouch() && !MobileManager.GetButtonJump() && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")) && isGrounded)
+        // else if (MobileManager.GetButtonCrouch() && !MobileManager.GetButtonJump() && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")) && isGrounded)
+        else if (crouch == 1 && jump==0 && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")) && isGrounded)
         {
             if (crouchTime > nextCrouch)
             {

@@ -159,11 +159,12 @@ public class PlayerAgent : Agent
         //     AddReward(-1f);
         // }
         
-        if(jump == 1)
-        {
-            // Debug.Log("Salta");
-            _playerController.Jump();
-        }
+        _playerController.Jump(jump);
+        // if(jump == 1)
+        // {
+        //     // Debug.Log("Salta");
+        //     _playerController.Jump(1);
+        // }
 
         // if(transform.localPosition.x == goalTransform_2.position.x && flag_2 == true)
         // {

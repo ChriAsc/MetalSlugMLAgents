@@ -7713,7 +7713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55e088b19d11dd4a9ed2892063f42af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0.7
+  maxSpeed: 1
   maxJump: 4
   topAnimator: {fileID: 1334744904}
   bottom: {fileID: 1122682570}
