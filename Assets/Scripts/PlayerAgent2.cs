@@ -134,7 +134,7 @@ public class PlayerAgent2 : Agent
                 } else
                 {
                     Vector2 down = new Vector2(1,-1);
-                    hit=Physics2D.Raycast(transform.position, transform.TransformDirection(down), 4f, _layerMask);
+                    hit=Physics2D.Raycast(transform.position, transform.TransformDirection(down), 3.5f, _layerMask);
                     //If the collider of the object hit is not NUll
                     if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
                     {
@@ -147,12 +147,13 @@ public class PlayerAgent2 : Agent
                         _playerController.ThrowGranate(1);
                         flagGrenade = SetFlag(flagGrenade);
                     }
+                    _playerController.ThrowGranate(0);
                     // AddReward(1f);
                     }
                     //Method to draw the ray in scene for debug purpose
-                    // Debug.DrawRay(transform.position, transform.TransformDirection(down)*4f, Color.white);
+                    Debug.DrawRay(transform.position, transform.TransformDirection(down)*3.5f, Color.white);
                 }
-                _playerController.ThrowGranate(0);
+                
             }
             else if (_playerController.GetFacing() == false)
             {
