@@ -39,7 +39,13 @@ public class PlayerAgent2 : Agent
         {
             nextActionTime += period;
             flagGrenade = SetFlag(flagGrenade);
-            // flagGrenade = SetFlag(flagGrenade);
+            if (flagGrenade)
+            {
+                _playerController.ThrowGranate(1);
+                flagGrenade = SetFlag(flagGrenade);
+            }
+            _playerController.ThrowGranate(0);
+
             Debug.Log("Total Reward:    " + GetCumulativeReward());
         }
     }
