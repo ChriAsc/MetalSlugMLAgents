@@ -16,7 +16,7 @@ public class PlayerAgent2 : Agent
     // float distance_from_enemy = Mathf.Infinity;
     private float nextActionTime = 0.0f;
     private float period = 100.0f;
-    private bool flagGrenade;
+    private bool flag;
 
     RaycastHit2D hit;
     LayerMask _layerMask;
@@ -26,7 +26,7 @@ public class PlayerAgent2 : Agent
         transform.localPosition = new Vector3(-8.61f,0.13f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
-        flagGrenade = false;
+        flag = false;
 
         // lastPositionY = transform.localPosition.y;
 
@@ -90,11 +90,11 @@ public class PlayerAgent2 : Agent
         int jump = actions.DiscreteActions[2];
 
         _playerController.MoveHorizontally(moveH);
-        if(moveV > 0.3f)
+        if(moveV > 0.5f)
         {
             _playerController.MoveVertically(1);
         } 
-        else if (moveV < 0.3f)
+        else if (moveV < 0.5)
         {
             _playerController.MoveVertically(0);
         }
@@ -115,10 +115,16 @@ public class PlayerAgent2 : Agent
         // }
 
         _playerController.Jump(jump);
-        // if(jump == 1)
+        if(jump==1)
+        {
+            flag = SetFlag(flag);
+        }
+        // if(jump == 1 && lastPosition.y == transform.localPosition.y)
         // {
         //     // Debug.Log("Salta");
-        //     _playerController.Jump(1);
+        //     AddReward(-1f);
+        // } else{
+        //     lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         // }
         // else if(jump == 0)
         // {
@@ -142,7 +148,7 @@ public class PlayerAgent2 : Agent
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
                     
-                    AddReward(1f);
+                    AddReward(0.5f);
                 }
             }
             else if(_playerController.GetFacing() == true)
@@ -157,7 +163,7 @@ public class PlayerAgent2 : Agent
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
                     
-                    AddReward(1f);
+                    AddReward(0.5f);
                 }
                 // else
                 // {
@@ -195,7 +201,7 @@ public class PlayerAgent2 : Agent
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
                     
-                    AddReward(1f);
+                    AddReward(0.5f);
                 }
             }
         }
@@ -229,7 +235,7 @@ public class PlayerAgent2 : Agent
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            AddReward(-5f);
+            AddReward(-10f);
         }
         // if (collision.gameObject.CompareTag("Bullet"))
         // {
@@ -248,16 +254,34 @@ public class PlayerAgent2 : Agent
         // }
         // if (collision.gameObject.CompareTag("Walkable"))
         // {
-        //     if((transform.localPosition.y > (lastPosition.y + 0.1)) && (transform.localPosition.x >= lastPosition.x))
+        //     // if((transform.localPosition.y > (lastPosition.y + 0.5f)) && (transform.localPosition.x >= lastPosition.x))
+        //     if((transform.localPosition.y > (lastPosition.y + 0.5f)))
         //     {
         //         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         //         Debug.Log("Reward for jumping");
-        //         AddReward(0.1f);
-        //     } else
+        //         AddReward(1f);
+        //         flag = SetFlag(flag);
+        //     } else if (flag)
         //     {
-        //         AddReward(-0.001f);
+        //         Debug.Log("This jump was not necessary");
+        //         AddReward(-1f);
+        //         flag = SetFlag(flag);
         //     }
         // }
+        if (collision.gameObject.CompareTag("Walkable") && flag==true)
+        {
+            if((transform.localPosition.y > (lastPosition.y + 0.5f)))
+            {
+                lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
+                Debug.Log("Reward for jumping");
+                AddReward(1f);
+            } else
+            {
+                Debug.Log("This jump was not necessary");
+                AddReward(-1f);
+            }
+            flag = SetFlag(flag);
+        }
         // if (collision.gameObject.CompareTag("Granate"))
         // {
         //     Debug.Log("Hit!");
