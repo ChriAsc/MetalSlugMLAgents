@@ -209,10 +209,11 @@ public class PlayerAgent2 : Agent
         {
             _playerController.Fire(0);
         }
-        // else if (actions.DiscreteActions[1] == 2 && flagGrenade==true)
+        // else if (actions.DiscreteActions[1] == 2)
         // {
+        //     _playerController.Fire(0);
         //     _playerController.ThrowGranate(1);
-        //     flagGrenade = SetFlag(flagGrenade);
+        //     _playerController.ThrowGranate(0);
         // }
     }
 
@@ -270,7 +271,7 @@ public class PlayerAgent2 : Agent
         // }
         if (collision.gameObject.CompareTag("Walkable") && flag==true)
         {
-            if((transform.localPosition.y > (lastPosition.y + 0.5f)))
+            if((transform.localPosition.y > (lastPosition.y + 0.2f)))
             {
                 lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
                 Debug.Log("Reward for jumping");
@@ -278,7 +279,7 @@ public class PlayerAgent2 : Agent
             } else
             {
                 Debug.Log("This jump was not necessary");
-                AddReward(-1f);
+                AddReward(-0.1f);
             }
             flag = SetFlag(flag);
         }
