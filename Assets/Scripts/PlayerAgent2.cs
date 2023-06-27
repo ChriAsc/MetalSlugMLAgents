@@ -16,10 +16,11 @@ public class PlayerAgent2 : Agent
     // float distance_from_enemy = Mathf.Infinity;
     float maxD = 1.5f;
     private float nextActionTime = 0.0f;
-    private float period = 10.0f;
+    private float period = 50.0f;
     private bool flag;
     private bool flagGrenade;
     private bool flagEnemy;
+    private int timer;
 
     RaycastHit2D hit;
     LayerMask _layerMask;
@@ -46,6 +47,7 @@ public class PlayerAgent2 : Agent
             // flagGrenade = SetFlag(flagGrenade);
             Debug.Log("Total Reward:    " + GetCumulativeReward());
         }
+        timer = timer + 1;
     }
 
     public void registerReward(float rew){
@@ -73,16 +75,10 @@ public class PlayerAgent2 : Agent
         flagEnemy = DetectEnemy();
 
         _playerController.MoveHorizontally(moveH);
-        if ((moveH == -1) && (transform.localPosition.y == lastPosition.y))
-        {
-            flagEnemy = false;
-        }
-        else
-        {
-            lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
-            flagEnemy = true;
-        }
-
+        // if ((moveH == -1))
+        // {
+        //     flagGrenade = false;
+        // }
         if(moveV > 0.5f)
         {
             _playerController.MoveVertically(1);
@@ -91,6 +87,7 @@ public class PlayerAgent2 : Agent
         else if (moveV < 0.5f)
         {
             _playerController.MoveVertically(0);
+            flagGrenade = true;
         }
         // else if (moveV < -0.5f)
         // {
@@ -109,7 +106,7 @@ public class PlayerAgent2 : Agent
         {
             // _playerController.ThrowGranate(0);
             _playerController.Fire(1);
-            // flagGrenade = false;
+            flagGrenade = false;
 
             if (moveV > 0.5)
             {
@@ -166,20 +163,18 @@ public class PlayerAgent2 : Agent
             flagGrenade = false;
             _playerController.Fire(0);
         }
-        else if ((actions.DiscreteActions[1] == 2) && (flagGrenade == true) && (flagEnemy == true))
+        else if ((actions.DiscreteActions[1] == 2) && (flagGrenade == true) && (flagEnemy == true) && timer > 500)
         {
-            // _playerController.Fire(0);
-            for (int i = 0; i < 1000000; i++) 
-            {
-            }
+            // _playerController.ThrowGranate(0);
             flagGrenade = SetFlag(flagGrenade);
             flagEnemy = SetFlag(flagEnemy);
 
             _playerController.ThrowGranate(1);
-            for (int i = 0; i < 1000000; i++) 
-            {
-            }
             // _playerController.ThrowGranate(0);
+            timer = 0;
+        }
+        else {
+            _playerController.ThrowGranate(0);
         }
 
     }

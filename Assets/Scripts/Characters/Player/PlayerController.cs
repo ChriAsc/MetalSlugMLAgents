@@ -237,7 +237,7 @@ public class PlayerController : MonoBehaviour
             // if (MobileManager.GetButtonGrenade())
             if (granate == 1)
             {
-                GameManager.RemoveBomb();
+                // GameManager.RemoveBomb();
                 if (!wasFiring2)
                 {
                     /*Animation based on whether it is standing or not*/
@@ -276,6 +276,7 @@ public class PlayerController : MonoBehaviour
                     }
                     /*end*/
                 }
+                GameManager.RemoveBomb();
             }
             else
             {
