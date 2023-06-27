@@ -13,8 +13,8 @@ public class PlayerAgent2 : Agent
     private float lastPositionX = 0f;
     // private float lastPositionY = 0f;
     private Vector2 lastPosition;
-    float distance_from_enemy = Mathf.Infinity;
-    float maxD = 2f;
+    // float distance_from_enemy = Mathf.Infinity;
+    float maxD = 1.5f;
     private float nextActionTime = 0.0f;
     private float period = 10.0f;
     private bool flag;
@@ -43,7 +43,7 @@ public class PlayerAgent2 : Agent
         if (Time.time > nextActionTime)
         {
             nextActionTime += period;
-            flagGrenade = SetFlag(flagGrenade);
+            // flagGrenade = SetFlag(flagGrenade);
             Debug.Log("Total Reward:    " + GetCumulativeReward());
         }
     }
@@ -109,6 +109,7 @@ public class PlayerAgent2 : Agent
         {
             // _playerController.ThrowGranate(0);
             _playerController.Fire(1);
+            // flagGrenade = false;
 
             if (moveV > 0.5)
             {
@@ -136,6 +137,7 @@ public class PlayerAgent2 : Agent
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.white);
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
+                    flagGrenade = true;
                     
                     AddReward(0.5f);
                 }
@@ -152,6 +154,7 @@ public class PlayerAgent2 : Agent
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left)*3.5f, Color.cyan);
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
+                    flagGrenade = true;
                     
                     AddReward(0.5f);
                 }
@@ -160,20 +163,23 @@ public class PlayerAgent2 : Agent
         else if (actions.DiscreteActions[1] == 0)
         {
             // _playerController.ThrowGranate(0);
+            flagGrenade = false;
             _playerController.Fire(0);
         }
         else if ((actions.DiscreteActions[1] == 2) && (flagGrenade == true) && (flagEnemy == true))
         {
-            _playerController.Fire(0);
-            for (int i = 0; i < 6000; i++) 
+            // _playerController.Fire(0);
+            for (int i = 0; i < 1000000; i++) 
             {
             }
             flagGrenade = SetFlag(flagGrenade);
+            flagEnemy = SetFlag(flagEnemy);
+
             _playerController.ThrowGranate(1);
-            for (int i = 0; i < 6000; i++) 
+            for (int i = 0; i < 1000000; i++) 
             {
             }
-            _playerController.ThrowGranate(0);
+            // _playerController.ThrowGranate(0);
         }
 
     }
@@ -258,37 +264,31 @@ public class PlayerAgent2 : Agent
 
     public bool DetectEnemy()
     {
-        GameObject enemy = FindClosestEnemy();
-        if(enemy != null)
+        int n_enemies = FindClosestEnemies();
+        if(n_enemies > 1)
         {
-            distance_from_enemy = Mathf.Abs(transform.localPosition.x - enemy.transform.position.x);
-            if (distance_from_enemy < maxD)
-            {
-                // Debug.Log("Distance from the enemy:" + distance_from_enemy);
-                return true;
-            }
-        
+            return true;
         }
         return false;
     }
 
-    public GameObject FindClosestEnemy()
+    public int FindClosestEnemies()
     {
         GameObject[] enemies;
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        GameObject closest = null;
+        // GameObject closest = null;
         float distance = maxD;
         float position = transform.localPosition.x;
+        int n_enemies = 0;
         foreach (GameObject enemy in enemies)
         {
             float currentD = Mathf.Abs(enemy.transform.position.x - position);
             if(currentD < distance)
             {
-                closest = enemy;
-                distance = currentD;
+                n_enemies = n_enemies + 1;
             }
         }
-        return closest;
+        return n_enemies;
     }
     
     public override void Heuristic(in ActionBuffers actionsOut)
