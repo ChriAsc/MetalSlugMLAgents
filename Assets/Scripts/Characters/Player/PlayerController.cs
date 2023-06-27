@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Time shoot")]
     private float shotTime = 0.0f;
-    public float fireDelta = 0.3f;
+    public float fireDelta = 0.2f;
     private float nextFire = 0.2f;
 
     [Header("Time Crouch")]

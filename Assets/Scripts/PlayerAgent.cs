@@ -185,13 +185,13 @@ public class PlayerAgent : Agent
         //     flag_4 = SetFlag(flag_4);
         // }
 
-        if(actions.DiscreteActions[1] == 0)
+        if(actions.DiscreteActions[1] ==1)
         {
 
             // hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
             // Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.green);
             
-            _playerController.Fire(0);
+            _playerController.Fire(1);
 
             //If the collider of the object hit is not NUll
             // if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
