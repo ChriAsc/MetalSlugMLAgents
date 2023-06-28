@@ -106,6 +106,11 @@ public class PlayerController : MonoBehaviour
         return this.facingRight;
     }
 
+    public bool GetFiring()
+    {
+        return this.wasFiring;
+    }
+
     public void Update()
     {
         //Block the player from moving if it's death

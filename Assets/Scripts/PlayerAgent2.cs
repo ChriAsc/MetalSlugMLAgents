@@ -18,8 +18,9 @@ public class PlayerAgent2 : Agent
     private float nextActionTime = 0.0f;
     private float period = 50.0f;
     private bool flag;
-    private bool flagGrenade;
+    // private bool flagGrenade;
     private bool flagEnemy;
+    private bool firing;
     private int timer;
 
     RaycastHit2D hit;
@@ -31,7 +32,7 @@ public class PlayerAgent2 : Agent
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         lastPositionX = transform.localPosition.x;
         flag = false;
-        flagGrenade = false;
+        // flagGrenade = false;
         flagEnemy = false;
 
         // lastPositionY = transform.localPosition.y;
@@ -73,6 +74,7 @@ public class PlayerAgent2 : Agent
         int jump = actions.DiscreteActions[2];
 
         flagEnemy = DetectEnemy();
+        firing = _playerController.GetFiring();
 
         _playerController.MoveHorizontally(moveH);
         // if ((moveH == -1))
@@ -82,12 +84,12 @@ public class PlayerAgent2 : Agent
         if(moveV > 0.5f)
         {
             _playerController.MoveVertically(1);
-            flagGrenade = false;
+            // flagGrenade = false;
         } 
         else if (moveV < 0.5f)
         {
             _playerController.MoveVertically(0);
-            flagGrenade = true;
+            // flagGrenade = true;
         }
         // else if (moveV < -0.5f)
         // {
@@ -106,9 +108,9 @@ public class PlayerAgent2 : Agent
         {
             // _playerController.ThrowGranate(0);
             _playerController.Fire(1);
-            flagGrenade = false;
+            // flagGrenade = false;
 
-            if (moveV > 0.5)
+            if (moveV > 0.5 && !firing)
             {
                 hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 3.5f, _layerMask);
                 
@@ -120,10 +122,10 @@ public class PlayerAgent2 : Agent
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
                     
-                    AddReward(0.5f);
+                    AddReward(1f);
                 }
             }
-            else if(_playerController.GetFacing() == true)
+            else if(_playerController.GetFacing() == true && !firing)
             {
                 hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
                    
@@ -134,13 +136,13 @@ public class PlayerAgent2 : Agent
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.white);
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
-                    flagGrenade = true;
+                    // flagGrenade = true;
                     
-                    AddReward(0.5f);
+                    AddReward(1f);
                 }
                 
             }
-            else if (_playerController.GetFacing() == false)
+            else if (_playerController.GetFacing() == false && !firing)
             {
                 hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 3.5f, _layerMask);
                 
@@ -151,30 +153,40 @@ public class PlayerAgent2 : Agent
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left)*3.5f, Color.cyan);
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
-                    flagGrenade = true;
+                    // flagGrenade = true;
                     
-                    AddReward(0.5f);
+                    AddReward(1f);
                 }
             }
         }
         else if (actions.DiscreteActions[1] == 0)
         {
             // _playerController.ThrowGranate(0);
-            flagGrenade = false;
+            // flagGrenade = false;
             _playerController.Fire(0);
         }
-        else if ((actions.DiscreteActions[1] == 2) && (flagGrenade == true) && (flagEnemy == true) && timer > 500)
+        else if ((actions.DiscreteActions[1] == 2) && !firing && (flagEnemy == true) && timer > 1000)
         {
-            // _playerController.ThrowGranate(0);
-            flagGrenade = SetFlag(flagGrenade);
+            // // _playerController.ThrowGranate(0);
+            // flagGrenade = SetFlag(flagGrenade);
             flagEnemy = SetFlag(flagEnemy);
 
             _playerController.ThrowGranate(1);
             // _playerController.ThrowGranate(0);
             timer = 0;
         }
-        else {
+        else
+        {
             _playerController.ThrowGranate(0);
+        }
+
+        if(flagEnemy == true)
+        {
+            bool chk = DetectEnemy();
+            if(chk != flagEnemy)
+            {
+                AddReward(10f);
+            }
         }
 
     }
