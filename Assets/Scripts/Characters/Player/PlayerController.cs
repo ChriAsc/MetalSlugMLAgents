@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Time shoot")]
     private float shotTime = 0.0f;
-    public float fireDelta = 0.2f;
-    private float nextFire = 0.2f;
+    public float fireDelta = 0.5f;
+    private float nextFire = 0.5f;
 
     [Header("Time Crouch")]
     private float crouchTime = 0.0f;
@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Time jump")]
     private float jumpTime = 0.0f;
-    public float jumpDelta = 0.8f;
-    private float nextJump = 0.5f;
+    public float jumpDelta = 0.2f;
+    private float nextJump = 0.2f;
 
     [Header("Bullet")]
     public GameObject projSpawner;
@@ -130,15 +130,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnDead(float damage) // health delegate onDead
     {
-        //------originale
+        //------original------//
         //Died();
         GameManager.PlayerDied();
         Start();
         health = GetComponent<Health>();
         health.health=100;
-        
         //AudioManager.PlayDeathAudio();
-        //--------
+
+        //--------new//--------//
         GameManager.LoadNextMission();
         _playerAgent2.registerReward(-500f);    // -100f
         _playerAgent2.EndEpisode();
