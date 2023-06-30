@@ -13,13 +13,13 @@ public class PlayerAgent2 : Agent
     // Vector used to store player's last position
     private Vector2 lastPosition;
     // Distance used in enemy detection
-    float maxD = 2.5f;
+    float maxD = 2f;
 
     private float nextActionTime = 0.0f;
     private float period = 50.0f;
 
     // Flags
-    private bool flag;
+    private bool flagJump;
     private bool flagEnemy;
     private int n_enemies;
     private bool firing;
@@ -35,7 +35,7 @@ public class PlayerAgent2 : Agent
         transform.localPosition = new Vector3(-8.61f,0.13f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         // Flags set to false
-        flag = false;
+        flagJump = false;
         flagEnemy = false;
         n_enemies = 0;
         // Admitted layers
@@ -125,15 +125,15 @@ public class PlayerAgent2 : Agent
         // }
 
         // The player is going to jump only if he is not already jumping
-        if(jump==1 && flag == false)
+        if(jump==1 && flagJump == false)
         {
             _playerController.Jump(jump);
-            flag = true;
+            flagJump = true;
         }
-        else if(jump==0)
+        else
         {
             // Set the flag to false as he is not jumping anymore
-            flag = false;
+            flagJump = false;
         }
 
         if(actions.DiscreteActions[1] == 1)
@@ -299,7 +299,7 @@ public class PlayerAgent2 : Agent
 
         foreach (GameObject enemy in enemies)
         {
-            float currentD = Mathf.Abs(enemy.transform.position.x) - Mathf.Abs(transform.localPosition.x);
+            float currentD = Mathf.Abs(enemy.transform.position.x - transform.localPosition.x);
             if(currentD < maxD)
             {
                 // Increase the number of enemies near to the player
