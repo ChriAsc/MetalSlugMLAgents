@@ -6,8 +6,8 @@ behaviors:
       batch_size: 5120
       buffer_size: 51200
       learning_rate: 0.00003
-      beta: 0.005
-      epsilon: 0.2
+      beta: 0.01
+      epsilon: 0.3
       lambd: 0.95
       num_epoch: 3
       shared_critic: false
@@ -15,9 +15,9 @@ behaviors:
       beta_schedule: linear
       epsilon_schedule: linear
     network_settings:
-      normalize: false
-      hidden_units: 128
-      num_layers: 2
+      normalize: true
+      hidden_units: 256
+      num_layers: 4
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -66,8 +66,8 @@ checkpoint_settings:
   run_id: run_3
   initialize_from: null
   load_model: false
-  resume: true
-  force: true
+  resume: false
+  force: false
   train_model: false
   inference: false
   results_dir: results
