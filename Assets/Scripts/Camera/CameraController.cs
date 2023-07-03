@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 
 public class CameraController : MonoBehaviour
 {
+    [SerializeField] private PlayerAgent2 _playerAgent2;
     private Camera camera2;
     private GameObject player;
     private Vector2 playerVPPos;
@@ -26,6 +27,9 @@ public class CameraController : MonoBehaviour
         {
             //Restore old player position (block him)
             player.transform.position = new Vector2(oldPosition.x, player.transform.position.y);
+            Debug.Log("Penalty for touching left border");
+            _playerAgent2.registerReward(-0.02f);
+
         }
 
         oldPosition = player.transform.position;
