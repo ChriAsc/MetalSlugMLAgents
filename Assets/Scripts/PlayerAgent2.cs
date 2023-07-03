@@ -10,6 +10,7 @@ public class PlayerAgent2 : Agent
 {
     [SerializeField] private PlayerController _playerController;
 
+    CameraManager _camManager = new CameraManager();
     // Vector used to store player's last position
     private Vector2 lastPosition;
     // Distance used in enemy detection
@@ -32,7 +33,9 @@ public class PlayerAgent2 : Agent
     public override void OnEpisodeBegin()
     {
         // Initialize player's position at the beginning of the episode
-        transform.localPosition = new Vector3(-8.61f,0.13f,0f);
+        transform.localPosition = new Vector3(-8.5f,0f,0f);
+        //transform.localPosition = new Vector3(6,71f,0.64f,0f);
+        //_camManager.AfterFirstHeli;
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         // Flags set to false
         flagJump = false;
@@ -56,7 +59,7 @@ public class PlayerAgent2 : Agent
     private void FixedUpdate()
     {
         // if the player goes backwards, a penalty is applied
-        if (transform.localPosition.x < (lastPosition.x - 0.5f))
+        if (transform.localPosition.x < (lastPosition.x - 0.25f))
         {
             // player's position update
             lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
@@ -127,6 +130,7 @@ public class PlayerAgent2 : Agent
         // The player is going to jump only if he is not already jumping
         if(jump==1 && flagJump == false)
         {
+
             _playerController.Jump(jump);
             flagJump = true;
         }
@@ -140,8 +144,6 @@ public class PlayerAgent2 : Agent
         {
             _playerController.ThrowGranate(0);
             // Fire
-            _playerController.Fire(1);
-            
             // If the player was not firing before, then a ray is traced to check if an enemy is above him
             if (moveV > 0.5 && !firing)
             {
@@ -156,7 +158,13 @@ public class PlayerAgent2 : Agent
                     Debug.Log("Ray hit: " + hit.collider.name);
                     
                     // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
-                    AddReward(1f);
+                    AddReward(2f);
+                    _playerController.Fire(1);  
+                }else{
+                    if(hit.collider != null && hit.collider.gameObject.tag!="Enemy"){
+                        Debug.Log("Penalty for shooting randomly");
+                        AddReward(-0.05f);
+                    }
                 }
             }
             else if(_playerController.GetFacing() == true && !firing)
@@ -171,9 +179,14 @@ public class PlayerAgent2 : Agent
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.white);
                     //Hit something, print the tag of the object
                     Debug.Log("Ray hit: " + hit.collider.name);
-                    
                     // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
-                    AddReward(1f);
+                    AddReward(2f);
+                    _playerController.Fire(1);  
+                }else{
+                    if(hit.collider != null && hit.collider.gameObject.tag!="Enemy"){
+                        Debug.Log("Penalty for shooting randomly");
+                        AddReward(-0.05f);
+                    }
                 }
                 
             }
@@ -191,7 +204,13 @@ public class PlayerAgent2 : Agent
                     Debug.Log("Ray hit: " + hit.collider.name);
                     
                     // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
-                    AddReward(1f);
+                    AddReward(2f);
+                    _playerController.Fire(1);  
+                }else{
+                    if(hit.collider != null && hit.collider.gameObject.tag!="Enemy"){
+                        Debug.Log("Penalty for shooting randomly");
+                        AddReward(-0.05f);
+                    }
                 }
             }
         }
@@ -217,7 +236,7 @@ public class PlayerAgent2 : Agent
         int actual = FindClosestEnemies();
         if (actual < n_enemies)
         {
-            AddReward(10f);
+            AddReward(2f);
         }
 
     }
@@ -233,16 +252,16 @@ public class PlayerAgent2 : Agent
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Debug.Log("Collectible!");
-            AddReward(5f);
+            AddReward(3f);
         }
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             Debug.Log("Checkpoint!");
-            AddReward(10f);
+            AddReward(3f);
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            AddReward(-10f);
+            AddReward(-5f);
         }
 
         // if (collision.gameObject.CompareTag("Bullet"))
