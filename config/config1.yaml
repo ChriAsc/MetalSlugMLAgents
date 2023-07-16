@@ -1,22 +1,22 @@
 default_settings: null
 behaviors:
-  Player Behaviour 2:
+  Player Behaviour:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 4096
-      buffer_size: 40960
-      learning_rate: 0.0003
-      beta: 0.005
-      epsilon: 0.2
+      batch_size: 512
+      buffer_size: 5120
+      learning_rate: 0.00003
+      beta: 0.001
+      epsilon: 0.3
       lambd: 0.95
       num_epoch: 3
       learning_rate_schedule: linear
       beta_schedule: linear
       epsilon_schedule: linear
     network_settings:
-      normalize: false
-      hidden_units: 128
-      num_layers: 2
+      normalize: true
+      hidden_units: 512
+      num_layers: 4
       vis_encode_type: simple
       memory: null
       goal_conditioning_type: hyper
@@ -56,7 +56,7 @@ engine_settings:
   width: 84
   height: 84
   quality_level: 5
-  time_scale: 20.0
+  time_scale: 1.0
   target_frame_rate: -1
   capture_frame_rate: 60
   no_graphics: false

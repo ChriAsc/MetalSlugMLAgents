@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     public GameObject foreground;
     Cinemachine.CinemachineBrain cinemachineBrain;
 
-    private PlayerAgent2 _playerAgent2;
+    private PlayerAgent _playerAgent;
     private MenuManager _menuManager;
     private GameManager _gameManager;
 
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
     public void Start()
     {
-        _playerAgent2 = GetComponent<PlayerAgent2>();
+        _playerAgent = GetComponent<PlayerAgent>();
         rb = GetComponent<Rigidbody2D>();
         bottomAnimator = bottom.GetComponent<Animator>();
         cinemachineBrain = Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         FlipShoot();
     }
 
-    private void OnDead(float damage) // health delegate onDead
+    public void OnDead(float damage) // health delegate onDead
     {
         //------original------//
         //Died();
@@ -140,8 +140,8 @@ public class PlayerController : MonoBehaviour
 
         //--------new//--------//
         GameManager.LoadNextMission();
-        _playerAgent2.registerReward(-500f);    // -100f
-        _playerAgent2.EndEpisode();
+        _playerAgent.RegisterReward(-500f);  
+        _playerAgent.EndEpisode();
         //_menuManager.PressStart();
     }
 
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
     {
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
-        _playerAgent2.registerReward(-50f);   //-25f
+        _playerAgent.RegisterReward(-50f);  
     }
 
     public void Died()
@@ -240,7 +240,7 @@ public class PlayerController : MonoBehaviour
         {
             shotTime = shotTime + Time.deltaTime;
             // if (MobileManager.GetButtonGrenade())
-            if (granate == 1)
+            if (granate == 1 && !wasFiring)
             {
                 // GameManager.RemoveBomb();
                 if (!wasFiring2)
@@ -329,38 +329,6 @@ public class PlayerController : MonoBehaviour
         return false;
     }
 
-    // public void MoveHorizontally()
-    // {
-    //     float moveH = MobileManager.GetAxisHorizontal();
-    //     if (IsOutsideScreen(moveH))
-    //         return;
-
-    //     if (moveH != 0 && !(bottomAnimator.GetBool("isCrouched") && topAnimator.GetBool("isFiring")))
-    //     {
-    //         rb.velocity = new Vector2(moveH * maxSpeed, rb.velocity.y);
-           
-    //         topAnimator.SetBool("isWalking", true);
-    //         bottomAnimator.SetBool("isWalking", true);
-
-    //         // Flip sprite orientantion if the user is walking right or left
-    //         if (moveH > 0 && !facingRight)
-    //         {
-    //             //Moving right
-    //             Flip();
-    //         }
-    //         else if (moveH < 0 && facingRight)
-    //         {
-    //             //Moving left
-    //             Flip();
-    //         }
-    //     }
-    //     else
-    //     {
-    //         topAnimator.SetBool("isWalking", false);
-    //         bottomAnimator.SetBool("isWalking", false);
-    //     }
-    // }
-
     public void MoveHorizontally(int moveH)
     {
         if (IsOutsideScreen(moveH))
@@ -391,37 +359,6 @@ public class PlayerController : MonoBehaviour
             bottomAnimator.SetBool("isWalking", false);
         }
     }
-
-
-    // public void MoveVertically()
-    // {
-    //     float moveV = MobileManager.GetAxisVertical();
-    //     if (moveV != 0)
-    //     {
-    //         //Yes
-
-    //         // bottomAnimator.SetBool("isWalking", true);
-
-    //         //Flip sprite orientantion if the user is walking right or left
-    //         if (moveV > 0)
-    //         {
-    //             //Moving UP
-    //             topAnimator.SetBool("isLookingUp", true);
-    //         }
-    //         else if (moveV < 0)
-    //         {
-    //             //Moving down
-    //         }
-    //     }
-    //     else
-    //     {
-    //         //No
-    //         if (topAnimator.GetBool("isLookingUp"))
-    //         {
-    //             topAnimator.SetBool("isLookingUp", false);
-    //         }
-    //     }
-    // }
 
     public void MoveVertically(int moveV)
     {
@@ -457,7 +394,6 @@ public class PlayerController : MonoBehaviour
 
         jumpTime = jumpTime + Time.deltaTime;
 
-        // if (MobileManager.GetButtonJump() && isGrounded && !bottomAnimator.GetBool("isCrouched"))
         if (jump==1 && isGrounded && !bottomAnimator.GetBool("isCrouched"))
         {
             if (jumpTime > nextJump)
@@ -477,7 +413,6 @@ public class PlayerController : MonoBehaviour
     public void Crouch(int jump, int crouch)
     {
         crouchTime = crouchTime + Time.deltaTime;
-        // if (MobileManager.GetButtonCrouch() && MobileManager.GetButtonJump() && isGrounded)
         if (crouch == 1 && jump==1 && isGrounded)
         {
             isGrounded = false;
@@ -499,7 +434,6 @@ public class PlayerController : MonoBehaviour
                 wasCrounching = true;
             }
         }
-        // else if (MobileManager.GetButtonCrouch() && !MobileManager.GetButtonJump() && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")) && isGrounded)
         else if (crouch == 1 && jump==0 && (!(bottomAnimator.GetBool("isWalking") && !wasCrounching) || !bottomAnimator.GetBool("isWalking")) && isGrounded)
         {
             if (crouchTime > nextCrouch)
@@ -668,7 +602,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator WaitGranate()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         BulletManager.GetGrenadePool().Spawn(granadeSpawner.transform.position, granadeSpawner.transform.rotation);
         yield return new WaitForSeconds(0.15f);
     }

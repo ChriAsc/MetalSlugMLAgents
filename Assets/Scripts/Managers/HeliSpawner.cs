@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -48,10 +48,13 @@ public class HeliSpawner : MonoBehaviour
 
     public void HeliDestroy(GameObject heli)
     {
-        killedHeli++;
-        heliList.Remove(heli);
-        SetMainHeliShooter();
-        CheckFinished();
+        if(heli != null)
+        {
+            killedHeli++;
+            heliList.Remove(heli);
+            SetMainHeliShooter();
+            CheckFinished();
+        }
     }
 
     public void SetMainHeliShooter()
@@ -73,13 +76,19 @@ public class HeliSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(secondsWait);
         GameObject heli = Instantiate(heliPrefab, transform.position, transform.rotation, transform);
-        heli.GetComponent<HeliController>().RegisterSpawner(this);
-        heliList.Add(heli);
-        SetMainHeliShooter();
+        if(heli != null)
+        {
+            heli.GetComponent<HeliController>().RegisterSpawner(this);
+            heliList.Add(heli);
+            SetMainHeliShooter();
+        }
     }
 
     void SetFire(GameObject heli)
     {
-        heli.GetComponent<HeliController>().SetFire(true);
+        if(heli != null)
+        {
+            heli.GetComponent<HeliController>().SetFire(true);
+        }
     }
 }

@@ -6081,7 +6081,12 @@ PrefabInstance:
     - target: {fileID: 2431320819883578219, guid: b7f8e7b35f7be624e80727a89ad67fae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.341236
+      value: -22.447727
+      objectReference: {fileID: 0}
+    - target: {fileID: 2431320819883578261, guid: b7f8e7b35f7be624e80727a89ad67fae,
+        type: 3}
+      propertyPath: _playerAgent2
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7f8e7b35f7be624e80727a89ad67fae, type: 3}
@@ -6605,7 +6610,7 @@ PrefabInstance:
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.264326
+      value: -14.625999
       objectReference: {fileID: 0}
     - target: {fileID: 1866510319001186920, guid: e6ecc3aab9e52aa4791973b906dda33f,
         type: 3}
@@ -8599,14 +8604,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712400299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4974ff1ceeb31c4791c45425763547a, type: 3}
+  m_Script: {fileID: 11500000, guid: 88b6042bc9a5d4aa58d931eae49442e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 1000000
-  _playerController: {fileID: 1712400307}
+  MaxStep: 0
 --- !u!114 &1712400302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8632,7 +8636,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: Player Behaviour 2
+  m_BehaviorName: Player Behaviour
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -8663,10 +8667,27 @@ MonoBehaviour:
   m_RayLength: 4.5
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 28161
+    m_Bits: 27136
   m_ObservationStacks: 2
   rayHitColor: {r: 1, g: 0.1252185, b: 0.02352941, a: 1}
   rayMissColor: {r: 0.07735002, g: 1, b: 0, a: 1}
+--- !u!114 &1712400304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712400299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a3b0524f0855245b8bc30b79f96bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  _playerController: {fileID: 1712400307}
 --- !u!114 &1712400307
 MonoBehaviour:
   m_ObjectHideFlags: 0

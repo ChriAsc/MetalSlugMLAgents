@@ -9,319 +9,301 @@ using Random = UnityEngine.Random;
 public class PlayerAgent : Agent
 {
     [SerializeField] private PlayerController _playerController;
-    [SerializeField] private Transform goalTransform_1;
-    // [SerializeField] private Transform goalTransform_2;
-    // [SerializeField] private Transform goalTransform_3;
-    // [SerializeField] private Transform goalTransform_4;
 
-    private bool flag_1 = true;
-    // private bool flag_2 = true;
-    // private bool flag_3 = true;
-    // private bool flag_4 = true;
-
-    // GameObject lastEnemy = null;
-
-    private int countEnemy;
-    private float lastPositionX;
-    // private float lastPositionY = 0f;
+    // Vector used to store player's last position
     private Vector2 lastPosition;
-    float maxD = 1f;
-    // float distance_from_enemy = Mathf.Infinity;
+    // Distance used in enemy detection
+    float maxD = 2.5f;
+
     private float nextActionTime = 0.0f;
     private float period = 50.0f;
-    // private bool flagGrenade = false;
 
-    // RaycastHit2D hit;
-    // LayerMask _layerMask;
+    // Flags
+    private bool flagJump;
+    private bool flagEnemy;
+    private int n_enemies;
+    private bool firing;
+    private int timer;
+    private int ending;
+
+    // Raycast variables
+    RaycastHit2D hit;
+    LayerMask _layerMask;
 
     public override void OnEpisodeBegin()
     {
-        
-        countEnemy = checkEnemy();
-        lastPositionX = transform.localPosition.x;
-        transform.localPosition = new Vector3(-27.53f,1.54f,0f);
+        // Initialize player's position at the beginning of the episode
+        transform.localPosition = new Vector3(-8.61f,0.13f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
-        lastPositionX = transform.localPosition.x;
-
-        // lastPositionY = transform.localPosition.y;
-        // _layerMask = LayerMask.GetMask("Enemy", "Building", "Collectible");
+        // Flags set to false
+        flagJump = false;
+        flagEnemy = false;
+        n_enemies = 0;
+        ending = 0;
+        timer = 0;
+        // Admitted layers
+        _layerMask = LayerMask.GetMask("Enemy", "IgnoreRoof", "Building", "Default");
     }
         
     private void Update()
     {
-        if(transform.position.x == goalTransform_1.position.x && flag_1 == true)
-        {
-            Debug.Log("First cartel!");
-            AddReward(5f);
-            flag_1 = SetFlag(flag_1);
-        }
-
+        // After a period cumulative reward is printed
         if (Time.time > nextActionTime)
         {
             nextActionTime += period;
-            // flagGrenade = SetFlag(flagGrenade);
             Debug.Log("Total Reward:    " + GetCumulativeReward());
-        
         }
-
-        if (_playerController.GetHealth() <= 0f)
-        {
-           AddReward(-100f);
-           EndEpisode();
-        }      
+        timer = timer + 1;
     }
 
     private void FixedUpdate()
     {
-
-        int actualCount = checkEnemy();
-        if (actualCount != countEnemy)
+        // if the player goes backwards, a penalty is applied
+        if (transform.localPosition.x < (lastPosition.x - 0.5f))
         {
-            Debug.Log("Someone was killed!");
-            AddReward(10f);
-            countEnemy = actualCount;
-        } else
-        {
-            AddReward(-0.01f);
+            // player's position update
+            lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
+            AddReward(-1f);
         }
-
-        if(lastPositionX < transform.localPosition.x)
+        else if (transform.localPosition.x > (lastPosition.x))
         {
-            lastPositionX = transform.localPosition.x;
-            AddReward(10f);
+            // player's position update
+            lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         }
-        if(lastPosition.x > transform.localPosition.x)
-        {
-            AddReward(-10f);
-            lastPosition.x = transform.localPosition.x;
-        }
-
-        // if(checkBoat())
-        // {
-        //     _playerController.ThrowGranate();
-        // }
+        
     }
 
-    public int checkEnemy()
-    {
-        GameObject[] enemies;
-        int count;
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        count = enemies.Length;
-        return count;
-    }
-
-    public bool checkBoat()
-    {
-        GameObject[] enemies;
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        float position = transform.localPosition.x;
-        foreach (GameObject enemy in enemies)
-        {
-            if(enemy.name == "EnemyBoat")
-            {
-                if (Mathf.Abs(enemy.transform.position.x - transform.localPosition.x)< maxD)
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public void registerReward(float rew){
+    // Function called from other classes in order to add a reward/penalty
+    public void RegisterReward(float rew){
         AddReward(rew);
     }
 
 
     public override void CollectObservations(VectorSensor sensor){
         sensor.AddObservation(transform.localPosition);
-        sensor.AddObservation(goalTransform_1.localPosition.x);  // goal x reference
-        // sensor.AddObservation(goalTransform_2.localPosition.x);  // goal x reference
-        // sensor.AddObservation(goalTransform_3.localPosition.x);  // goal y reference
-        // sensor.AddObservation(goalTransform_4.localPosition.x);  // goal y reference
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
-        // float moveH = actions.ContinuousActions[0];
-        // float moveV = actions.ContinuousActions[1];
-        
+        // Continuous action used to move vertically
+        float moveV = actions.ContinuousActions[0];
+
+        // Discrete action used to move horizontally
         int moveH = actions.DiscreteActions[0] - 1;
+
+        // Discrete action used to jump
         int jump = actions.DiscreteActions[2];
 
+        // Check if there are at least 2 enemies around
+        flagEnemy = DetectEnemies();
+        // Store the number of the enemies around
+        n_enemies = FindClosestEnemies();
+        // Check if the player is firing
+        firing = _playerController.GetFiring();
+
+        // Player moves (-1: left, 0: stop, 1: right)
         _playerController.MoveHorizontally(moveH);
 
-        // if(moveH == 1 && (lastPositionX < transform.localPosition.x))
-        // {
-        //     lastPositionX = transform.localPosition.x;
-        //     AddReward(0.1f);
-        // }
-        // if (lastPositionX > transform.localPosition.x)
-        // {
-        //     AddReward(-1f);
-        // }
-        
-        _playerController.Jump(jump);
-        // if(jump == 1)
-        // {
-        //     // Debug.Log("Salta");
-        //     _playerController.Jump(1);
-        // }
-
-        // if(transform.localPosition.x == goalTransform_2.position.x && flag_2 == true)
-        // {
-        //     Debug.Log("Second cartel!");
-        //     AddReward(10f);
-        //     flag_2 = SetFlag(flag_2);
-        // }
-        // if(transform.localPosition.x == goalTransform_3.position.x && flag_3 == true)
-        // {
-        //     Debug.Log("Boat!");
-        //     AddReward(15f);
-        //     flag_3 = SetFlag(flag_3);
-        // }
-        // if(transform.localPosition.x == goalTransform_4.localPosition.x && flag_4 == true)
-        // {
-        //     Debug.Log("Fish!");
-        //     AddReward(15f);
-        //     flag_4 = SetFlag(flag_4);
-        // }
-
-        if(actions.DiscreteActions[1] ==1)
+        // Player sees above it only if moveV > 0.5
+        if(moveV > 0.4f) 
         {
-
-            // hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
-            // Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.green);
-            
-            _playerController.Fire(1);
-
-            //If the collider of the object hit is not NUll
-            // if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
-            // {
-            //     //Hit something, print the tag of the object
-            //     Debug.Log("Collision with: " + hit.collider.name);
-            //     // Debug.Log("Position: " + hit.collider.transform.position);
-            //     //Method to draw the ray in scene for debug purpose
-            //     AddReward(1f);
-            // }else if(hit.collider != null){
-            //         Debug.Log("Collision with: " + hit.collider.tag);
-            //         AddReward(-0.01f);
-            // }
+            _playerController.MoveVertically(1);
+        } 
+        else if (moveV <= 0.4f)
+        {
+            _playerController.MoveVertically(0);
         }
-        // if(actions.DiscreteActions[1] == 1 && flagGrenade)
-        // {
-        //     _playerController.ThrowGranate();
-        //     flagGrenade = SetFlag(flagGrenade);
-        // }
 
-    }
-
-    public bool SetFlag(bool flag)
-    {
-        return !flag;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Walkable"))
+        // The player is going to jump only if he is not already jumping
+        if(jump==1 && flagJump == false)
         {
-            if((transform.localPosition.y > (lastPosition.y + 0.1)))
+            _playerController.Jump(jump);
+            flagJump = true;
+        }
+        else
+        {
+            // Set the flag to false as he is not jumping anymore
+            flagJump = false;
+        }
+
+        if(actions.DiscreteActions[1] == 1)
+        {
+            _playerController.ThrowGranate(0);
+            // Fire
+            _playerController.Fire(1);
+            
+            // If the player was not firing before, then a ray is traced to check if an enemy is above him
+            if (moveV > 0.4f && !firing)
             {
-                lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
-                Debug.Log("Reward for jumping");
-                AddReward(10f);
-            } else
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 3.5f, _layerMask);
+                
+                // If the collider of the object hit is not NUll
+                if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
+                {
+                    // Method to draw the ray in scene for debug purpose
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.up)*3.5f, Color.yellow);
+                    // Hit something, print the tag of the object
+                    Debug.Log("Ray hit: " + hit.collider.name);
+                    
+                    // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
+                    AddReward(1f);
+                }
+            }
+            else if(moveV < 0.4f && !firing)
             {
-                AddReward(-0.0001f);
+                // If the player was not firing before, then a ray is traced to check if an enemy is to the right
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
+                   
+                //If the collider of the object hit is not NUll
+                if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
+                {
+                    //Method to draw the ray in scene for debug purpose
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.right)*3.5f, Color.white);
+                    //Hit something, print the tag of the object
+                    Debug.Log("Ray hit: " + hit.collider.name);
+                    
+                    // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
+                    AddReward(1f);
+                }
+            }
+            else if (moveV < 0.4f && !firing)
+            {
+                // If the player was not firing before, then a ray is traced to check if an enemy is to the left
+                hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 3.5f, _layerMask);
+                
+                //If the collider of the object hit is not NUll
+                if(hit.collider != null && hit.collider.gameObject.tag=="Enemy")
+                {
+                    //Method to draw the ray in scene for debug purpose
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector2.left)*3.5f, Color.cyan);
+                    //Hit something, print the tag of the object
+                    Debug.Log("Ray hit: " + hit.collider.name);
+                    
+                    // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
+                    AddReward(1f);
+                }
             }
         }
-        if (collision.gameObject.CompareTag("Bullet"))
+        else if (actions.DiscreteActions[1] == 0)
         {
-            Debug.Log("Hit!");
-            AddReward(-1f);
+            // Player does nothing
+            _playerController.Fire(0);
+            _playerController.ThrowGranate(0);
+        }
+        // If the player is free to throw a grenade and at least 2 enemies are around
+        else if ((actions.DiscreteActions[1] == 2) && _playerController.GetFacing() == true && (flagEnemy == true) && timer > 500)
+        {
+            flagEnemy = false;
+            
+            // Player throws a grenade
+            _playerController.ThrowGranate(1);
+            timer = 0;
         }
 
+        // If at least one enemy was killed, add a reward
+        int actual = FindClosestEnemies();
+        if (actual < n_enemies)
+        {
+            AddReward(10f);
+        }
+
+    }
+
+    // Add rewards if the player collide with something
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Debug.Log("Collectible!");
-            AddReward(3f);
+            AddReward(30f); 
+            ending = 0;
         }
-
-        if (collision.gameObject.CompareTag("Marco Boat"))
+        if (collision.gameObject.CompareTag("Checkpoint"))
         {
-            // Debug.Log("Marco Boat!");
-            AddReward(30f);
+            Debug.Log("Checkpoint!");
+            AddReward(20f);
+            ending = 0;
         }
-
-        if (collision.gameObject.CompareTag("Water Dead"))
-        {
-            AddReward(-1000f);
-            //EndEpisode();
-        }
-
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            AddReward(-30f);
-        }
- 
     }
 
-    // public bool DetectEnemy()
-    // {
-    //     GameObject enemy = FindClosestEnemy();
-    //     if(enemy != null)
-    //     {
-    //         distance_from_enemy = Mathf.Abs(transform.localPosition.x - enemy.transform.position.x);
-    //         if (distance_from_enemy < maxD)
-    //         {
-    //             // Debug.Log("Distance from the enemy:" + distance_from_enemy);
-    //             return true;
-    //         }
-        
-    //     }
-    //     return false;
-    // }
+    // Function that returns true if at least 2 enemies are near to the player
+    public bool DetectEnemies()
+    {
+        int n_enemies = FindClosestEnemies();
+        if(n_enemies > 1)
+        {
+            return true;
+        }
+        return false;
+    }
 
-    // public GameObject FindClosestEnemy()
-    // {
-    //     GameObject[] enemies;
-    //     enemies = GameObject.FindGameObjectsWithTag("Enemy");
-    //     GameObject closest = null;
-    //     float distance = maxD;
-    //     float position = transform.localPosition.x;
-    //     foreach (GameObject enemy in enemies)
-    //     {
-    //         float currentD = Mathf.Abs(enemy.transform.position.x - position);
-    //         if(currentD < distance)
-    //         {
-    //             closest = enemy;
-    //             distance = currentD;
-    //         }
-    //     }
-    //     return closest;
-    // }
+    // Function that returns the number of enemies around 
+    public int FindClosestEnemies()
+    {
+        // GameObject used to store the deteected enemies
+        GameObject[] enemies;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        // float position = transform.localPosition.x;
+        int n_enemies = 0;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float currentD = Mathf.Abs(enemy.transform.position.x - transform.localPosition.x);
+            if(currentD < maxD)
+            {
+                // Increase the number of enemies near to the player
+                n_enemies = n_enemies + 1;
+            }
+        }
+        return n_enemies;
+    }
     
-    // public override void Heuristic(in ActionBuffers actionsOut)
-    // {
-    //     ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
-    //     ActionSegment<int> discreteActions = actionsOut.DiscreteActions;
+    // Method used to give a penalty when the player touches the border
+    public void CameraAction()
+    {
+        AddReward(-0.02f);
+        ending = ending + 1;    // flag
+        if (ending > 1000)
+        {
+            // if the player touches the border multiple times without taking a bonus, the episode ends
+            _playerController.OnDead(100f);
+        }
+    }
+    
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+        ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
+        ActionSegment<int> discreteActions = actionsOut.DiscreteActions;
 
 
-    //     //Block the player from moving if it's death
-    //     if (_playerController.GetHealth()<=0)
-    //         return;
+        //Block the player from moving if he's dead
+        if (_playerController.GetHealth()<=0)
+            return;
 
-    //     continuousActions[0] = Input.GetAxisRaw("Horizontal");
-    //     continuousActions[1] = Input.GetAxisRaw("Vertical");
+        continuousActions[0] = Input.GetAxisRaw("Vertical");
 
-    //     if(Input.GetKey(KeyCode.Mouse0))
-    //     {
-    //         discreteActions[1] = 1;
-    //     }
+        if(Input.GetKey(KeyCode.Mouse0))
+        {
+            discreteActions[1] = 1;
+        }
+        else if(Input.GetKey(KeyCode.Z))
+        {
+            discreteActions[1] = 2;
+        }
         
-    //     if(Input.GetKey(KeyCode.Space))
-    //     {
-    //         discreteActions[2] = 1;
-    //     }
-        
-    //     _playerController.FlipShoot();
-    // }
+        if(Input.GetKey(KeyCode.Space))
+        {
+            discreteActions[2] = 1;
+        }
+
+        if(Input.GetKey(KeyCode.A))
+        {
+            discreteActions[0] = 0;
+        } else if(Input.GetKey(KeyCode.D))
+        {
+            discreteActions[0] = 2;
+        } else
+        {
+            discreteActions[0] = 1;
+        }
+    }
 }
