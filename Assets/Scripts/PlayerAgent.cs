@@ -116,6 +116,7 @@ public class PlayerAgent : Agent
         // The player is going to jump only if he is not already jumping
         if(jump==1 && flagJump == false)
         {
+            AddReward(-0.5f)
             _playerController.Jump(jump);
             flagJump = true;
         }
