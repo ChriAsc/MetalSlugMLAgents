@@ -33,7 +33,7 @@ public class PlayerAgent : Agent
     public override void OnEpisodeBegin()
     {
         // Initialize player's position at the beginning of the episode
-        transform.localPosition = new Vector3(-8.61f,0.13f,0f);
+        transform.localPosition = new Vector3(-7.94f,0.13f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         // Flags set to false
         flagJump = false;
