@@ -75,7 +75,7 @@ Deep reinforcement learning combines artificial neural networks with a framework
 - Modification of helicopter spawn code
 
 
-#### Ascani Christian, Bedetta Alessandro, Recchi Giovanni
+#### Authors: Ascani Christian, Bedetta Alessandro, Recchi Giovanni
 
 ## Related Projects
 Original game.
