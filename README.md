@@ -75,6 +75,8 @@ Deep reinforcement learning combines artificial neural networks with a framework
 - Edit of helicopter spawn code
 
 
+#### _Disclaimer: this version of MetalSlugMLAgents works only with the second level. Feel free to fork this repository and to improve it_
+
 #### Authors: Ascani Christian, Bedetta Alessandro, Recchi Giovanni
 
 ## Related Projects
