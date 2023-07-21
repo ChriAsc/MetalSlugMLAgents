@@ -72,7 +72,7 @@ Deep reinforcement learning combines artificial neural networks with a framework
     - int to indicate firing (Fire)
     - int to indicate grenade throw (ThrowGranate)
 - Timer and flag for throwing the grenade
-- Modification of helicopter spawn code
+- Edit of helicopter spawn code
 
 
 #### Authors: Ascani Christian, Bedetta Alessandro, Recchi Giovanni
