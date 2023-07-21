@@ -1,3 +1,17 @@
-configuration1: 4096 batch size, 1M max steps, 3e-4 lr, 5 stackedVectors, 
-configuration2: 2048 batch size, 1M max steps, 3e-3 lr, 1 stackedVectors,
-configuration3: 5120 batch size, 1M max steps, 3e-5 lr, Beta 0.01, Epsilon 0.3, Epochs 3, Hidden units 256, Layers 4
+configuration1: 1024 bs, 1M max, 3e-5 lr, Beta 0.01, Epochs 5, Hidden units 256, Layers 5, 15 steps, 0.5 vel, -250 killed -25 hit, missed (-0.01)
+
+configuration2: 2048 bs, 1M max, 3e-5 lr, Beta 0.001, Epochs 10, Hidden units 256, Layers 4, 15 steps, 0.3 vel, -250 killed -25 hit
+
+configuration3: 512 bs, 1M max, 3e-5 lr, Beta 0.01, Epochs 3, Hidden units 256, Layers 4, 20 steps, -500 killed -50 hit
+
+configuration4: 512 bs, 1.5M max, 3e-5 lr, Beta 0.01, Epochs 3, Hidden units 256, Layers 5, 15 steps, 10 stackedV, -250 killed -25 hit
+
+configuration5: 5120 bs, 1.5M max, 3e-5 lr, Beta 0.01, Epochs 10, Hidden units 256, Layers 5, 15 steps, -250 killed -25 hit, missed (-0.05)
+
+configuration6: 4096 bs, 1.5M max, 3e-5 lr, Beta 0.01, Epochs 10, Hidden units 256, Layers 4, 20 steps, 0.3 vel, -250 killed -25 hit, missed (-0.05)
+
+configuration7: 5120 bs, 1.5M max, 3e-5 lr, Beta 0.01, Epochs 5, Hidden units 512, Layers 5, 15 steps, 10 stackedV, -500 killed -50 hit, missed (-0.01)
+
+configuration8: 512 bs, 1.5M max, 3e-5 lr, Beta 0.01, Epochs 3, Hidden units 512, Layers 3, 15 steps, 1 stackedV, -500 killed -50 hit, missed (-0.01)
+
+configuration9: 512 bs, 1.5M max, 3e-5 lr, Beta 0.01, Epochs 10, Hidden units 512, Layers 3, 15 steps, 0.5 vel, 1 stackedV, -500 killed -50 hit

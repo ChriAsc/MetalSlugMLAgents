@@ -104,11 +104,11 @@ public class PlayerAgent : Agent
         _playerController.MoveHorizontally(moveH);
 
         // Player sees above it only if moveV > 0.5
-        if(moveV > 0.4f) 
+        if(moveV > 0.3f) 
         {
             _playerController.MoveVertically(1);
         } 
-        else if (moveV <= 0.4f)
+        else if (moveV <= 0.3f)
         {
             _playerController.MoveVertically(0);
         }
@@ -132,7 +132,7 @@ public class PlayerAgent : Agent
             _playerController.Fire(1);
             
             // If the player was not firing before, then a ray is traced to check if an enemy is above him
-            if (moveV > 0.4f && !firing)
+            if (moveV > 0.3f && !firing)
             {
                 hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), 3.5f, _layerMask);
                 
@@ -153,7 +153,7 @@ public class PlayerAgent : Agent
                     AddReward(-0.01f);
                 }
             }
-            else if(moveV < 0.4f && !firing)
+            else if(moveV < 0.3f && !firing)
             {
                 // If the player was not firing before, then a ray is traced to check if an enemy is to the right
                 hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 3.5f, _layerMask);
@@ -175,7 +175,7 @@ public class PlayerAgent : Agent
                     AddReward(-0.01f);
                 }
             }
-            else if (moveV < 0.4f && !firing)
+            else if (moveV < 0.3f && !firing)
             {
                 // If the player was not firing before, then a ray is traced to check if an enemy is to the left
                 hit=Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 3.5f, _layerMask);
