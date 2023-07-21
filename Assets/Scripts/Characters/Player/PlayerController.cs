@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
 
         //--------new//--------//
         GameManager.LoadNextMission();
-        _playerAgent.RegisterReward(-500f);  
+        _playerAgent.RegisterReward(-250f);  //500f
         _playerAgent.EndEpisode();
         //_menuManager.PressStart();
     }
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
     {
         UIManager.UpdateHealthUI(health.GetHealth(), health.GetMaxHealth());
         AudioManager.PlayMeleeTakeAudio();
-        _playerAgent.RegisterReward(-50f);  
+        _playerAgent.RegisterReward(-25f);  // 25f  
     }
 
     public void Died()

@@ -13,7 +13,7 @@ public class PlayerAgent : Agent
     // Vector used to store player's last position
     private Vector2 lastPosition;
     // Distance used in enemy detection
-    float maxD = 2.5f;
+    float maxD = 3f;
 
     private float nextActionTime = 0.0f;
     private float period = 50.0f;
@@ -33,7 +33,7 @@ public class PlayerAgent : Agent
     public override void OnEpisodeBegin()
     {
         // Initialize player's position at the beginning of the episode
-        transform.localPosition = new Vector3(-7.94f,0.13f,0f);
+        transform.localPosition = new Vector3(-8.64f,0.13f,0f);
         lastPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
         // Flags set to false
         flagJump = false;
@@ -116,7 +116,6 @@ public class PlayerAgent : Agent
         // The player is going to jump only if he is not already jumping
         if(jump==1 && flagJump == false)
         {
-            AddReward(-0.5f)
             _playerController.Jump(jump);
             flagJump = true;
         }
@@ -148,6 +147,11 @@ public class PlayerAgent : Agent
                     // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
                     AddReward(1f);
                 }
+                else 
+                {
+                    Debug.Log("Penalty for random shooting");
+                    AddReward(-0.01f);
+                }
             }
             else if(moveV < 0.4f && !firing)
             {
@@ -165,6 +169,11 @@ public class PlayerAgent : Agent
                     // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
                     AddReward(1f);
                 }
+                else 
+                {
+                    Debug.Log("Penalty for random shooting");
+                    AddReward(-0.01f);
+                }
             }
             else if (moveV < 0.4f && !firing)
             {
@@ -181,6 +190,11 @@ public class PlayerAgent : Agent
                     
                     // Since a ray hit an object with tag "Enemy", it means the bullet is going to hit that enemy
                     AddReward(1f);
+                }
+                else 
+                {
+                    Debug.Log("Penalty for random shooting");
+                    AddReward(-0.01f);
                 }
             }
         }
@@ -261,10 +275,11 @@ public class PlayerAgent : Agent
     // Method used to give a penalty when the player touches the border
     public void CameraAction()
     {
-        AddReward(-0.02f);
+        AddReward(-0.02f); // 0.02f
         ending = ending + 1;    // flag
-        if (ending > 1000)
+        if (ending > 1000)  
         {
+            AddReward(-250f);
             // if the player touches the border multiple times without taking a bonus, the episode ends
             _playerController.OnDead(100f);
         }
